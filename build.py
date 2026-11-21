@@ -5,7 +5,8 @@ from pathlib import Path
 
 root = Path(__file__).parent
 cfg = json.loads((root / "pages.json").read_text())
-site, magnets = cfg["site"], cfg["magnets"]
+site = cfg["site"]
+magnets = [m for m in cfg["magnets"] if not m.get("hidden")]  # set "hidden": true in pages.json to pull a magnet offline
 dist = root / "dist"
 if dist.exists():
     shutil.rmtree(dist)

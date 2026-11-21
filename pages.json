@@ -68,7 +68,8 @@
       "delivery_label": "Open the DM Reply Builder",
       "delivery_url": "",
       "next_label": "Join The Lab (free Facebook group)",
-      "next_url": "#"
+      "next_url": "#",
+      "hidden": true
     }
   ]
 }
