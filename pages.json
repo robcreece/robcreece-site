@@ -1,0 +1,74 @@
+{
+  "site": {
+    "name": "Rob Reece",
+    "domain": "https://robcreece.com",
+    "emailit_script": "https://js.emailit.com/js/eaccc376-5edb-425c-94fc-bcab47a93d57/emailit.js",
+    "cultlike_url": "https://cultlikemarketing.com",
+    "facebook_group_url": "#"
+  },
+  "magnets": [
+    {
+      "slug": "robot-tells",
+      "title": "The Robot Tells",
+      "tag": "Free checklist",
+      "headline": "12 Giveaways That Prove AI Wrote Your Content",
+      "sub": "Your posts are getting scrolled past because people can smell the robot. Here are the 12 tells, plus a 30-second fix for each one.",
+      "bullets": [
+        "The 12 phrases and patterns readers spot in a second",
+        "A 30-second fix for every single tell",
+        "Before/after rewrites so you see the fix in action"
+      ],
+      "cta": "Send Me The Checklist",
+      "card_blurb": "12 tells that scream 'AI wrote this', each with a 30-second fix.",
+      "form_token": "840db6b06fc26c6ecf88a0b1105404cc2d405ed683af9931",
+      "thanks_headline": "Check your inbox. The Robot Tells is on its way.",
+      "thanks_body": "It should land in a minute or two. If it doesn't, check Promotions or Spam and move it to your main inbox.",
+      "delivery_label": "Open The Robot Tells now",
+      "delivery_url": "",
+      "next_label": "Join The Lab (free Facebook group)",
+      "next_url": "#"
+    },
+    {
+      "slug": "ai-word-list",
+      "title": "The AI Word List",
+      "tag": "Free tool",
+      "headline": "The Words That Make People Reply, Call, or Buy",
+      "sub": "A free word list you can drop into any post, DM, or page. Stop guessing which words move people and which ones get ignored.",
+      "bullets": [
+        "The trigger words that get people to take action",
+        "Where to put them in posts, DMs, and sales pages",
+        "Examples of weak wording next to stronger wording"
+      ],
+      "cta": "Get The Word List",
+      "card_blurb": "The words that move people to reply, call, or buy, with examples.",
+      "form_token": "2f3a5440922366439ef9d11c26e6474c9627886981119ded",
+      "thanks_headline": "You're in. Your word list is ready.",
+      "thanks_body": "A copy is also on its way to your inbox. Check Promotions or Spam if you don't see it.",
+      "delivery_label": "Open The AI Word List",
+      "delivery_url": "",
+      "next_label": "Join The Lab (free Facebook group)",
+      "next_url": "#"
+    },
+    {
+      "slug": "dm-reply-builder",
+      "title": "The DM Reply Builder",
+      "tag": "Free tool",
+      "headline": "Write DMs People Actually Answer",
+      "sub": "Paste in a prospect's profile and your chat history. Get back a DM that sounds like a human who's good company, not a bot running a script.",
+      "bullets": [
+        "Works for Facebook and Instagram DMs",
+        "Funny, charming replies instead of cold pitches",
+        "Free to use. Upgrade later if you want more runs"
+      ],
+      "cta": "Give Me Free Access",
+      "card_blurb": "Turn a prospect's profile and chat history into a DM they'll answer.",
+      "form_token": "3677e7c20143654ac1ce63f0f03e3e6f215834a81f38f12e",
+      "thanks_headline": "You're in. Your DM Reply Builder access is ready.",
+      "thanks_body": "A copy of your access link is also on its way to your inbox.",
+      "delivery_label": "Open the DM Reply Builder",
+      "delivery_url": "",
+      "next_label": "Join The Lab (free Facebook group)",
+      "next_url": "#"
+    }
+  ]
+}

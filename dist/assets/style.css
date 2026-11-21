@@ -1,0 +1,42 @@
+:root{--ink:#0e0e0e;--bone:#f2ede2;--gold:#c9a24b;--steel:#4a7aa8;--mute:#8d8878;--card:#171717;--line:#2a2a2a}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--bone);font-family:'Space Grotesk',system-ui,sans-serif;line-height:1.6;font-size:18px}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+.narrow{max-width:680px}
+h1,h2,h3{font-family:'Anton',Impact,sans-serif;font-weight:400;text-transform:uppercase;line-height:1.05;letter-spacing:.01em}
+h1{font-size:clamp(40px,7vw,76px)}
+h2{font-size:clamp(30px,4.5vw,46px);margin-bottom:18px}
+h3{font-size:24px;margin-bottom:8px}
+.mono{font-family:'Space Mono',monospace;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+nav{border-bottom:1px solid var(--line);padding:18px 0}
+nav .wrap{display:flex;justify-content:space-between;align-items:center}
+.logo{font-family:'Anton',sans-serif;font-size:22px;text-transform:uppercase;text-decoration:none;letter-spacing:.04em}
+nav a.link{font-family:'Space Mono',monospace;font-size:13px;text-transform:uppercase;letter-spacing:.1em;text-decoration:none;color:var(--mute);margin-left:22px}
+nav a.link:hover{color:var(--bone)}
+section{padding:80px 0;border-bottom:1px solid var(--line)}
+.hero{padding:100px 0 90px}
+.hero p.lead{font-size:21px;max-width:620px;margin:24px 0 32px;color:#d8d3c4}
+.btn{display:inline-block;background:var(--gold);color:var(--ink);font-family:'Space Mono',monospace;font-weight:700;text-transform:uppercase;letter-spacing:.08em;font-size:14px;padding:16px 28px;text-decoration:none;border:0;cursor:pointer}
+.btn:hover{background:var(--bone)}
+.btn.ghost{background:transparent;color:var(--bone);border:1px solid var(--mute)}
+.btn.ghost:hover{border-color:var(--bone);background:transparent}
+.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin-top:30px}
+.card{background:var(--card);border:1px solid var(--line);padding:28px}
+.card p{color:#cfcabb;font-size:16px;margin-bottom:18px}
+.card .mono{display:block;margin-bottom:10px}
+.pain{border-left:3px solid var(--gold);padding:4px 0 4px 18px;margin:16px 0;font-size:19px}
+.bullets{list-style:none;margin:26px 0}
+.bullets li{padding:10px 0 10px 30px;position:relative;border-bottom:1px solid var(--line)}
+.bullets li:before{content:"→";position:absolute;left:0;color:var(--gold)}
+.formbox{background:var(--bone);color:var(--ink);padding:28px;margin-top:28px}
+.formbox .mono{color:#555;margin-bottom:12px;display:block}
+footer{padding:40px 0;color:var(--mute);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.center{text-align:center}
+.thanks h1{font-size:clamp(34px,5.5vw,56px)}
+.steps{counter-reset:s;margin:30px 0;list-style:none}
+.steps li{counter-increment:s;padding:14px 0 14px 54px;position:relative;border-bottom:1px solid var(--line)}
+.steps li:before{content:counter(s);position:absolute;left:0;top:10px;width:36px;height:36px;border:1px solid var(--gold);color:var(--gold);display:grid;place-items:center;font-family:'Space Mono',monospace}
+@media(max-width:600px){body{font-size:17px}section{padding:56px 0}.hero{padding:64px 0}nav a.link{display:none}}
