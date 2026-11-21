@@ -11,6 +11,7 @@ if dist.exists():
     shutil.rmtree(dist)
 (dist / "assets").mkdir(parents=True)
 shutil.copy(root / "assets/style.css", dist / "assets/style.css")
+shutil.copy(root / "assets/rob.jpg", dist / "assets/rob.jpg")
 
 e = html.escape
 
@@ -42,12 +43,28 @@ cards = "".join(
     f'<a class="card" href="/{m["slug"]}/" style="text-decoration:none"><span class="mono">{e(m["tag"])}</span><h3>{e(m["title"])}</h3><p>{e(m["card_blurb"])}</p><span class="mono">Get it free →</span></a>'
     for m in magnets)
 
+bc_links = "".join(f'<li><a href="/{m["slug"]}/"><span>{e(m["title"])}</span><span class="mono">Free →</span></a></li>' for m in magnets)
+
 hub = f"""
-<section class="hero"><div class="wrap">
+<section class="hero"><div class="wrap herogrid">
+<div>
 <span class="mono">Rob Reece · Solo marketer</span>
 <h1>Your first online sale<br>doesn't need a guru.</h1>
 <p class="lead">I help broke beginners get their first online sale with simple offers, honest copy, and organic traffic. No sales calls. No ad budget. No fake lifestyle.</p>
 <a class="btn" href="#free">Grab the free tools</a> &nbsp; <a class="btn ghost" href="#pain">See if this is you</a>
+</div>
+<aside class="bizcard">
+<img src="/assets/rob.jpg" alt="Rob Reece at his desk in front of the Cult Like Marketing banner" width="1000" height="800">
+<div class="bc-body">
+<h3>Rob Reece</h3>
+<p class="mono">Solo marketer · CultLike Marketing</p>
+<p class="bc-line">Simple offers. Honest copy. Organic traffic.</p>
+<ul class="bc-links">
+{bc_links}
+</ul>
+<a class="bc-cult" href="{site['cultlike_url']}">cultlikemarketing.com →</a>
+</div>
+</aside>
 </div></section>
 
 <section id="pain"><div class="wrap narrow">
@@ -79,10 +96,15 @@ hub = f"""
 <div class="grid">{cards}</div>
 </div></section>
 
-<section><div class="wrap narrow">
+<section id="about"><div class="wrap aboutgrid">
+<img src="/assets/rob.jpg" alt="Rob Reece" loading="lazy" width="1000" height="800">
+<div>
 <span class="mono">About</span>
 <h2>I'm Rob.</h2>
-<p>I'm a solo marketer. I build small offers, write the copy, and sell through organic Facebook posts and messages. I'm also a husband, a dad of a big family, and a minister. I run experiments in the open and hand you what works.</p>
+<p>I'm a solo marketer. I build small offers, write the copy, and sell through organic Facebook posts and messages. No sales calls, ever.</p>
+<p style="margin-top:14px">I'm also a husband, a dad of a big family, and a minister. I run experiments in the open and hand you what works.</p>
+<p style="margin-top:24px"><a class="btn" href="#free">Start with a free tool</a></p>
+</div>
 </div></section>
 """
 (dist / "index.html").write_text(layout("Rob Reece | Get your first online sale", "Simple offers, honest copy, and organic traffic for broke beginners seeking their first online sale.", hub, "/"))

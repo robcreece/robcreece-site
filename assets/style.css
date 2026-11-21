@@ -39,4 +39,18 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 .steps{counter-reset:s;margin:30px 0;list-style:none}
 .steps li{counter-increment:s;padding:14px 0 14px 54px;position:relative;border-bottom:1px solid var(--line)}
 .steps li:before{content:counter(s);position:absolute;left:0;top:10px;width:36px;height:36px;border:1px solid var(--gold);color:var(--gold);display:grid;place-items:center;font-family:'Space Mono',monospace}
+.herogrid{display:grid;gap:48px;grid-template-columns:1.15fr 1fr;align-items:center}
+.bizcard{background:var(--card);border:1px solid var(--gold);box-shadow:8px 8px 0 rgba(201,162,75,.25)}
+.bizcard img,.aboutgrid img{width:100%;height:auto;display:block}
+.bc-body{padding:22px 24px 26px}
+.bc-body h3{font-size:30px;margin-bottom:2px}
+.bc-line{color:#cfcabb;font-size:16px;margin:10px 0 14px}
+.bc-links{list-style:none;border-top:1px solid var(--line)}
+.bc-links a{display:flex;justify-content:space-between;gap:12px;padding:11px 0;border-bottom:1px solid var(--line);text-decoration:none;font-size:16px}
+.bc-links a:hover span:first-child{color:var(--gold)}
+.bc-cult{display:inline-block;margin-top:14px;font-family:'Space Mono',monospace;font-size:13px;color:var(--mute);text-decoration:none}
+.bc-cult:hover{color:var(--bone)}
+.aboutgrid{display:grid;gap:48px;grid-template-columns:1fr 1.1fr;align-items:center}
+.aboutgrid img{border:1px solid var(--line)}
+@media(max-width:820px){.herogrid,.aboutgrid{grid-template-columns:1fr;gap:36px}}
 @media(max-width:600px){body{font-size:17px}section{padding:56px 0}.hero{padding:64px 0}nav a.link{display:none}}
