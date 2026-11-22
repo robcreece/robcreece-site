@@ -117,13 +117,14 @@ hub = f"""
 # ---------- magnets + thank-you ----------
 for m in magnets:
     bl = "".join(f"<li>{e(b)}</li>" for b in m["bullets"])
-    body = f"""<section class="hero"><div class="wrap narrow">
-<span class="mono">{e(m['tag'])}</span>
+    body = f"""<section class="hero squeeze"><div class="wrap herogrid">
+<div><span class="mono">{e(m['tag'])}</span>
 <h1>{e(m['headline'])}</h1>
 <p class="lead">{e(m['sub'])}</p>
-<ul class="bullets">{bl}</ul>
+<ul class="bullets">{bl}</ul></div>
+<div><div class="cover"><span class="mono">{e(m['tag'])}</span><strong>{e(m['title'])}</strong><em>by Rob Reece</em></div>
 <div class="formbox"><span class="mono">{e(m['cta'])}</span>{form_block(m)}</div>
-<p style="margin-top:14px;color:var(--mute);font-size:14px">No spam. Unsubscribe any time.</p>
+<p style="margin-top:12px;color:var(--mute);font-size:14px">No spam. Unsubscribe any time.</p></div>
 </div></section>"""
     d = dist / m["slug"]; d.mkdir()
     (d / "index.html").write_text(layout(f"{m['title']} | Rob Reece", m["sub"], body, f"/{m['slug']}/"))
@@ -160,14 +161,21 @@ for o in offers:
     inc = "".join(f"<li>{e(x)}</li>" for x in o["includes"])
     needs = "".join(f"<li>{e(x)}</li>" for x in o["needs"])
     notf = "".join(f"<li>{e(x)}</li>" for x in o["not_for"])
-    body = f"""<section class="res"><div class="wrap narrow">
+    vid = o.get("video_url", "")
+    if vid:
+        vsl = f'<div class="vsl"><video controls playsinline preload="metadata" src="{e(vid)}"></video></div>'
+    else:
+        vsl = ""
+    cta = f'<p class="ctarow"><span class="price">{e(o["price"])}</span><a class="btn" href="{e(buy)}">{e(o["button"])}</a></p>'
+    body = f"""<section class="res landing"><div class="wrap narrow">
 <span class="mono">{e(o['tag'])}</span>
 <h1>{e(o['headline'])}</h1>
 <p class="sub">{e(o['sub'])}</p>
+{vsl}{cta}
 <h2>What you get</h2><ul class="bullets">{inc}</ul>
+<div class="pricebox"><span class="mono">Today</span><strong>{e(o['price'])}</strong><span>One-time payment. Instant access.</span>{cta.replace('<span class="price">'+e(o["price"])+'</span>','')}</div>
 <h2>What you need</h2><ul class="bullets">{needs}</ul>
 <h2>Who it's not for</h2><ul class="bullets">{notf}</ul>
-<p style="margin-top:30px"><a class="btn" href="{e(buy)}">{e(o['button'])}</a></p>
 <p class="foot">One-time payment of {e(o['price'])}. Checkout is handled by Dodo Payments. This is a set of instructions and files for an AI assistant. No sales or income are guaranteed.</p>
 </div></section>"""
     d = dist / o["slug"]; d.mkdir(parents=True, exist_ok=True)
