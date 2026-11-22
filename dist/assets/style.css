@@ -74,3 +74,5 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 .res .foot{color:var(--mute);font-size:14px;margin-top:30px}
 .res .steps li{padding-left:54px}
 .res .cut{margin-left:20px}
+.res .promptbox{white-space:pre-wrap;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--gold);padding:16px;font-family:'Space Mono',monospace;font-size:13.5px;line-height:1.55;color:var(--bone);overflow-x:auto}
+.res button.btn{margin-top:6px}

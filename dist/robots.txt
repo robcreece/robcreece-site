@@ -2,4 +2,5 @@ User-agent: *
 Allow: /
 Disallow: /thanks/
 Disallow: /r/
+Disallow: /welcome/
 Sitemap: https://robcreece.com/sitemap.xml

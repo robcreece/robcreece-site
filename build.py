@@ -40,6 +40,18 @@ def form_block(m):
     return '<p><strong>Form coming soon.</strong></p>'
 
 # ---------- hub ----------
+from urllib.parse import quote
+offers = cfg.get("offers", [])
+offer_section = ""
+if offers:
+    o0 = offers[0]
+    offer_section = f'''<section id="build"><div class="wrap narrow"><span class="mono">Build your own</span><h2>Want a site like this one?</h2><p style="color:#cfcabb;max-width:620px">I built this site, its free tools and the signup flow in one chat with Claude. I packaged the process so you can do the same.</p><p style="margin-top:24px"><a class="btn" href="/{o0["slug"]}/">See the {e(o0["title"])}</a></p></div></section>'''
+
+h = cfg["hub"]
+pains = "".join(f'<div class="pain">{p}</div>' for p in h["pains"])
+fixes = "".join(f'<div class="card"><h3>{c["title"]}</h3><p>{c["text"]}</p></div>' for c in h["fix_cards"])
+about_paras = "".join(f'<p style="margin-top:14px">{p}</p>' for p in h["about"])
+
 cards = "".join(
     f'<a class="card" href="/{m["slug"]}/" style="text-decoration:none"><span class="mono">{e(m["tag"])}</span><h3>{e(m["title"])}</h3><p>{e(m["card_blurb"])}</p><span class="mono">Get it free →</span></a>'
     for m in magnets)
@@ -49,61 +61,53 @@ bc_links = "".join(f'<li><a href="/{m["slug"]}/"><span>{e(m["title"])}</span><sp
 hub = f"""
 <section class="hero"><div class="wrap herogrid">
 <div>
-<span class="mono">Rob Reece · Solo marketer</span>
-<h1>Your first online sale<br>doesn't need a guru.</h1>
-<p class="lead">I help broke beginners get their first online sale with simple offers, honest copy, and organic traffic. No sales calls. No ad budget. No fake lifestyle.</p>
+<span class="mono">{h["eyebrow"]}</span>
+<h1>{h["headline"]}</h1>
+<p class="lead">{h["lead"]}</p>
 <a class="btn" href="#free">Grab the free tools</a> &nbsp; <a class="btn ghost" href="#pain">See if this is you</a>
 </div>
 <aside class="bizcard">
-<img src="/assets/rob.jpg" alt="Rob Reece at his desk in front of the Cult Like Marketing banner" width="1000" height="800">
+<img src="/assets/rob.jpg" alt="{h["photo_alt"]}" width="1000" height="800">
 <div class="bc-body">
-<h3>Rob Reece</h3>
-<p class="mono">Solo marketer · CultLike Marketing</p>
-<p class="bc-line">Simple offers. Honest copy. Organic traffic.</p>
+<h3>{site["name"]}</h3>
+<p class="mono">{h["card_role"]}</p>
+<p class="bc-line">{h["card_line"]}</p>
 <ul class="bc-links">
 {bc_links}
 </ul>
-<a class="bc-cult" href="{site['cultlike_url']}">cultlikemarketing.com →</a>
+<a class="bc-cult" href="{site['cultlike_url']}">{h["brand_link_label"]} →</a>
 </div>
 </aside>
 </div></section>
 
 <section id="pain"><div class="wrap narrow">
-<span class="mono">Sound familiar?</span>
-<h2>You've done everything you were told to do.</h2>
-<div class="pain">You've bought the course and still have no sale.</div>
-<div class="pain">You post every day and nobody buys.</div>
-<div class="pain">You don't know what to sell, or who to sell it to.</div>
-<div class="pain">Your content reads like every other AI post, and people scroll past.</div>
-<div class="pain">You're afraid of DMs and sales calls, so you hide.</div>
-<p style="margin-top:24px;color:#cfcabb">That isn't a talent problem. It's a clarity problem. Fix the offer, the words, and the conversation, and sales follow.</p>
+<span class="mono">{h["pain_eyebrow"]}</span>
+<h2>{h["pain_title"]}</h2>
+{pains}
+<p style="margin-top:24px;color:#cfcabb">{h["pain_close"]}</p>
 </div></section>
 
 <section id="fix"><div class="wrap">
 <span class="mono">The fix</span>
-<h2>Small offers. Sharp words. Real conversations.</h2>
-<div class="grid">
-<div class="card"><h3>Pick a small offer</h3><p>A simple, low-priced product that solves one problem, so your first buyer says yes fast.</p></div>
-<div class="card"><h3>Write like a human</h3><p>Direct-response copy that sounds like you at the kitchen table, not like a robot reading a script.</p></div>
-<div class="card"><h3>Sell without calls</h3><p>Organic Facebook posts and friendly DMs. That's how I sell, and it's how I teach it.</p></div>
-</div>
-<p style="margin-top:30px"><a class="btn" href="{site['cultlike_url']}">See CultLike Marketing</a></p>
+<h2>{h["fix_title"]}</h2>
+<div class="grid">{fixes}</div>
+<p style="margin-top:30px"><a class="btn" href="{site['cultlike_url']}">{h["fix_button"]}</a></p>
 </div></section>
 
 <section id="free"><div class="wrap">
 <span class="mono">Start here</span>
-<h2>Free tools. Steal them.</h2>
-<p style="color:#cfcabb;max-width:620px">Pick one. Enter your email. It lands in your inbox.</p>
+<h2>{h["free_title"]}</h2>
+<p style="color:#cfcabb;max-width:620px">{h["free_sub"]}</p>
 <div class="grid">{cards}</div>
 </div></section>
 
+{offer_section}
 <section id="about"><div class="wrap aboutgrid">
-<img src="/assets/rob.jpg" alt="Rob Reece" loading="lazy" width="1000" height="800">
+<img src="/assets/rob.jpg" alt="{site["name"]}" loading="lazy" width="1000" height="800">
 <div>
 <span class="mono">About</span>
-<h2>I'm Rob.</h2>
-<p>I'm a solo marketer. I build small offers, write the copy, and sell through organic Facebook posts and messages. No sales calls, ever.</p>
-<p style="margin-top:14px">I'm also a husband, a dad of a big family, and a minister. I run experiments in the open and hand you what works.</p>
+<h2>{h["about_title"]}</h2>
+{about_paras}
 <p style="margin-top:24px"><a class="btn" href="#free">Start with a free tool</a></p>
 </div>
 </div></section>
@@ -143,9 +147,52 @@ for pdf in (root / "assets/downloads").glob("*.pdf"):
 for slug in freebies.DATA:
     d = dist / "r" / slug; d.mkdir(parents=True)
     ttl = freebies.DATA[slug]["title"]
-    (d / "index.html").write_text(layout(f"{ttl} | Rob Reece", freebies.DATA[slug]["subtitle"], freebies.web_body(slug, f"/downloads/{slug}.pdf"), f"/r/{slug}/", noindex=True))
+    (d / "index.html").write_text(layout(f"{ttl} | Rob Reece", freebies.DATA[slug]["subtitle"], freebies.web_body(slug, f"/downloads/{slug}.pdf" if (root / "assets/downloads" / f"{slug}.pdf").exists() else None), f"/r/{slug}/", noindex=True))
 
-(dist / "robots.txt").write_text(f"User-agent: *\nAllow: /\nDisallow: /thanks/\nDisallow: /r/\nSitemap: {site['domain']}/sitemap.xml\n")
-urls = ["/"] + [f"/{m['slug']}/" for m in magnets]
+# ---------- paid offers: sales pages + welcome (delivery) pages ----------
+L = root / "launchpad" / "rendered"
+def rd(n): return (L / n).read_text()
+def prompt_box(txt, pid):
+    return f'<pre class="promptbox" id="{pid}">{e(txt)}</pre><p><button class="btn" onclick="navigator.clipboard.writeText(document.getElementById(\'{pid}\').innerText);this.textContent=\'Copied\'">Copy the prompt</button></p>'
+for o in offers:
+    ret = f"{site.get('checkout_return_base', site['domain'])}/welcome/{o['welcome_token']}/"
+    buy = f"https://checkout.dodopayments.com/buy/{o['product_id']}?quantity=1&redirect_url={quote(ret, safe='')}"
+    inc = "".join(f"<li>{e(x)}</li>" for x in o["includes"])
+    needs = "".join(f"<li>{e(x)}</li>" for x in o["needs"])
+    notf = "".join(f"<li>{e(x)}</li>" for x in o["not_for"])
+    body = f"""<section class="res"><div class="wrap narrow">
+<span class="mono">{e(o['tag'])}</span>
+<h1>{e(o['headline'])}</h1>
+<p class="sub">{e(o['sub'])}</p>
+<h2>What you get</h2><ul class="bullets">{inc}</ul>
+<h2>What you need</h2><ul class="bullets">{needs}</ul>
+<h2>Who it's not for</h2><ul class="bullets">{notf}</ul>
+<p style="margin-top:30px"><a class="btn" href="{e(buy)}">{e(o['button'])}</a></p>
+<p class="foot">One-time payment of {e(o['price'])}. Checkout is handled by Dodo Payments. This is a set of instructions and files for an AI assistant. No sales or income are guaranteed.</p>
+</div></section>"""
+    d = dist / o["slug"]; d.mkdir(parents=True, exist_ok=True)
+    (d / "index.html").write_text(layout(f"{o['title']} | Rob Reece", o["sub"], body, f"/{o['slug']}/"))
+    # welcome page (noindex, unguessable path)
+    w = dist / "welcome" / o["welcome_token"]; w.mkdir(parents=True, exist_ok=True)
+    if o["slug"] == "launchpad":
+        zipbtn = f'<p><a class="btn" href="/welcome/{o["welcome_token"]}/{o["zip"]}">Download the starter kit (zip)</a></p>'
+        shutil.copy(root / "assets/product" / o["zip"], w / o["zip"])
+        inner = f"""<h2>Start here</h2>
+<ol class="steps"><li>Read the Click Guide below so you know which steps are yours.</li><li>Download the starter kit and unzip it.</li><li>Open a new Claude chat and paste the master prompt. Tell Claude you have the starter kit.</li></ol>
+{zipbtn}
+<h2>The master prompt</h2>{prompt_box(rd('router-prompt.txt'), 'mp')}
+<h2>Click Guide</h2>{rd('click-guide.html')}
+<h2>Rollback Card</h2>{rd('rollback-card.html')}"""
+    else:
+        inner = f"""<h2>The Stage 6 prompt</h2><p>Paste this into your Launchpad chat once your site is live on your own domain. Fill in the [BRACKETS].</p>{prompt_box(rd('addon-prompt.txt'), 'ap')}{rd('addon-templates.html')}"""
+    up = ""
+    if o.get("upsell"):
+        u = next(x for x in offers if x["slug"] == o["upsell"])
+        up = f'<div class="formbox" style="margin-top:40px"><span class="mono">Next step, when you are ready</span><h3 style="color:#0e0e0e">{e(u["title"])}</h3><p>{e(u["sub"])}</p><p style="margin-top:14px"><a class="btn" href="/{u["slug"]}/">See the {e(u["title"])} ({e(u["price"])})</a></p></div>'
+    wbody = f"""<section class="res"><div class="wrap narrow"><span class="mono">Thank you</span><h1>{e(o['welcome_title'])}</h1><p class="sub">Bookmark this page. Dodo also emailed you a link to it.</p>{inner}{up}<p class="foot">Questions? Reply to any email from Rob.</p></div></section>"""
+    (w / "index.html").write_text(layout(f"{o['welcome_title']} | Rob Reece", "Your purchase.", wbody, f"/welcome/{o['welcome_token']}/", noindex=True))
+
+(dist / "robots.txt").write_text(f"User-agent: *\nAllow: /\nDisallow: /thanks/\nDisallow: /r/\nDisallow: /welcome/\nSitemap: {site['domain']}/sitemap.xml\n")
+urls = ["/"] + [f"/{m['slug']}/" for m in magnets] + [f"/{o['slug']}/" for o in offers]
 (dist / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + "".join(f"<url><loc>{site['domain']}{u}</loc></url>" for u in urls) + "</urlset>")
 print("built", len(list(dist.rglob('*.html'))), "pages")

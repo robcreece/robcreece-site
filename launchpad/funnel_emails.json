@@ -1,0 +1,30 @@
+{
+  "freebie_series": {
+    "name": "One-Prompt Website: follow-up (6 emails)",
+    "emails": [
+      {"day": 0, "subject": "Your One-Prompt Website is here",
+       "body": "Hi {first_name},\n\nHere's the prompt: {SITE}/r/one-prompt-website/\n\nHow to use it:\n1. Open a new chat with Claude.\n2. Paste the prompt.\n3. Answer its questions. It builds the page and walks you through putting it online for free.\n\nAbout 10 minutes if you already know what you want to say.\n\nOne question: what are you trying to launch? Hit reply and tell me. I read every one.\n\nRob"},
+      {"day": 1, "subject": "Did the prompt work?",
+       "body": "Hi {first_name},\n\nQuick check. Did you get to run it?\n\nThe two places people get stuck:\n\n1. They don't know what to give away. Fix: ask Claude for three options based on your audience's biggest frustration, then pick the one you could finish today.\n2. They get stuck at the free hosting step. Fix: tell Claude exactly which screen you're on and what it says. It will walk you through it.\n\nIf you're stuck somewhere else, reply and tell me where.\n\nRob"},
+      {"day": 3, "subject": "What the free version leaves out",
+       "body": "Hi {first_name},\n\nThe free prompt gets you a real page on a free web address. It deliberately stops there.\n\nThree things it leaves out:\n\n1. Your own domain (yourname.com instead of yourname.workers.dev)\n2. Collecting and emailing the people who sign up\n3. The part where it all connects\n\nI built my own site, two freebies and the email setup in one chat with Claude. The prompt I used, packaged with a starter template, is called the One-Chat Launchpad. I'll tell you what's in it over the next few emails.\n\nRob"},
+      {"day": 5, "subject": "The part that scares beginners",
+       "body": "Hi {first_name},\n\nThe scary part of owning a website is DNS. That's the setting that connects your domain to your site. Get it wrong and your site, or your email, can stop working.\n\nSo the Launchpad has a rule: Claude copies every existing record first, then stops and asks you before it changes anything. It also comes with a one-page Rollback Card that shows how to undo the switch in about two minutes.\n\nYou keep control the whole way.\n\nRob"},
+      {"day": 7, "subject": "What's inside the Launchpad",
+       "body": "Hi {first_name},\n\nHere's exactly what you get:\n\n- The master prompt that runs the whole build in one chat\n- A starter template (the same one this site is built on)\n- A click guide listing the few steps only you can do\n- The Rollback Card\n\nIt's $19, one time: {SITE}/launchpad/\n\nYou'll pay a registrar separately for a domain (roughly $10 to $25 a year). Email is a separate add-on.\n\nWho it's for: beginners who want a real site and a lead magnet without hiring anyone.\nWho it's not for: anyone who wants a promise of sales. I don't make those, and nobody honest can.\n\nYou also need Claude. It works best with a paid plan that has file tools and the Chrome extension. If Claude can't do a step, it walks you through it by hand.\n\nRob"},
+      {"day": 9, "subject": "Last note from me on this",
+       "body": "Hi {first_name},\n\nThat's the last email about the Launchpad.\n\nIf a website and a lead magnet are on your list, the free prompt is yours to keep: {SITE}/r/one-prompt-website/\n\nIf you want the full setup, it's here: {SITE}/launchpad/\n\nEither way, I'm glad you grabbed the prompt.\n\nRob"}
+    ]
+  },
+  "buyer_series": {
+    "name": "Launchpad buyers: onboarding and add-on (3 emails)",
+    "emails": [
+      {"day": 0, "subject": "Your Launchpad is ready: start here",
+       "body": "Hi {first_name},\n\nThanks for buying. Your files are on the page after checkout, and Dodo emailed you the links too.\n\nStart here:\n1. Open the Click Guide so you know which steps are yours.\n2. Open a new chat with Claude and paste the master prompt.\n3. Answer the intake questions. Claude takes it from there.\n\nIf you get stuck, reply with the screen you're on and what it says.\n\nRob"},
+      {"day": 2, "subject": "How's the build going?",
+       "body": "Hi {first_name},\n\nChecking in. Where are you in the build?\n\nIf your site isn't live on a free address yet, start there. Don't touch the domain until the free address works.\n\nIf you're stuck, reply with the stage and what you see.\n\nRob"},
+      {"day": 4, "subject": "When you're ready for email",
+       "body": "Hi {first_name},\n\nOnce your site is live on your own domain, the next piece is email: sending from your domain, a signup form, and a welcome series.\n\nThere's an Email Add-on for that. It has the Stage 6 prompt and 5 welcome-email templates. It's $19: {SITE}/email-addon/\n\nA warning so you don't waste time: email tools often need to approve your account before they send to outside addresses, and that can take a day or more. Start it early.\n\nNo rush. Get the site live first.\n\nRob"}
+    ]
+  }
+}

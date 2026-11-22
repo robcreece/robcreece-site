@@ -117,56 +117,128 @@
       {
         "name": "1. Words that get a reply",
         "job": "Use in the first line of a DM or comment. They keep the pressure low and make answering easy.",
-        "words": ["quick question", "curious", "mind if I ask", "honest question", "random thought", "saw your post", "out of curiosity", "would it help if"],
+        "words": [
+          "quick question",
+          "curious",
+          "mind if I ask",
+          "honest question",
+          "random thought",
+          "saw your post",
+          "out of curiosity",
+          "would it help if"
+        ],
         "weak": "Hi, I help people grow their business. Interested?",
         "strong": "Quick question. Saw your post about your first launch. What's been the hardest part so far?"
       },
       {
         "name": "2. Words that make the promise specific",
         "job": "Use in headlines and the first line of a post. Specific beats impressive.",
-        "words": ["exactly", "step by step", "in 7 days", "in one afternoon", "without", "even if", "the only", "how to"],
+        "words": [
+          "exactly",
+          "step by step",
+          "in 7 days",
+          "in one afternoon",
+          "without",
+          "even if",
+          "the only",
+          "how to"
+        ],
         "weak": "Learn to make money online.",
         "strong": "How to get your first $50 sale in 7 days, even if you have no list."
       },
       {
         "name": "3. Words that lower the risk",
         "job": "Use near the button, the price, and the ask. They answer the fear of getting it wrong.",
-        "words": ["free", "no card needed", "cancel anytime", "try it", "keep it either way", "guarantee", "simple", "takes 5 minutes"],
+        "words": [
+          "free",
+          "no card needed",
+          "cancel anytime",
+          "try it",
+          "keep it either way",
+          "guarantee",
+          "simple",
+          "takes 5 minutes"
+        ],
         "weak": "Sign up now for access.",
         "strong": "Grab it free. No card needed. Keep it either way."
       },
       {
         "name": "4. Words that create real urgency",
         "job": "Use only when there is a true deadline or limit. Name the date or the number.",
-        "words": ["today", "by Friday", "until midnight", "only 20 spots", "closes", "last day", "this week", "before"],
+        "words": [
+          "today",
+          "by Friday",
+          "until midnight",
+          "only 20 spots",
+          "closes",
+          "last day",
+          "this week",
+          "before"
+        ],
         "weak": "Hurry! Don't miss out on this amazing deal!",
         "strong": "Price goes up Friday at midnight. After that it's $27."
       },
       {
         "name": "5. Words that say \"this is for you\"",
         "job": "Use at the top of a post or page. People act when they see themselves in it.",
-        "words": ["if you're", "for", "beginners", "first sale", "solo", "starting from zero", "no experience", "busy"],
+        "words": [
+          "if you're",
+          "for",
+          "beginners",
+          "first sale",
+          "solo",
+          "starting from zero",
+          "no experience",
+          "busy"
+        ],
         "weak": "A powerful system for everyone.",
         "strong": "For solo beginners with $0 and no list who want a first sale."
       },
       {
         "name": "6. Words that show proof",
         "job": "Use right after a claim. A claim with a reason beats a claim alone.",
-        "words": ["because", "here's the proof", "I tested", "screenshot", "results", "after", "what happened", "the numbers"],
+        "words": [
+          "because",
+          "here's the proof",
+          "I tested",
+          "screenshot",
+          "results",
+          "after",
+          "what happened",
+          "the numbers"
+        ],
         "weak": "This method really works.",
         "strong": "I tested it for 14 days. Here's what happened, with the screenshots."
       },
       {
         "name": "7. Words that name the pain",
         "job": "Use in the opening of a post, an email, or a sales page. Describe the problem before you sell the fix.",
-        "words": ["stuck", "tired of", "still", "keep", "wasting", "nothing works", "no one replies", "behind"],
+        "words": [
+          "stuck",
+          "tired of",
+          "still",
+          "keep",
+          "wasting",
+          "nothing works",
+          "no one replies",
+          "behind"
+        ],
         "weak": "Struggling with online marketing?",
         "strong": "Posting every day and still getting zero replies?"
       },
       {
         "name": "8. Words that ask for the action",
         "job": "Use in the last line. Tell people the one thing to do and make it small.",
-        "words": ["reply", "send me", "comment", "DM me", "grab", "tap", "watch", "tell me"],
+        "words": [
+          "reply",
+          "send me",
+          "comment",
+          "DM me",
+          "grab",
+          "tap",
+          "watch",
+          "tell me"
+        ],
         "weak": "Let me know if you'd like to learn more.",
         "strong": "Reply with the word LIST and I'll send it over."
       }
@@ -174,24 +246,96 @@
     "cut_title": "Words to cut",
     "cut_intro": "These words make your writing sound weak, vague, or like an ad. Search your draft for them and delete or replace.",
     "cut": [
-      {"word": "just", "why": "It apologizes. \"Just checking in\" becomes \"Checking in\"."},
-      {"word": "maybe / try to / I think", "why": "Hedging makes people trust you less. Commit or say why you're unsure."},
-      {"word": "solutions / synergy / best-in-class", "why": "Nobody talks like this. Name the thing you do."},
-      {"word": "unlock / elevate / game-changer", "why": "Hype words with no detail. Say what changes."},
-      {"word": "amazing / incredible / revolutionary", "why": "Adjectives you give yourself don't count. Show a result."},
-      {"word": "click here", "why": "Say what they get. \"Get the checklist\" beats \"Click here\"."}
+      {
+        "word": "just",
+        "why": "It apologizes. \"Just checking in\" becomes \"Checking in\"."
+      },
+      {
+        "word": "maybe / try to / I think",
+        "why": "Hedging makes people trust you less. Commit or say why you're unsure."
+      },
+      {
+        "word": "solutions / synergy / best-in-class",
+        "why": "Nobody talks like this. Name the thing you do."
+      },
+      {
+        "word": "unlock / elevate / game-changer",
+        "why": "Hype words with no detail. Say what changes."
+      },
+      {
+        "word": "amazing / incredible / revolutionary",
+        "why": "Adjectives you give yourself don't count. Show a result."
+      },
+      {
+        "word": "click here",
+        "why": "Say what they get. \"Get the checklist\" beats \"Click here\"."
+      }
     ],
     "placement_title": "Where to put the words",
     "placement": [
-      {"where": "First line of a post", "use": "Groups 5, 7, and 2. Make the reader feel seen or promise something specific."},
-      {"where": "First line of a DM", "use": "Group 1. Keep it low pressure and about them."},
-      {"where": "Right after a claim", "use": "Group 6. Back up every big claim with a reason or a result."},
-      {"where": "Near the button or price", "use": "Group 3. Answer the fear of getting it wrong."},
-      {"where": "Final line", "use": "Group 8, plus a true Group 4 if there's a real deadline."},
-      {"where": "Subject lines", "use": "Groups 1 and 2. Short, specific, and curious. Under 50 characters."}
+      {
+        "where": "First line of a post",
+        "use": "Groups 5, 7, and 2. Make the reader feel seen or promise something specific."
+      },
+      {
+        "where": "First line of a DM",
+        "use": "Group 1. Keep it low pressure and about them."
+      },
+      {
+        "where": "Right after a claim",
+        "use": "Group 6. Back up every big claim with a reason or a result."
+      },
+      {
+        "where": "Near the button or price",
+        "use": "Group 3. Answer the fear of getting it wrong."
+      },
+      {
+        "where": "Final line",
+        "use": "Group 8, plus a true Group 4 if there's a real deadline."
+      },
+      {
+        "where": "Subject lines",
+        "use": "Groups 1 and 2. Short, specific, and curious. Under 50 characters."
+      }
     ],
     "prompt_title": "Copy and paste this into any AI",
     "prompt": "Rewrite the text below. Use plain words. Cut these words: just, maybe, leverage, unlock, elevate, game-changer, amazing. Start with the reader's problem in one line. Make the promise specific with a number or a time frame. Add one reason it works. End with one small action. Keep my voice. Text: [paste your draft here]",
     "closer": "Start with one group. Rewrite one post or DM using it today. Then check what changes in your replies."
+  },
+  "one-prompt-website": {
+    "title": "The One-Prompt Website",
+    "subtitle": "Paste one prompt into Claude. Get a real website with a signup page, online for free.",
+    "intro": [
+      "This is the exact kind of prompt I used to build my own site, trimmed to the free part: a one-page site with a free signup page, put online on a free address. No domain, no email setup, no cost.",
+      "You need a Claude account. It works best if Claude can create files in your chat. If it can't, the prompt tells it to give you a single page you can copy and paste."
+    ],
+    "items": [
+      {
+        "name": "Before you paste it",
+        "text": "Decide three things in plain words: who this is for, their biggest frustration, and the one free thing you'll give away. If you don't know the freebie, Claude will suggest three."
+      },
+      {
+        "name": "While it runs",
+        "text": "Answer Claude's questions in one message. It will build the page, show it to you, and ask what to change. Fix anything that doesn't sound like you."
+      },
+      {
+        "name": "When it asks you to sign in",
+        "text": "Do it yourself. Claude should never ask for your password, and you should never paste one into the chat."
+      },
+      {
+        "name": "What you'll have at the end",
+        "text": "A live page on a free web address, a freebie page, and a short list of what's still missing: your own domain and a way to email your signups."
+      }
+    ],
+    "prompt_block": {
+      "title": "The prompt",
+      "intro": "Copy this, open a new chat with Claude, and paste it.",
+      "prompt": "You are my website builder. Help me build a one-page website with a free signup page, and get it online for free. Work step by step, and keep messages short.\n\nRules:\n- Never type my passwords or codes. If a site needs a sign-in, tell me to do it.\n- Ask before anything that costs money or can't be undone.\n- Don't invent facts, testimonials, stats or income claims. Use [FILL IN] where a real detail is needed.\n\nStep 1. Ask me these questions in one message, then wait:\n1. What name goes on the site?\n2. Who is it for, and what is their biggest frustration, in their words?\n3. What do I help them with, in one plain sentence?\n4. What is the one free thing I'll give them in return for their email?\n5. Can you create files and run code in this chat? (Tell me if you can't. If not, give me a single HTML file I can copy and paste.)\n\nStep 2. Build one HTML file with: a headline that states my promise, the problem in my audience's words, how I help, a short About section with [FILL IN] for my story, and a signup section for the free thing. Make it mobile first, one accent colour, big readable text.\n\nStep 3. Write the free thing in my voice (a checklist or short guide, before/after examples, one clear next step). Put it on its own page.\n\nStep 4. Show me the page. Ask what to change. Fix it.\n\nStep 5. Walk me through putting it online for free: make a free account at Cloudflare, upload the file as a static site, and open the free web address. Tell me each click.\n\nStep 6. Tell me what is still missing: my own domain, and a way to collect and email my signups. Don't set those up unless I ask."
+    },
+    "closer": "Want your own domain, a signup form wired to email, and the whole thing connected? That's the One-Chat Launchpad.",
+    "cta": {
+      "label": "See the full Launchpad",
+      "url": "/launchpad/"
+    }
   }
 }

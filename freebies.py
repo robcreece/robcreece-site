@@ -16,7 +16,13 @@ def content_html(slug):
     out.append(f'<p class="sub">{e(d["subtitle"])}</p>')
     out += [f"<p>{e(p)}</p>" for p in d["intro"]]
 
-    if slug == "robot-tells":
+    if "items" in d:
+        for i, t in enumerate(d["items"], 1):
+            ba = ""
+            if t.get("before") and t.get("after"):
+                ba = f'<div class="ba"><div class="b"><span>Before</span>{_nl(t["before"])}</div><div class="a"><span>After</span>{_nl(t["after"])}</div></div>'
+            out.append(f'<div class="item"><h2><span class="n">{i:02d}</span> {e(t["name"])}</h2><p>{e(t["text"])}</p>{ba}</div>')
+    elif slug == "robot-tells":
         for i, t in enumerate(d["tells"], 1):
             out.append(f'''<div class="item"><h2><span class="n">{i:02d}</span> {e(t["name"])}</h2>
 <p><b>How to spot it:</b> {e(t["spot"])}</p>
@@ -24,7 +30,9 @@ def content_html(slug):
 <div class="ba"><div class="b"><span>Before</span>{_nl(t["before"])}</div><div class="a"><span>After</span>{_nl(t["after"])}</div></div></div>''')
         out.append(f'<h2>{e(d["routine_title"])}</h2><ol class="steps">' + "".join(f"<li>{e(r)}</li>" for r in d["routine"]) + "</ol>")
         out.append(f'<h2>{e(d["score_title"])}</h2><p>{e(d["score"])}</p>')
-    else:
+    if "prompt_block" in d:
+        out.append(f'<h2>{e(d["prompt_block"]["title"])}</h2><p>{e(d["prompt_block"]["intro"])}</p><pre class="promptbox" id="pb">{e(d["prompt_block"]["prompt"])}</pre><p><button class="btn" onclick="navigator.clipboard.writeText(document.getElementById(\'pb\').innerText);this.textContent=\'Copied\'">Copy the prompt</button></p>')
+    elif "groups" in d:
         for g in d["groups"]:
             chips = "".join(f'<span class="chip">{e(w)}</span>' for w in g["words"])
             out.append(f'''<div class="item"><h2>{e(g["name"])}</h2>
@@ -45,7 +53,8 @@ def web_body(slug, pdf_url):
 <span class="mono">Free resource</span>
 <h1>{e(d["title"])}</h1>
 {content_html(slug)}
-<p style="margin-top:34px"><a class="btn" href="{e(pdf_url)}">Download the PDF</a></p>
+{('<p style="margin-top:34px"><a class="btn" href="' + e(pdf_url) + '">Download the PDF</a></p>') if pdf_url else ""}
+{('<p style="margin-top:20px"><a class="btn ghost" href="' + e(d["cta"]["url"]) + '">' + e(d["cta"]["label"]) + '</a></p>') if d.get("cta") else ""}
 </div></section>'''
 
 
@@ -66,6 +75,7 @@ h2{font-size:14pt;margin:16pt 0 4pt;color:#0e0e0e;page-break-after:avoid}
 .chip{display:inline-block;background:#f2ede2;border:1px solid #c9a24b;padding:1pt 7pt;margin:2pt 3pt 2pt 0;font-size:10.5pt}
 table{border-collapse:collapse;width:100%}td{border-bottom:1px solid #ddd;padding:5pt 6pt;vertical-align:top}
 .prompt{background:#f2ede2;border-left:4px solid #c9a24b;padding:9pt 11pt;font-family:'Courier New',monospace;font-size:10pt}
+.promptbox{white-space:pre-wrap;background:#f2ede2;border-left:4px solid #c9a24b;padding:9pt 11pt;font-family:'Courier New',monospace;font-size:9.5pt}
 .closer{font-weight:bold;margin-top:16pt}
 .foot{color:#777;font-size:9.5pt;margin-top:20pt;border-top:1px solid #ddd;padding-top:8pt}
 .steps li,.cut li{margin-bottom:3pt}

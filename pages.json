@@ -4,7 +4,8 @@
     "domain": "https://robcreece.com",
     "emailit_script": "https://js.emailit.com/js/eaccc376-5edb-425c-94fc-bcab47a93d57/emailit.js",
     "cultlike_url": "https://cultlikemarketing.com",
-    "facebook_group_url": "#"
+    "facebook_group_url": "#",
+    "checkout_return_base": "https://robcreece-site.cliqhub.workers.dev"
   },
   "magnets": [
     {
@@ -70,6 +71,128 @@
       "next_label": "Join The Lab (free Facebook group)",
       "next_url": "#",
       "hidden": true
+    },
+    {
+      "slug": "one-prompt-website",
+      "title": "The One-Prompt Website",
+      "tag": "Free prompt",
+      "headline": "Build a Real Website With One Prompt",
+      "sub": "Paste one prompt into Claude and get a one-page site with a free signup page, online for free. No domain. No coding. No cost.",
+      "bullets": [
+        "The exact prompt, ready to copy and paste",
+        "Walks you through free hosting, step by step",
+        "Tells you what's still missing, so nothing surprises you"
+      ],
+      "cta": "Send Me The Prompt",
+      "card_blurb": "One prompt that builds a free website and signup page with Claude.",
+      "form_token": "",
+      "thanks_headline": "You're in. Your prompt is ready.",
+      "thanks_body": "A copy is also on its way to your inbox. Check Promotions or Spam if you don't see it.",
+      "delivery_label": "Open The One-Prompt Website",
+      "delivery_url": "/r/one-prompt-website/",
+      "next_label": "Want the domain and email too? See the Launchpad",
+      "next_url": "/launchpad/"
+    }
+  ],
+  "hub": {
+    "eyebrow": "Rob Reece · Solo marketer",
+    "headline": "Your first online sale<br>doesn't need a guru.",
+    "lead": "I help broke beginners get their first online sale with simple offers, honest copy, and organic traffic. No sales calls. No ad budget. No fake lifestyle.",
+    "photo_alt": "Rob Reece at his desk in front of the Cult Like Marketing banner",
+    "card_role": "Solo marketer · CultLike Marketing",
+    "card_line": "Simple offers. Honest copy. Organic traffic.",
+    "brand_link_label": "cultlikemarketing.com",
+    "pain_eyebrow": "Sound familiar?",
+    "pain_title": "You've done everything you were told to do.",
+    "pains": [
+      "You've bought the course and still have no sale.",
+      "You post every day and nobody buys.",
+      "You don't know what to sell, or who to sell it to.",
+      "Your content reads like every other AI post, and people scroll past.",
+      "You're afraid of DMs and sales calls, so you hide."
+    ],
+    "pain_close": "That isn't a talent problem. It's a clarity problem. Fix the offer, the words, and the conversation, and sales follow.",
+    "fix_title": "Small offers. Sharp words. Real conversations.",
+    "fix_cards": [
+      {
+        "title": "Pick a small offer",
+        "text": "A simple, low-priced product that solves one problem, so your first buyer says yes fast."
+      },
+      {
+        "title": "Write like a human",
+        "text": "Direct-response copy that sounds like you at the kitchen table, not like a robot reading a script."
+      },
+      {
+        "title": "Sell without calls",
+        "text": "Organic Facebook posts and friendly DMs. That's how I sell, and it's how I teach it."
+      }
+    ],
+    "fix_button": "See CultLike Marketing",
+    "free_title": "Free tools. Steal them.",
+    "free_sub": "Pick one. Enter your email. It lands in your inbox.",
+    "about_title": "I'm Rob.",
+    "about": [
+      "I'm a solo marketer. I build small offers, write the copy, and sell through organic Facebook posts and messages. No sales calls, ever.",
+      "I'm also a husband, a dad of a big family, and a minister. I run experiments in the open and hand you what works."
+    ]
+  },
+  "offers": [
+    {
+      "slug": "launchpad",
+      "title": "The One-Chat Launchpad",
+      "price": "$19",
+      "tag": "Launchpad",
+      "headline": "Your Website, Lead Magnet and Signup Flow in One Chat",
+      "sub": "A master prompt, a starter template and two cheat sheets that let Claude build and publish your site while you stay in control.",
+      "product_id": "pdt_0NsTCBSWE7FI25OOVMUoB",
+      "welcome_token": "cff805193546e31bdc58",
+      "button": "Get the Launchpad for $19",
+      "includes": [
+        "The master prompt that runs the whole build in one chat",
+        "A starter template (the same kind of generator this site is built on)",
+        "A Click Guide listing the few steps only you can do",
+        "A Rollback Card to undo a domain switch in about two minutes"
+      ],
+      "needs": [
+        "A Claude account. It works best with file tools and the Claude in Chrome extension. If Claude can't do a step, it walks you through it by hand.",
+        "Free accounts at GitHub and Cloudflare (you sign in yourself).",
+        "Optional: a domain from a registrar, roughly $10 to $25 a year, paid to the registrar."
+      ],
+      "not_for": [
+        "Anyone who wants a promise of sales or income. Nobody honest can give you one.",
+        "Anyone who wants someone else to build and run it for them.",
+        "Email setup is not included. It's a separate add-on."
+      ],
+      "welcome_title": "Your Launchpad is ready",
+      "zip": "launchpad-starter.zip",
+      "upsell": "email-addon"
+    },
+    {
+      "slug": "email-addon",
+      "title": "Launchpad Email Add-on",
+      "price": "$19",
+      "tag": "Add-on",
+      "headline": "Add Email to Your Launchpad Site",
+      "sub": "The Stage 6 prompt and 5 welcome-email templates: send from your own domain, connect a signup form, and welcome new subscribers.",
+      "product_id": "pdt_0NsTCBWArVOHZqMyVbi1q",
+      "welcome_token": "89734f3573e9e7178ea3",
+      "button": "Get the Email Add-on for $19",
+      "includes": [
+        "The Stage 6 prompt: DNS audit, sending records, DMARC, form, verification, test",
+        "5 welcome-email templates with [BRACKETS] for your real details",
+        "A checklist for what to do while your email tool approves your account"
+      ],
+      "needs": [
+        "Your site live on your own domain first (Launchpad Stage 5).",
+        "An email tool account. Check its current free limits and prices on its own site.",
+        "Patience: tools may need to approve your account before sending to outside addresses. That can take a day or more."
+      ],
+      "not_for": [
+        "Anyone sending to a purchased or scraped list. Don't.",
+        "Anyone who wants guaranteed inbox placement. Nobody can promise that."
+      ],
+      "welcome_title": "Your Email Add-on is ready",
+      "upsell": null
     }
   ]
 }

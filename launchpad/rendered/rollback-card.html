@@ -1,0 +1,22 @@
+<h1 id="rollback-card-undo-the-domain-switch-in-2-minutes">ROLLBACK
+CARD: UNDO THE DOMAIN SWITCH IN 2 MINUTES</h1>
+<p>Use this if your site or email stops working after switching
+nameservers.</p>
+<ol type="1">
+<li>Open the website where you bought the domain (your registrar). Go to
+the domain’s Nameservers setting.</li>
+<li>Choose “I’ll use my own nameservers” or “Custom”, and enter the two
+nameservers you wrote down <strong>before</strong> the change. (Claude
+lists them in your control sheet. Save them somewhere safe.) If you
+didn’t save them, the registrar’s default nameservers are usually shown
+as “Use default” or “Registrar nameservers”. Choose that.</li>
+<li>Save. It can take from minutes to a few hours to take effect.</li>
+<li>In the meantime, your free address (yourname.workers.dev) keeps
+working. Only the custom domain is affected.</li>
+<li>Tell Claude what happened and paste any error. It will compare your
+DNS records and fix what’s missing.</li>
+</ol>
+<p>Tips - Switch nameservers when you have time to watch it, not right
+before a launch. - Check that DNSSEC is off at your registrar before you
+switch (turning it on again later is optional). - Keep a screenshot of
+your old DNS records.</p>

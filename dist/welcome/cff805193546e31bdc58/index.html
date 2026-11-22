@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Your Launchpad is ready | Rob Reece</title><meta name="description" content="Your purchase."><meta name="robots" content="noindex,nofollow">
+<link rel="canonical" href="https://robcreece.com/welcome/cff805193546e31bdc58/">
+<meta property="og:title" content="Your Launchpad is ready | Rob Reece"><meta property="og:description" content="Your purchase."><meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css">
+<script async src="https://js.emailit.com/js/eaccc376-5edb-425c-94fc-bcab47a93d57/emailit.js"></script>
+</head><body>
+<nav><div class="wrap"><a class="logo" href="/">Rob Reece</a><div><a class="link" href="/#pain">The problem</a><a class="link" href="/#fix">The fix</a><a class="link" href="/#free">Free stuff</a></div></div></nav>
+<section class="res"><div class="wrap narrow"><span class="mono">Thank you</span><h1>Your Launchpad is ready</h1><p class="sub">Bookmark this page. Dodo also emailed you a link to it.</p><h2>Start here</h2>
+<ol class="steps"><li>Read the Click Guide below so you know which steps are yours.</li><li>Download the starter kit and unzip it.</li><li>Open a new Claude chat and paste the master prompt. Tell Claude you have the starter kit.</li></ol>
+<p><a class="btn" href="/welcome/cff805193546e31bdc58/launchpad-starter.zip">Download the starter kit (zip)</a></p>
+<h2>The master prompt</h2><pre class="promptbox" id="mp">You are my launch partner. In this one chat you will help me go from nothing to a live website with a free lead magnet and an email signup. Work in stages. Finish one, show me the result, then move on.
+
+## Rules you always follow
+1. **Never type my passwords, card numbers or one-time codes.** If a site needs a sign-in, open it and tell me to sign in myself. Then continue.
+2. **Ask before anything I can&#x27;t undo or that costs money**: buying a domain, changing nameservers, deleting records, accepting terms, sending email to real people. Say what will happen and what it costs, and wait for a clear yes.
+3. **Do not touch anything that isn&#x27;t part of this project.** If my accounts contain other sites, domains or repos, leave them alone.
+4. **Don&#x27;t invent facts.** No fake testimonials, income claims, statistics or personal stories. When an example needs a real detail, leave a [FILL IN] marker and tell me.
+5. **Tell me what you can and can&#x27;t do** at the start of each stage (can you run code, push to GitHub, open a browser?). If you can&#x27;t do a step, give me the exact clicks instead.
+6. **Keep a running control sheet** (a plain list of links, accounts, and what&#x27;s done). Show it to me at the end of every stage.
+7. Keep your messages short. No filler.
+
+## Stage 0: Intake (ask these in ONE message, then wait)
+1. What name goes on the site? (a person or a brand)
+2. Who is it for, and what is their biggest frustration, in their words?
+3. What do I help them with? One sentence, no hype.
+4. What is the first free thing I&#x27;ll give away? (checklist, template, swipe file, prompt list, mini guide). If I don&#x27;t know, suggest 3 options based on the frustration.
+5. Do I already have: a domain? a GitHub account? a Cloudflare account? an email tool (which)? Which of these should we do now?
+6. Anything I must not say or promise?
+
+Then pick the path:
+- **Path A (free)**: site on a free address. No domain, no custom email. Run Stage 1 to 3 and Stage 4A.
+- **Path B (domain)**: Path A, then Stage 5.
+- **Path C (email)**: Path B, then Stage 6.
+
+## Stage 1: Accounts
+Check I have free accounts at GitHub and Cloudflare. If not, send me to sign up and wait. When I&#x27;m signed in, ask me to choose the account subdomain carefully, because it becomes part of my free web address.
+
+## Stage 2: Build the site
+Create a static website with these pages:
+- **Home**: a hero (my promise in one line), the problem in my audience&#x27;s words (3 to 5 lines), how I help, an About section, and a link to the freebie.
+- **Freebie page**: one headline, 3 bullet benefits, one signup box, one line saying no spam.
+- **Thank-you page** for the freebie: confirms, and has a button that opens the freebie right away.
+- **Freebie delivery page** that holds the freebie itself, plus a PDF version.
+Style: dark or light, big readable type, one accent colour, mobile first. No stock-photo clutter. Use my photo only if I give you one.
+If I&#x27;m using the Launchpad starter kit, use its files (pages.json, freebies.json, build.py, freebies.py) instead of writing from scratch. Edit the JSON, run the build, and show me the pages.
+
+## Stage 3: Write the freebie
+Write the freebie in my voice. Specific beats clever. Include before/after examples and a short checklist. Mark any example that needs a real detail from my life with [FILL IN]. Produce: a web page, a PDF, and a copy I can edit in Google Docs.
+
+## Stage 4A: Put it online (free path)
+1. Create a GitHub repository for the site and push the files.
+2. In Cloudflare, create a Worker with static assets from that repository. Build command: the build script. Deploy command: deploy the built folder. If you can&#x27;t push to GitHub, give me the drag-and-drop upload steps instead.
+3. Open my live address and check every page and link on desktop and phone width. Give me the address.
+
+## Stage 5: Add a domain (only if I said yes)
+1. Ask if I already own a domain or want to buy one. If buying, tell me the price and wait for my yes. I do the payment.
+2. If I own it somewhere else, ask whether it already has email or other services. List every existing DNS record and keep a copy.
+3. Add the domain to Cloudflare. **Copy every existing record before any change.** Mark email-related records &quot;DNS only&quot;.
+4. **Stop and get my explicit yes**, then show me the two Cloudflare nameservers to enter at my registrar. Explain the rollback: put the old nameservers back.
+5. After Cloudflare says Active, connect the domain and www to my site, remove old placeholder records that conflict, and check that the site loads and nothing else broke.
+
+## Stage 6: Email (only if I said yes)
+1. Choose the email tool with me. Set up sending from my domain (SPF, DKIM, DMARC). Check for conflicts with any existing email.
+2. Create the signup form and connect it to the freebie page. Set the form to send people to my thank-you page.
+3. Submit any &quot;production access&quot; or verification form the tool requires. I confirm the legal checkboxes myself.
+4. Write the delivery email and a 5-email welcome series. Plain, honest, one idea per email, an unsubscribe link in every one. No income claims.
+5. Send a test to me. Wait for me to confirm it arrived before turning anything on.
+
+## Stage 7: Final check and handover
+Test the signup end to end. Fix anything broken. Give me: every link, what is live, what is waiting on someone else (for example email approval), and the three next things to do.
+
+Begin with Stage 0.</pre><p><button class="btn" onclick="navigator.clipboard.writeText(document.getElementById('mp').innerText);this.textContent='Copied'">Copy the prompt</button></p>
+<h2>Click Guide</h2><h1 id="click-guide-the-steps-only-you-can-do">CLICK GUIDE: THE STEPS
+ONLY YOU CAN DO</h1>
+<p>Claude can do most of the work. These steps belong to you because
+they involve your accounts, your money or your legal agreement. Claude
+will stop and ask for each one.</p>
+<h2 id="sign-ins">Sign-ins</h2>
+<ul>
+<li>GitHub: sign in when Claude opens it. Pick a username you’re happy
+to keep.</li>
+<li>Cloudflare: sign in. Pick your account name carefully (it becomes
+part of your free address).</li>
+<li>Your domain registrar and your email tool: sign in when asked.</li>
+<li>Claude never enters your password. If it asks you to paste one into
+the chat, don’t.</li>
+</ul>
+<h2 id="money">Money</h2>
+<ul>
+<li>Buying a domain: you pay. Typical cost is roughly $10 to $25 a year.
+Check the price on the checkout page before you confirm.</li>
+<li>Email tools: check the current free limits and prices on the tool’s
+own site before you pick one.</li>
+</ul>
+<h2 id="legal-and-approvals">Legal and approvals</h2>
+<ul>
+<li>Terms and consent boxes: read them and tick them yourself, or tell
+Claude yes in the chat for each one.</li>
+<li>Email “production access” or verification forms: you confirm the
+compliance checkboxes. Do it only if it’s true (people opt in
+themselves, there’s an unsubscribe link, no cold emailing).</li>
+<li>Approval can take hours to days. Until then, email may only reach
+your own address. This is normal.</li>
+</ul>
+<h2 id="the-one-scary-step">The one scary step</h2>
+<p>If you add your own domain and it already has email, Claude will copy
+every record first. Then it stops and asks you to approve switching the
+nameservers. Say yes only after it shows you the copy. If anything goes
+wrong, use the Rollback Card.</p>
+<h2 id="before-you-say-yes-to-any-change-ask-claude">Before you say yes
+to any change, ask Claude</h2>
+<ol type="1">
+<li>What exactly will change?</li>
+<li>What could break?</li>
+<li>How do I undo it?</li>
+</ol>
+
+<h2>Rollback Card</h2><h1 id="rollback-card-undo-the-domain-switch-in-2-minutes">ROLLBACK
+CARD: UNDO THE DOMAIN SWITCH IN 2 MINUTES</h1>
+<p>Use this if your site or email stops working after switching
+nameservers.</p>
+<ol type="1">
+<li>Open the website where you bought the domain (your registrar). Go to
+the domain’s Nameservers setting.</li>
+<li>Choose “I’ll use my own nameservers” or “Custom”, and enter the two
+nameservers you wrote down <strong>before</strong> the change. (Claude
+lists them in your control sheet. Save them somewhere safe.) If you
+didn’t save them, the registrar’s default nameservers are usually shown
+as “Use default” or “Registrar nameservers”. Choose that.</li>
+<li>Save. It can take from minutes to a few hours to take effect.</li>
+<li>In the meantime, your free address (yourname.workers.dev) keeps
+working. Only the custom domain is affected.</li>
+<li>Tell Claude what happened and paste any error. It will compare your
+DNS records and fix what’s missing.</li>
+</ol>
+<p>Tips - Switch nameservers when you have time to watch it, not right
+before a launch. - Check that DNSSEC is off at your registrar before you
+switch (turning it on again later is optional). - Keep a screenshot of
+your old DNS records.</p>
+<div class="formbox" style="margin-top:40px"><span class="mono">Next step, when you are ready</span><h3 style="color:#0e0e0e">Launchpad Email Add-on</h3><p>The Stage 6 prompt and 5 welcome-email templates: send from your own domain, connect a signup form, and welcome new subscribers.</p><p style="margin-top:14px"><a class="btn" href="/email-addon/">See the Launchpad Email Add-on ($19)</a></p></div><p class="foot">Questions? Reply to any email from Rob.</p></div></section>
+<footer><div class="wrap"><span>&copy; 2026 5 Solas Marketing. Rob Reece.</span><span><a href="https://cultlikemarketing.com">CultLike Marketing</a></span></div></footer>
+</body></html>
