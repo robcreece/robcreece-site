@@ -16,7 +16,7 @@
 ## Not yet live
 - Email automations (series below are written, not loaded into Emailit)
 - Emailit production approval (pending), so only workspace members get email today
-- robcreece.com pointing at the site (all links use the workers.dev address until then)
+- robcreece.com pointing at the site (done: all links now use robcreece.com)
 
 ## Freebie series
 
@@ -25,7 +25,7 @@
 
 Hi {first_name},
 
-Here's the prompt: https://robcreece-site.cliqhub.workers.dev/r/one-prompt-website/
+Here's the prompt: https://robcreece.com/r/one-prompt-website/
 
 How to use it:
 1. Open a new chat with Claude.
@@ -96,7 +96,7 @@ Here's exactly what you get:
 - A click guide listing the few steps only you can do
 - The Rollback Card
 
-It's $19, one time: https://robcreece-site.cliqhub.workers.dev/launchpad/
+It's $19, one time: https://robcreece.com/launchpad/
 
 You'll pay a registrar separately for a domain (roughly $10 to $25 a year). Email is a separate add-on.
 
@@ -114,9 +114,9 @@ Hi {first_name},
 
 That's the last email about the Launchpad.
 
-If a website and a lead magnet are on your list, the free prompt is yours to keep: https://robcreece-site.cliqhub.workers.dev/r/one-prompt-website/
+If a website and a lead magnet are on your list, the free prompt is yours to keep: https://robcreece.com/r/one-prompt-website/
 
-If you want the full setup, it's here: https://robcreece-site.cliqhub.workers.dev/launchpad/
+If you want the full setup, it's here: https://robcreece.com/launchpad/
 
 Either way, I'm glad you grabbed the prompt.
 
@@ -160,7 +160,7 @@ Hi {first_name},
 
 Once your site is live on your own domain, the next piece is email: sending from your domain, a signup form, and a welcome series.
 
-There's an Email Add-on for that. It has the Stage 6 prompt and 5 welcome-email templates. It's $19: https://robcreece-site.cliqhub.workers.dev/email-addon/
+There's an Email Add-on for that. It has the Stage 6 prompt and 5 welcome-email templates. It's $19: https://robcreece.com/email-addon/
 
 A warning so you don't waste time: email tools often need to approve your account before they send to outside addresses, and that can take a day or more. Start it early.
 
