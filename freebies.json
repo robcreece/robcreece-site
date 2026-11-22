@@ -1,0 +1,197 @@
+{
+  "robot-tells": {
+    "title": "The Robot Tells",
+    "subtitle": "12 giveaways that prove AI wrote your content, and a 30-second fix for each",
+    "intro": [
+      "People don't need a detector to spot AI writing. They just feel it. The post is smooth, polite, and weirdly empty, so they scroll past.",
+      "This checklist shows you the 12 patterns that give it away. Each one has a fast fix and a before/after so you can see it work. Run your next draft through it before you hit post. It takes about two minutes."
+    ],
+    "tells": [
+      {
+        "name": "The throat-clearing opener",
+        "spot": "The first line talks about the world instead of the point. \"In today's fast-paced digital landscape...\"",
+        "fix": "Delete the first sentence. Start with the thing you actually wanted to say.",
+        "before": "In today's fast-paced digital world, building an audience is more important than ever.",
+        "after": "Nobody followed me for the first 90 days."
+      },
+      {
+        "name": "\"It's not X, it's Y\"",
+        "spot": "A claim set up as a fake contrast. \"It's not about posting more. It's about posting better.\" AI loves this shape.",
+        "fix": "Say the claim once, plainly, and back it with one fact.",
+        "before": "It's not about working harder. It's about working smarter.",
+        "after": "I cut my posts from 7 a week to 3 and got more replies."
+      },
+      {
+        "name": "The perfect triplet",
+        "spot": "Every list has exactly three tidy items. \"Clear, concise, and compelling.\"",
+        "fix": "Keep only the item that is actually true. Or use two. Or use four. Break the pattern.",
+        "before": "Great copy is clear, concise, and compelling.",
+        "after": "Great copy is clear. That's the whole job."
+      },
+      {
+        "name": "The vocabulary tell",
+        "spot": "Words real people almost never say out loud: delve, tapestry, leverage, unlock, elevate, game-changer, seamless, robust, navigate the landscape.",
+        "fix": "Say it the way you'd say it to a friend across the table. Swap each fancy word for the plain one.",
+        "before": "Let's delve into how you can leverage this game-changing tool.",
+        "after": "Here's how to use this tool."
+      },
+      {
+        "name": "Em dash overload",
+        "spot": "Dashes everywhere, holding sentences together that should have been two sentences.",
+        "fix": "Allow yourself one per post at most. Everywhere else, use a period.",
+        "before": "The offer is simple, it's fast, and it works, even if you're starting from zero.",
+        "after": "The offer is simple. It's fast. It works even if you're starting from zero."
+      },
+      {
+        "name": "Fake hype",
+        "spot": "Cheerful filler: \"Let's dive in!\" \"Buckle up!\" \"Here's the thing.\" Energy with no information.",
+        "fix": "Cut every line that announces what you're about to say. Just say it.",
+        "before": "Buckle up, because we're about to dive into something amazing!",
+        "after": "Here's the exact DM I sent."
+      },
+      {
+        "name": "Vague claims",
+        "spot": "\"Many people struggle with...\" \"Studies show...\" No number, no name, no price, no date.",
+        "fix": "Add one concrete detail: a number, a name, a place, a price, or a day of the week.",
+        "before": "Many beginners struggle to make their first sale.",
+        "after": "Most beginners I talk to are 60 days in with $0 and 4 half-built products."
+      },
+      {
+        "name": "Perfect rhythm",
+        "spot": "Every paragraph is the same length. Every sentence is the same shape. It reads like a metronome.",
+        "fix": "Break it up. Add a one-line paragraph. Use a fragment. Let one sentence run long and the next stop short.",
+        "before": "Posting daily builds trust. Trust leads to sales. Sales create growth.",
+        "after": "Post daily. Trust comes first. Sales come after, sometimes a lot after."
+      },
+      {
+        "name": "The summary closer",
+        "spot": "\"In conclusion...\" \"Ultimately...\" \"At the end of the day...\" The post repeats itself to feel finished.",
+        "fix": "End on your last useful point, or on a question you actually want answered.",
+        "before": "In conclusion, consistency and authenticity are key to long-term success.",
+        "after": "What's the one post you've been avoiding?"
+      },
+      {
+        "name": "Hedging mush",
+        "spot": "\"It's important to note that...\" \"This can potentially help...\" \"May improve...\" Nothing is ever committed to.",
+        "fix": "Say it or cut it. If you're not sure, say that you're not sure, and say why.",
+        "before": "It's important to note that this approach can potentially help improve results.",
+        "after": "This worked for me. I don't know if it'll work for you."
+      },
+      {
+        "name": "Emoji bullet lists",
+        "spot": "Every point has a rocket, a checkmark, or a lightbulb, with a bold header, even for a three-line post.",
+        "fix": "Write sentences. Use at most one emoji, or none.",
+        "before": "🚀 Boost engagement\n✅ Save time\n💡 Grow faster",
+        "after": "This saves me about an hour a day, and my replies went up."
+      },
+      {
+        "name": "No scars, no opinion",
+        "spot": "Nothing in the post could only have come from you. No story, no mistake, no opinion that someone might disagree with.",
+        "fix": "Add one thing that happened to you, with a detail only you would know. Then take a side.",
+        "before": "Email marketing is a powerful tool for any business.",
+        "after": "My first email list was 14 people, and 6 were family. I still sent every email like it mattered."
+      }
+    ],
+    "routine_title": "The 2-minute pass before you post",
+    "routine": [
+      "Read the first line out loud. If it talks about \"the world\" or \"today's landscape\", delete it.",
+      "Search the draft for dashes and fancy words (delve, leverage, unlock, elevate, seamless). Replace them.",
+      "Find every vague claim and add one real number, name, or detail.",
+      "Make one paragraph shorter than the others. Make one longer.",
+      "Cut the last paragraph if it just repeats the post.",
+      "Add one sentence only you could have written."
+    ],
+    "score_title": "Score your draft",
+    "score": "Count how many of the 12 tells you find. 0 to 2 reads like a person. 3 to 5 reads like a person using AI, which is fine if the story is yours. 6 or more reads like a robot, and readers will keep scrolling.",
+    "closer": "The goal is not to hide that you used AI. The goal is to make something worth reading. Fix these 12 and your posts will sound like you again."
+  },
+  "ai-word-list": {
+    "title": "The AI Word List",
+    "subtitle": "The words that make people reply, call, or buy, and where to put them",
+    "intro": [
+      "Most posts and DMs fail on word choice, not on the offer. A few small words make it easy for someone to say yes. A few others make them feel sold to.",
+      "This list gives you words that work, grouped by the job they do, with weak versus stronger examples. Copy them into posts, DMs, subject lines, and sales pages.",
+      "One rule goes with all of it: only use a word if it's true. Urgency you invent and promises you can't keep cost you more than they earn."
+    ],
+    "groups": [
+      {
+        "name": "1. Words that get a reply",
+        "job": "Use in the first line of a DM or comment. They keep the pressure low and make answering easy.",
+        "words": ["quick question", "curious", "mind if I ask", "honest question", "random thought", "saw your post", "out of curiosity", "would it help if"],
+        "weak": "Hi, I help people grow their business. Interested?",
+        "strong": "Quick question. Saw your post about your first launch. What's been the hardest part so far?"
+      },
+      {
+        "name": "2. Words that make the promise specific",
+        "job": "Use in headlines and the first line of a post. Specific beats impressive.",
+        "words": ["exactly", "step by step", "in 7 days", "in one afternoon", "without", "even if", "the only", "how to"],
+        "weak": "Learn to make money online.",
+        "strong": "How to get your first $50 sale in 7 days, even if you have no list."
+      },
+      {
+        "name": "3. Words that lower the risk",
+        "job": "Use near the button, the price, and the ask. They answer the fear of getting it wrong.",
+        "words": ["free", "no card needed", "cancel anytime", "try it", "keep it either way", "guarantee", "simple", "takes 5 minutes"],
+        "weak": "Sign up now for access.",
+        "strong": "Grab it free. No card needed. Keep it either way."
+      },
+      {
+        "name": "4. Words that create real urgency",
+        "job": "Use only when there is a true deadline or limit. Name the date or the number.",
+        "words": ["today", "by Friday", "until midnight", "only 20 spots", "closes", "last day", "this week", "before"],
+        "weak": "Hurry! Don't miss out on this amazing deal!",
+        "strong": "Price goes up Friday at midnight. After that it's $27."
+      },
+      {
+        "name": "5. Words that say \"this is for you\"",
+        "job": "Use at the top of a post or page. People act when they see themselves in it.",
+        "words": ["if you're", "for", "beginners", "first sale", "solo", "starting from zero", "no experience", "busy"],
+        "weak": "A powerful system for everyone.",
+        "strong": "For solo beginners with $0 and no list who want a first sale."
+      },
+      {
+        "name": "6. Words that show proof",
+        "job": "Use right after a claim. A claim with a reason beats a claim alone.",
+        "words": ["because", "here's the proof", "I tested", "screenshot", "results", "after", "what happened", "the numbers"],
+        "weak": "This method really works.",
+        "strong": "I tested it for 14 days. Here's what happened, with the screenshots."
+      },
+      {
+        "name": "7. Words that name the pain",
+        "job": "Use in the opening of a post, an email, or a sales page. Describe the problem before you sell the fix.",
+        "words": ["stuck", "tired of", "still", "keep", "wasting", "nothing works", "no one replies", "behind"],
+        "weak": "Struggling with online marketing?",
+        "strong": "Posting every day and still getting zero replies?"
+      },
+      {
+        "name": "8. Words that ask for the action",
+        "job": "Use in the last line. Tell people the one thing to do and make it small.",
+        "words": ["reply", "send me", "comment", "DM me", "grab", "tap", "watch", "tell me"],
+        "weak": "Let me know if you'd like to learn more.",
+        "strong": "Reply with the word LIST and I'll send it over."
+      }
+    ],
+    "cut_title": "Words to cut",
+    "cut_intro": "These words make your writing sound weak, vague, or like an ad. Search your draft for them and delete or replace.",
+    "cut": [
+      {"word": "just", "why": "It apologizes. \"Just checking in\" becomes \"Checking in\"."},
+      {"word": "maybe / try to / I think", "why": "Hedging makes people trust you less. Commit or say why you're unsure."},
+      {"word": "solutions / synergy / best-in-class", "why": "Nobody talks like this. Name the thing you do."},
+      {"word": "unlock / elevate / game-changer", "why": "Hype words with no detail. Say what changes."},
+      {"word": "amazing / incredible / revolutionary", "why": "Adjectives you give yourself don't count. Show a result."},
+      {"word": "click here", "why": "Say what they get. \"Get the checklist\" beats \"Click here\"."}
+    ],
+    "placement_title": "Where to put the words",
+    "placement": [
+      {"where": "First line of a post", "use": "Groups 5, 7, and 2. Make the reader feel seen or promise something specific."},
+      {"where": "First line of a DM", "use": "Group 1. Keep it low pressure and about them."},
+      {"where": "Right after a claim", "use": "Group 6. Back up every big claim with a reason or a result."},
+      {"where": "Near the button or price", "use": "Group 3. Answer the fear of getting it wrong."},
+      {"where": "Final line", "use": "Group 8, plus a true Group 4 if there's a real deadline."},
+      {"where": "Subject lines", "use": "Groups 1 and 2. Short, specific, and curious. Under 50 characters."}
+    ],
+    "prompt_title": "Copy and paste this into any AI",
+    "prompt": "Rewrite the text below. Use plain words. Cut these words: just, maybe, leverage, unlock, elevate, game-changer, amazing. Start with the reader's problem in one line. Make the promise specific with a number or a time frame. Add one reason it works. End with one small action. Keep my voice. Text: [paste your draft here]",
+    "closer": "Start with one group. Rewrite one post or DM using it today. Then check what changes in your replies."
+  }
+}

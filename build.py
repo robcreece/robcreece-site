@@ -135,7 +135,17 @@ for m in magnets:
     t = dist / "thanks" / m["slug"]; t.mkdir(parents=True)
     (t / "index.html").write_text(layout(f"Thank you | {m['title']}", "Thanks for signing up.", tbody, f"/thanks/{m['slug']}/", noindex=True))
 
-(dist / "robots.txt").write_text(f"User-agent: *\nAllow: /\nDisallow: /thanks/\nSitemap: {site['domain']}/sitemap.xml\n")
+# ---------- freebie resource pages + PDFs ----------
+import freebies
+(dist / "downloads").mkdir(exist_ok=True)
+for pdf in (root / "assets/downloads").glob("*.pdf"):
+    shutil.copy(pdf, dist / "downloads" / pdf.name)
+for slug in freebies.DATA:
+    d = dist / "r" / slug; d.mkdir(parents=True)
+    ttl = freebies.DATA[slug]["title"]
+    (d / "index.html").write_text(layout(f"{ttl} | Rob Reece", freebies.DATA[slug]["subtitle"], freebies.web_body(slug, f"/downloads/{slug}.pdf"), f"/r/{slug}/", noindex=True))
+
+(dist / "robots.txt").write_text(f"User-agent: *\nAllow: /\nDisallow: /thanks/\nDisallow: /r/\nSitemap: {site['domain']}/sitemap.xml\n")
 urls = ["/"] + [f"/{m['slug']}/" for m in magnets]
 (dist / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + "".join(f"<url><loc>{site['domain']}{u}</loc></url>" for u in urls) + "</urlset>")
 print("built", len(list(dist.rglob('*.html'))), "pages")
