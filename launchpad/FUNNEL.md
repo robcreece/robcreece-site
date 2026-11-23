@@ -13,10 +13,11 @@
 - Dodo products: Launchpad `pdt_0NsTCBSWE7FI25OOVMUoB`, Email Add-on `pdt_0NsTCBWArVOHZqMyVbi1q` (live mode, $19 each)
 - Emailit form: "The One-Prompt Website - opt-in" (live)
 
-## Not yet live
-- Email automations (series below are written, not loaded into Emailit)
-- Emailit production: sending to outside addresses works (re-engagement sends run)
-- robcreece.com pointing at the site (done: all links now use robcreece.com)
+## Email automation status (updated 2026-11-23)
+- Freebie series (6 emails): live in Emailit, fed by the One-Prompt Website form
+- Buyer onboarding (3 emails): live in Emailit, trigger is the "Funnel - Launchpad buyers" audience
+- Dodo to Emailit: Dodo webhook (payment.succeeded) posts the buyer to that audience via the Emailit API. Not yet tested with a real purchase.
+- Segments: Emailit plan allows 3 (Openers, Clickers, COLD, all used)
 
 ## Freebie series
 
