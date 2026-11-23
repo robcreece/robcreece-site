@@ -184,6 +184,12 @@
      "Does it guarantee sales?",
      "No. It gets you a site and a signup page you control. What you sell and how you promote it is up to you."
     ]
+   ],
+   "guarantee": "30-day guarantee: follow the steps in the Click Guide. If you don't end up with a live site, reply to any email from Rob within 30 days and you get a full refund. No hoops.",
+   "cross": [
+    "Want the email part too? Get both for $37 instead of $38 separately, with the Email Add-on included.",
+    "/launchpad-bundle/",
+    "See the $37 bundle"
    ]
   },
   {
@@ -223,7 +229,72 @@
      "Will my emails hit the inbox?",
      "Nobody can promise that. The prompt sets up the records that give you the best honest shot."
     ]
+   ],
+   "guarantee": "30-day guarantee: follow the steps in the Click Guide. If you don't end up with a live site, reply to any email from Rob within 30 days and you get a full refund. No hoops.",
+   "cross": [
+    "Don't have the Launchpad yet? The bundle includes both for $37.",
+    "/launchpad-bundle/",
+    "See the $37 bundle"
    ]
+  },
+  {
+   "slug": "launchpad-bundle",
+   "title": "The Launchpad Bundle",
+   "price": "$37",
+   "tag": "Bundle",
+   "headline": "Build the Site, the Gift Page and the Email Signup. Send From Your Own Domain.",
+   "sub": "Everything in the Launchpad and the Email Add-on in one purchase. One chat builds your site and signup page, then the Stage 6 prompt gets your signups collected and welcomed from your own domain.",
+   "product_id": "pdt_0Nsb5KPLWrxgjNG3cTVHr",
+   "welcome_token": "1f4c32e6655d2b8166f2",
+   "button": "Get the Bundle for $37",
+   "includes": [
+    "The Master Prompt: runs the whole build in one chat, so you never stare at a blank page wondering what comes next",
+    "The Starter Template: the same kind of generator this site is built on, so you are not designing from scratch",
+    "The Click Guide: the few steps only you can do, in order, so you never get lost",
+    "The Rollback Card: undo a domain switch in about two minutes, so nothing you try can break what already works",
+    "The Stage 6 prompt: checks your DNS, sets up sending records and DMARC, connects the form and sends a test, so you are not guessing at settings",
+    "5 welcome-email templates with [BRACKETS] for your real details, so you are not facing a blank email",
+    "A checklist for what to do while your email tool approves your account, so the wait is not wasted"
+   ],
+   "bonuses": [
+    "Free bonus: The One-Prompt Website. Your first page live fast, so you get a quick win before the full build.",
+    "Free bonus: The Robot Tells. 12 giveaways that make AI writing sound fake, so your site copy reads like a person wrote it."
+   ],
+   "proof": "You are looking at it. robcreece.com is built on this generator and collects and emails its own signups with this setup.",
+   "faq": [
+    [
+     "What if I get stuck?",
+     "The Click Guide lists the few steps only you can do, in order. If Claude can't do a step, it walks you through it by hand."
+    ],
+    [
+     "Can I break something?",
+     "The Rollback Card shows how to undo a domain switch in about two minutes."
+    ],
+    [
+     "Does it guarantee sales?",
+     "No. It gets you a site and a signup page you control. What you sell and how you promote it is up to you."
+    ],
+    [
+     "Why the wait?",
+     "Email tools often approve new accounts before sending to outside addresses. It can take a day or more, and the checklist tells you what to do meanwhile."
+    ]
+   ],
+   "needs": [
+    "A Claude account. It works best with file tools and the Claude in Chrome extension. If Claude can't do a step, it walks you through it by hand.",
+    "Free accounts at GitHub and Cloudflare (you sign in yourself).",
+    "Optional: a domain from a registrar, roughly $10 to $25 a year, paid to the registrar.",
+    "An email tool account for the email half. Check its current free limits and prices on its own site."
+   ],
+   "not_for": [
+    "Anyone who wants a promise of sales or income. Nobody honest can give you one.",
+    "Anyone who wants someone else to build and run it for them.",
+    "Anyone sending to a purchased or scraped list. Don't.",
+    "Anyone who wants guaranteed inbox placement. Nobody can promise that."
+   ],
+   "welcome_title": "Your Launchpad Bundle is ready",
+   "zip": "launchpad-starter.zip",
+   "upsell": null,
+   "guarantee": "30-day guarantee: follow the steps in the Click Guide. If you don't end up with a live site, reply to any email from Rob within 30 days and you get a full refund. No hoops."
   }
  ]
 }

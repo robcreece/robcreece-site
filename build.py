@@ -171,6 +171,8 @@ for o in offers:
     proof_html = f'<p class="lead"><strong>Proof:</strong> {e(o["proof"])}</p>' if o.get("proof") else ""
     faq_html = "".join(f"<h3>{e(q)}</h3><p>{e(a)}</p>" for q, a in o.get("faq", []))
     faq_html = f"<h2>Quick answers</h2>{faq_html}" if faq_html else ""
+    guar_html = f'<div class="pricebox"><span class="mono">Risk-free</span><span>{e(o["guarantee"])}</span></div>' if o.get("guarantee") else ""
+    cross_html = f'<p class="lead">{e(o["cross"][0])} <a href="{e(o["cross"][1])}">{e(o["cross"][2])}</a></p>' if o.get("cross") else ""
     vid = o.get("video_url", "")
     if vid:
         vsl = f'<div class="vsl"><video controls playsinline preload="metadata" src="{e(vid)}"></video></div>'
@@ -184,7 +186,7 @@ for o in offers:
 {vsl}{cta}
 <h2>What you get</h2><ul class="bullets">{inc}</ul>{bon_html}{proof_html}
 <div class="pricebox"><span class="mono">Today</span><strong>{e(o['price'])}</strong><span>One-time payment. Instant access.</span>{cta.replace('<span class="price">'+e(o["price"])+'</span>','')}</div>
-<h2>What you need</h2><ul class="bullets">{needs}</ul>
+{guar_html}{cross_html}<h2>What you need</h2><ul class="bullets">{needs}</ul>
 <h2>Who it's not for</h2><ul class="bullets">{notf}</ul>{faq_html}
 <p class="foot">One-time payment of {e(o['price'])}. Checkout is handled by Dodo Payments. This is a set of instructions and files for an AI assistant. No sales or income are guaranteed.</p>
 </div></section>"""
@@ -192,7 +194,7 @@ for o in offers:
     (d / "index.html").write_text(layout(f"{o['title']} | Rob Reece", o["sub"], body, f"/{o['slug']}/"))
     # welcome page (noindex, unguessable path)
     w = dist / "welcome" / o["welcome_token"]; w.mkdir(parents=True, exist_ok=True)
-    if o["slug"] == "launchpad":
+    if o["slug"] in ("launchpad", "launchpad-bundle"):
         zipbtn = f'<p><a class="btn" href="/welcome/{o["welcome_token"]}/{o["zip"]}">Download the starter kit (zip)</a></p>'
         shutil.copy(root / "assets/product" / o["zip"], w / o["zip"])
         inner = f"""<h2>Start here</h2>
@@ -201,6 +203,8 @@ for o in offers:
 <h2>The master prompt</h2>{prompt_box(rd('router-prompt.txt'), 'mp')}
 <h2>Click Guide</h2>{rd('click-guide.html')}
 <h2>Rollback Card</h2>{rd('rollback-card.html')}"""
+        if o["slug"] == "launchpad-bundle":
+            inner += f"""<h2>Part 2: Email Add-on. The Stage 6 prompt</h2><p>Paste this into your Launchpad chat once your site is live on your own domain. Fill in the [BRACKETS].</p>{prompt_box(rd('addon-prompt.txt'), 'ap')}{rd('addon-templates.html')}"""
     else:
         inner = f"""<h2>The Stage 6 prompt</h2><p>Paste this into your Launchpad chat once your site is live on your own domain. Fill in the [BRACKETS].</p>{prompt_box(rd('addon-prompt.txt'), 'ap')}{rd('addon-templates.html')}"""
     up = ""
