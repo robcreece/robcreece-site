@@ -3,7 +3,7 @@
 ## The path
 1. **Traffic**: organic Facebook posts and DMs -> /one-prompt-website/ (free prompt, Emailit form)
 2. **Opt-in**: Emailit form -> redirect to /thanks/one-prompt-website/ (button opens /r/one-prompt-website/, the prompt itself)
-3. **Nurture**: 6-email freebie series (below)
+3. **Nurture**: 7-email freebie series (thanks+bonus+Launchpad at ~1 min, question at +5h, then days 1,3,5,7,9) (below)
 4. **Offer**: /launchpad/ ($19, Dodo checkout) -> redirect to /welcome/<token>/ (master prompt, starter zip, click guide, rollback card)
 5. **Upsell**: welcome page promotes /email-addon/ ($19, Dodo) -> /welcome/<token>/ (Stage 6 prompt + templates)
 6. **Buyer series**: 3 emails after purchase
@@ -14,7 +14,7 @@
 - Emailit form: "The One-Prompt Website - opt-in" (live)
 
 ## Email automation status (updated 2026-11-23)
-- Freebie series (6 emails): live in Emailit, fed by the One-Prompt Website form
+- Freebie series (7 emails): live in Emailit, fed by the One-Prompt Website form
 - Buyer onboarding (3 emails): live in Emailit, trigger is the "Funnel - Launchpad buyers" audience
 - Dodo to Emailit: Dodo webhook (payment.succeeded) posts the buyer to that audience via the Emailit API. Not yet tested with a real purchase.
 - Segments: Emailit plan allows 3 (Openers, Clickers, COLD, all used)
