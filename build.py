@@ -159,8 +159,11 @@ def rd(n): return (L / n).read_text()
 def prompt_box(txt, pid):
     return f'<pre class="promptbox" id="{pid}">{e(txt)}</pre><p><button class="btn" onclick="navigator.clipboard.writeText(document.getElementById(\'{pid}\').innerText);this.textContent=\'Copied\'">Copy the prompt</button></p>'
 for o in offers:
-    ret = f"{site.get('checkout_return_base', site['domain'])}/welcome/{o['welcome_token']}/"
-    buy = f"https://checkout.dodopayments.com/buy/{o['product_id']}?quantity=1&redirect_url={quote(ret, safe='')}"
+    def buy_url(arm=None):
+        r = f"{site.get('checkout_return_base', site['domain'])}/welcome/{o['welcome_token']}/" + (f"?arm={arm}" if arm else "")
+        u = f"https://checkout.dodopayments.com/buy/{o['product_id']}?quantity=1&redirect_url={quote(r, safe='')}"
+        return u + (f"&metadata_arm={arm}&metadata_funnel={o['slug']}" if arm else "")
+    buy = buy_url()
     bd = root / "dist" / "buy" / o["slug"]; bd.mkdir(parents=True, exist_ok=True)
     (bd / "index.html").write_text(f'<!doctype html><meta charset="utf-8"><meta name="robots" content="noindex"><title>Redirecting to checkout</title><meta http-equiv="refresh" content="0;url={e(buy)}"><p>Taking you to checkout... <a href="{e(buy)}">Continue</a></p><script>location.replace({json.dumps(buy)})</script>')
     inc = "".join(f"<li>{e(x)}</li>" for x in o["includes"])
@@ -188,10 +191,13 @@ for o in offers:
 <div class="pricebox"><span class="mono">Today</span><strong>{e(o['price'])}</strong><span>One-time payment. Instant access.</span>{cta.replace('<span class="price">'+e(o["price"])+'</span>','')}</div>
 {guar_html}{cross_html}<h2>What you need</h2><ul class="bullets">{needs}</ul>
 <h2>Who it's not for</h2><ul class="bullets">{notf}</ul>{faq_html}
-<p class="foot">One-time payment of {e(o['price'])}. Checkout is handled by Dodo Payments. This is a set of instructions and files for an AI assistant. No sales or income are guaranteed.</p>
+<p class="foot">One-time payment of {e(o['price'])}. Checkout is handled by Dodo Payments. {e(o.get('foot', 'This is a set of instructions and files for an AI assistant. No sales or income are guaranteed.'))}</p>
 </div></section>"""
     d = dist / o["slug"]; d.mkdir(parents=True, exist_ok=True)
     (d / "index.html").write_text(layout(f"{o['title']} | Rob Reece", o["sub"], body, f"/{o['slug']}/"))
+    for arm in o.get("arms", []):  # A/B test copies: same page, checkout tagged with the arm
+        ad = d / arm; ad.mkdir(parents=True, exist_ok=True)
+        (ad / "index.html").write_text(layout(f"{o['title']} | Rob Reece", o["sub"], body.replace(e(buy), e(buy_url(arm))), f"/{o['slug']}/", noindex=True))
     # welcome page (noindex, unguessable path)
     w = dist / "welcome" / o["welcome_token"]; w.mkdir(parents=True, exist_ok=True)
     if o["slug"] in ("launchpad", "launchpad-bundle"):
@@ -205,6 +211,11 @@ for o in offers:
 <h2>Rollback Card</h2>{rd('rollback-card.html')}"""
         if o["slug"] == "launchpad-bundle":
             inner += f"""<h2>Part 2: Email Add-on. The Stage 6 prompt</h2><p>Paste this into your Launchpad chat once your site is live on your own domain. Fill in the [BRACKETS].</p>{prompt_box(rd('addon-prompt.txt'), 'ap')}{rd('addon-templates.html')}"""
+    elif o["slug"] == "overlay-agency":
+        import overlay
+        shutil.copy(root / "assets/product/overlay-agency.pdf", w / "overlay-agency.pdf")
+        inner = overlay.web_html(f"/welcome/{o['welcome_token']}/overlay-agency.pdf")
+        inner += """<script>(function(){var a=new URLSearchParams(location.search).get('arm');var q='utm_source=robcreece&utm_medium=guide&utm_campaign=overlay-agency'+(a?'&utm_content='+encodeURIComponent(a):'');document.querySelectorAll('a.grafsy-link').forEach(function(l){l.href=l.href.split('?')[0]+'?'+q;});})();</script>"""
     else:
         inner = f"""<h2>The Stage 6 prompt</h2><p>Paste this into your Launchpad chat once your site is live on your own domain. Fill in the [BRACKETS].</p>{prompt_box(rd('addon-prompt.txt'), 'ap')}{rd('addon-templates.html')}"""
     up = ""

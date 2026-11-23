@@ -93,3 +93,5 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 .pricebox .mono{color:#555}
 .pricebox span{display:block;margin-bottom:8px}
 .pricebox .ctarow{justify-content:center;margin:14px 0 0}
+.res blockquote.quote{border-left:3px solid var(--gold);background:rgba(201,162,75,.08);padding:12px 16px;margin:10px 0 18px;color:#e9e3d3}
+.res h3{margin:22px 0 8px}

@@ -295,6 +295,56 @@
    "zip": "launchpad-starter.zip",
    "upsell": null,
    "guarantee": "30-day guarantee: follow the steps in the Click Guide. If you don't end up with a live site, reply to any email from Rob within 30 days and you get a full refund. No hoops."
+  },
+  {
+   "slug": "overlay-agency",
+   "title": "The Overlay Agency",
+   "price": "$4",
+   "tag": "$4 guide",
+   "headline": "Start a One-Person Video Graphics Service Without Learning to Edit",
+   "sub": "Your clients film. Software adds the on-screen graphics. You find the clients and send back the file. This short guide shows who buys, what to say and what to charge.",
+   "product_id": "pdt_0NsbBMgrdCRPwBhdkAMb6",
+   "welcome_token": "f5a59c40714512b407c2",
+   "button": "Get the guide for $4",
+   "arms": [
+    "a",
+    "b"
+   ],
+   "includes": [
+    "The service: exactly what you sell, with a before and after, so you can explain it in one sentence",
+    "Who buys: three filters and a 20-lead search you can run today, so you are not guessing who to message",
+    "The free 60-second sample pitch: word-for-word messages that show your work on their own video, so you never need a sales call",
+    "Pricing: your real cost per minute and a worked example, so you never quote below your cost",
+    "The tool: which plan to start with and its limits, so you never promise a client something it can't do"
+   ],
+   "bonuses": [],
+   "proof": "",
+   "needs": [
+    "A Grafsy plan to make the graphics. The guide says which one to start with. That is a separate purchase.",
+    "A few hours to find leads and send messages."
+   ],
+   "not_for": [
+    "Anyone who wants a promise of income. Nobody honest can give you one.",
+    "Anyone who wants hand-placed custom motion graphics. The graphics are AI-placed templates."
+   ],
+   "faq": [
+    [
+     "Why is it only $4?",
+     "I co-own Grafsy, the software the guide uses. I earn if you buy the tool, so the guide is cheap. Weigh what it says with that in mind."
+    ],
+    [
+     "Do I need editing skills?",
+     "No. You upload a finished video and download it back with graphics on it. You watch the result before you send it."
+    ],
+    [
+     "Does it guarantee clients?",
+     "No. It gives you the method, the messages and the math. Finding and closing clients is your work."
+    ]
+   ],
+   "guarantee": "30-day guarantee: if the guide isn't useful to you, reply to any email from Rob within 30 days and you get your $4 back. No hoops.",
+   "welcome_title": "Your copy of The Overlay Agency",
+   "upsell": null,
+   "foot": "This is a guide for informational purposes. Rob Reece co-owns Grafsy, the software it recommends. No sales or income are guaranteed."
   }
  ]
 }
