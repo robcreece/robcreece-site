@@ -142,16 +142,16 @@
       "title": "The One-Chat Launchpad",
       "price": "$19",
       "tag": "Launchpad",
-      "headline": "Your Website, Lead Magnet and Signup Flow in One Chat",
-      "sub": "A master prompt, a starter template and two cheat sheets that let Claude build and publish your site while you stay in control.",
+      "headline": "Get a Live Website, a Free Gift Page and an Email Signup in One Chat",
+      "sub": "Paste one master prompt into Claude and answer its questions. You finish with a site you control and a page that collects emails. A starter template and two cheat sheets keep you from getting stuck, and you stay in control of every click.",
       "product_id": "pdt_0NsTCBSWE7FI25OOVMUoB",
       "welcome_token": "cff805193546e31bdc58",
       "button": "Get the Launchpad for $19",
       "includes": [
-        "The master prompt that runs the whole build in one chat",
-        "A starter template (the same kind of generator this site is built on)",
-        "A Click Guide listing the few steps only you can do",
-        "A Rollback Card to undo a domain switch in about two minutes"
+        "The Master Prompt: runs the whole build in one chat, so you never stare at a blank page wondering what comes next",
+        "The Starter Template: the same kind of generator this site is built on, so you are not designing from scratch",
+        "The Click Guide: the few steps only you can do, in order, so you never get lost",
+        "The Rollback Card: undo a domain switch in about two minutes, so nothing you try can break what already works"
       ],
       "needs": [
         "A Claude account. It works best with file tools and the Claude in Chrome extension. If Claude can't do a step, it walks you through it by hand.",
@@ -172,15 +172,15 @@
       "title": "Launchpad Email Add-on",
       "price": "$19",
       "tag": "Add-on",
-      "headline": "Add Email to Your Launchpad Site",
-      "sub": "The Stage 6 prompt and 5 welcome-email templates: send from your own domain, connect a signup form, and welcome new subscribers.",
+      "headline": "Collect and Email Your Signups From Your Own Domain",
+      "sub": "Your Launchpad site gets people to sign up. This gets their emails collected and a welcome email sent from your own domain, using the Stage 6 prompt and 5 ready-to-edit welcome emails.",
       "product_id": "pdt_0NsTCBWArVOHZqMyVbi1q",
       "welcome_token": "89734f3573e9e7178ea3",
       "button": "Get the Email Add-on for $19",
       "includes": [
-        "The Stage 6 prompt: DNS audit, sending records, DMARC, form, verification, test",
-        "5 welcome-email templates with [BRACKETS] for your real details",
-        "A checklist for what to do while your email tool approves your account"
+        "The Stage 6 prompt: checks your DNS, sets up sending records and DMARC, connects the form and sends a test, so you are not guessing at settings",
+        "5 welcome-email templates with [BRACKETS] for your real details, so you are not facing a blank email",
+        "A checklist for what to do while your email tool approves your account, so the wait is not wasted"
       ],
       "needs": [
         "Your site live on your own domain first (Launchpad Stage 5).",
