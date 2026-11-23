@@ -166,6 +166,11 @@ for o in offers:
     inc = "".join(f"<li>{e(x)}</li>" for x in o["includes"])
     needs = "".join(f"<li>{e(x)}</li>" for x in o["needs"])
     notf = "".join(f"<li>{e(x)}</li>" for x in o["not_for"])
+    bon = "".join(f"<li>{e(x)}</li>" for x in o.get("bonuses", []))
+    bon_html = f'<ul class="bullets">{bon}</ul>' if bon else ""
+    proof_html = f'<p class="lead"><strong>Proof:</strong> {e(o["proof"])}</p>' if o.get("proof") else ""
+    faq_html = "".join(f"<h3>{e(q)}</h3><p>{e(a)}</p>" for q, a in o.get("faq", []))
+    faq_html = f"<h2>Quick answers</h2>{faq_html}" if faq_html else ""
     vid = o.get("video_url", "")
     if vid:
         vsl = f'<div class="vsl"><video controls playsinline preload="metadata" src="{e(vid)}"></video></div>'
@@ -177,10 +182,10 @@ for o in offers:
 <h1>{e(o['headline'])}</h1>
 <p class="sub">{e(o['sub'])}</p>
 {vsl}{cta}
-<h2>What you get</h2><ul class="bullets">{inc}</ul>
+<h2>What you get</h2><ul class="bullets">{inc}</ul>{bon_html}{proof_html}
 <div class="pricebox"><span class="mono">Today</span><strong>{e(o['price'])}</strong><span>One-time payment. Instant access.</span>{cta.replace('<span class="price">'+e(o["price"])+'</span>','')}</div>
 <h2>What you need</h2><ul class="bullets">{needs}</ul>
-<h2>Who it's not for</h2><ul class="bullets">{notf}</ul>
+<h2>Who it's not for</h2><ul class="bullets">{notf}</ul>{faq_html}
 <p class="foot">One-time payment of {e(o['price'])}. Checkout is handled by Dodo Payments. This is a set of instructions and files for an AI assistant. No sales or income are guaranteed.</p>
 </div></section>"""
     d = dist / o["slug"]; d.mkdir(parents=True, exist_ok=True)
