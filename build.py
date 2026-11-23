@@ -158,6 +158,8 @@ def prompt_box(txt, pid):
 for o in offers:
     ret = f"{site.get('checkout_return_base', site['domain'])}/welcome/{o['welcome_token']}/"
     buy = f"https://checkout.dodopayments.com/buy/{o['product_id']}?quantity=1&redirect_url={quote(ret, safe='')}"
+    bd = root / "dist" / "buy" / o["slug"]; bd.mkdir(parents=True, exist_ok=True)
+    (bd / "index.html").write_text(f'<!doctype html><meta charset="utf-8"><meta name="robots" content="noindex"><title>Redirecting to checkout</title><meta http-equiv="refresh" content="0;url={e(buy)}"><p>Taking you to checkout... <a href="{e(buy)}">Continue</a></p><script>location.replace({json.dumps(buy)})</script>')
     inc = "".join(f"<li>{e(x)}</li>" for x in o["includes"])
     needs = "".join(f"<li>{e(x)}</li>" for x in o["needs"])
     notf = "".join(f"<li>{e(x)}</li>" for x in o["not_for"])

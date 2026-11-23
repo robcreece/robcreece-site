@@ -15,7 +15,7 @@
 
 ## Not yet live
 - Email automations (series below are written, not loaded into Emailit)
-- Emailit production approval (pending), so only workspace members get email today
+- Emailit production: sending to outside addresses works (re-engagement sends run)
 - robcreece.com pointing at the site (done: all links now use robcreece.com)
 
 ## Freebie series
