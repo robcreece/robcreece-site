@@ -129,13 +129,16 @@ for m in magnets:
     d = dist / m["slug"]; d.mkdir()
     (d / "index.html").write_text(layout(f"{m['title']} | Rob Reece", m["sub"], body, f"/{m['slug']}/"))
 
-    deliver = f'<p><a class="btn" href="{e(m["delivery_url"])}">{e(m["delivery_label"])}</a></p>' if m["delivery_url"] else ""
-    nxt = f'<p style="margin-top:18px"><a class="btn ghost" href="{e(m["next_url"])}">{e(m["next_label"])}</a></p>' if m.get("next_url") and m["next_url"] != "#" else ""
-    tbody = f"""<section class="thanks"><div class="wrap narrow">
-<span class="mono">You're in</span>
-<h1>{e(m['thanks_headline'])}</h1>
-<p class="lead" style="margin:20px 0">{e(m['thanks_body'])}</p>
-{deliver}{nxt}
+    tbody = """<section class="thanks"><div class="wrap narrow">
+<span class="mono">One more step</span>
+<h1>Go check your email now.</h1>
+<p class="lead" style="margin:20px 0">Your free download is on its way. It should land in a minute or two.</p>
+<ol class="bullets" style="margin:0 0 20px 20px;line-height:1.7">
+<li><strong>Open your inbox.</strong> Look for an email from Rob Reece.</li>
+<li><strong>Not there? Check Spam and Promotions.</strong> Drag it to your main inbox so you keep getting what I send.</li>
+<li><strong>Hit reply and say hi.</strong> One word is fine. It tells your email provider I'm a real person, and I read every reply myself.</li>
+</ol>
+<p style="color:var(--mute)">Your access link is inside that email.</p>
 </div></section>"""
     t = dist / "thanks" / m["slug"]; t.mkdir(parents=True)
     (t / "index.html").write_text(layout(f"Thank you | {m['title']}", "Thanks for signing up.", tbody, f"/thanks/{m['slug']}/", noindex=True))
