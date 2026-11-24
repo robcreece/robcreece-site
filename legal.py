@@ -1,5 +1,6 @@
 """Legal pages: privacy, terms, refunds, earnings disclaimer, contact. Plain-English, matched to how this site works."""
 import html
+import links
 e = html.escape
 UPDATED = "November 24, 2026"
 BIZ = "5 Solas Marketing"
@@ -92,7 +93,7 @@ def build(root, dist, layout, site):
     paths = []
     for slug, (title, desc, body) in PAGES.items():
         inner = body.replace("{BIZ}", BIZ).replace("{MAIL}", MAIL).replace("{ADDR}", f"<p>{e(addr)}</p>" if addr else "")
-        page = f'<section class="res"><div class="wrap narrow"><span class="mono">Legal</span><h1>{e(title)}</h1><p class="sub">Last updated {UPDATED}</p>{inner}</div></section>'
+        page = f'<section class="res"><div class="wrap narrow"><span class="mono">Legal</span><h1>{e(title)}</h1><p class="sub">Last updated {UPDATED}</p>{inner}{links.legal_nav(None, slug)}</div></section>'
         d = dist / slug; d.mkdir(parents=True, exist_ok=True)
         (d / "index.html").write_text(layout(f"{title} | Rob Reece", desc, page, f"/{slug}/"))
         paths.append(f"/{slug}/")

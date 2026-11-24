@@ -2,6 +2,7 @@
 import html, json
 from pathlib import Path
 from blog import blocks
+import links
 
 e = html.escape
 
@@ -10,7 +11,7 @@ def ts(sec):
     return f"{sec // 60}:{sec % 60:02d}"
 
 
-def build(root, dist, layout, magnets, form_block, site):
+def build(root, dist, layout, magnets, form_block, site, offers=()):
     data = json.loads((root / "videos" / "videos.json").read_text())
     by = {m["slug"]: m for m in magnets}
     default = by.get(data["default_magnet"]) or magnets[0]
@@ -41,11 +42,12 @@ def build(root, dist, layout, magnets, form_block, site):
             ld.append({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in v["faq"]]})
         ldjson = "".join(f'<script type="application/ld+json">{json.dumps(x)}</script>' for x in ld)
         body = f'''{top}<section class="res post"><div class="wrap narrow">
-<p class="mono"><a href="/videos/" style="text-decoration:none">Videos</a> / {e(v["date"])}</p>
+<p class="mono crumbs"><a href="/">Home</a> / <a href="/videos/">Videos</a> / {e(v["date"])}</p>
 <h1>{e(v["h1"])}</h1>
 {player}
 <p class="lead">{e(v["summary"])}</p>
-{take}{chap}{blocks(v["body"], mid)}{faq}{tr}{end}
+{take}{chap}{blocks(v["body"], mid, f"/videos/{v['slug']}/")}{faq}{tr}{end}
+{links.related(f"/videos/{v['slug']}/", m["slug"], magnets, offers)}
 <p class="foot"><a href="/videos/">&larr; More videos</a></p>
 {ldjson}
 </div></section>'''
@@ -55,7 +57,7 @@ def build(root, dist, layout, magnets, form_block, site):
     if not cards:
         cards = "<p>Videos are coming soon.</p>"
     idx = f'''<section class="hero"><div class="wrap narrow"><span class="mono">Videos</span><h1>Watch. Then grab the free tool.</h1>
-<p class="lead">Short videos on simple offers, honest copy and getting your first online sale. Every one has a free tool to go with it.</p>
+<p class="lead">Short videos on simple offers, honest copy and getting your first online sale. Every one has a free tool to go with it. Prefer reading? Try the <a href="/blog/">blog</a>.</p>
 <div class="formbox"><span class="mono">Start here: {e(default["title"])}</span><p>{e(default["card_blurb"])}</p>{form_block(default)}</div></div></section>
 <section><div class="wrap"><h2>Latest videos</h2><div class="grid">{cards}</div></div></section>'''
     d = dist / "videos"; d.mkdir(exist_ok=True)

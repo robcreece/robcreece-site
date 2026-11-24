@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Static site generator for robcreece.com. Reads pages.json, writes dist/."""
+import links
 import json, shutil, html, sys
 from pathlib import Path
 
@@ -25,7 +26,7 @@ FOOT_MAGNETS = "".join(f'<li><a href="/{m["slug"]}/">{m["title"]}</a></li>' for 
 def foot_offers():
     return "".join(f'<li><a href="/{o["slug"]}/">{o["title"]}</a></li>' for o in cfg.get("offers", []))
 
-def extra_ld(path):
+def extra_ld(path, title=""):
     import json as _j
     out = []
     if path == "/":
@@ -34,6 +35,9 @@ def extra_ld(path):
     for o in cfg.get("offers", []):
         if path == f"/{o['slug']}/":
             out.append({"@context": "https://schema.org", "@type": "Product", "name": o["title"], "description": o["sub"], "brand": {"@type": "Brand", "name": "Rob Reece"}, "offers": {"@type": "Offer", "price": o["price"].replace("$", ""), "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": site["domain"] + path}})
+    import links as _l
+    _bc = _l.crumbs(path, title.split(" | ")[0], site["domain"]) if path != "/" and not path.startswith(("/welcome/", "/thanks/", "/r/")) else None
+    if _bc: out.append(_bc)
     return "".join(f'<script type="application/ld+json">{_j.dumps(x)}</script>' for x in out)
 
 def layout(title, desc, body, path, noindex=False):
@@ -43,7 +47,7 @@ def layout(title, desc, body, path, noindex=False):
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{e(title)}</title><meta name="description" content="{e(desc)}">{robots}
 <link rel="canonical" href="{site['domain']}{path}">
-<meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(desc)}"><meta property="og:type" content="website"><meta property="og:url" content="{site['domain']}{path}"><meta property="og:site_name" content="{e(site['name'])}"><meta property="og:image" content="{site['domain']}/assets/rob.jpg"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{e(title)}"><meta name="twitter:description" content="{e(desc)}"><meta name="twitter:image" content="{site['domain']}/assets/rob.jpg">{site.get('head_extra','')}{extra_ld(path)}
+<meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(desc)}"><meta property="og:type" content="website"><meta property="og:url" content="{site['domain']}{path}"><meta property="og:site_name" content="{e(site['name'])}"><meta property="og:image" content="{site['domain']}/assets/rob.jpg"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{e(title)}"><meta name="twitter:description" content="{e(desc)}"><meta name="twitter:image" content="{site['domain']}/assets/rob.jpg">{site.get('head_extra','')}{extra_ld(path, title)}
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Rye&family=Oswald:wght@400;600;700&family=Special+Elite&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/style.css?v={CSSV}">
@@ -68,6 +72,12 @@ def form_block(m):
 # ---------- hub ----------
 from urllib.parse import quote
 offers = cfg.get("offers", [])
+import links as _lk
+_lp = _lk.load_posts()[:3]
+blog_section = ""
+if _lp:
+    _cards = "".join(f'<a class="card" href="/blog/{p["slug"]}/"><h3>{e(p["title"])}</h3><p>{e(p["desc"])}</p><span class="mono">Read it</span></a>' for p in _lp)
+    blog_section = f'<section id="blog" class="light"><div class="wrap"><span class="mono">From the blog</span><h2>Short reads. Real fixes.</h2><div class="grid">{_cards}</div><p style="margin-top:24px"><a class="btn" href="/blog/">All posts</a> <a class="link" href="/videos/">Watch the videos</a></p></div></section>'
 offer_section = ""
 if offers:
     o0 = offers[0]
@@ -128,7 +138,7 @@ hub = f"""
 </div></section>
 
 {offer_section}
-<section id="about"><div class="wrap aboutgrid">
+{blog_section}<section id="about"><div class="wrap aboutgrid">
 <img src="/assets/rob.jpg" alt="{site["name"]}" loading="lazy" width="1000" height="800">
 <div>
 <span class="mono">About</span>
@@ -151,7 +161,7 @@ for m in magnets:
 <div><div class="cover"><span class="mono">{e(m['tag'])}</span><strong>{e(m['title'])}</strong><em>by Rob Reece</em></div>
 <div class="formbox"><span class="mono">{e(m['cta'])}</span>{form_block(m)}</div>
 <p style="margin-top:12px;color:var(--mute);font-size:14px">No spam. Unsubscribe any time.</p></div>
-</div></section>"""
+</div></section><section><div class="wrap narrow">{links.related(f"/{m['slug']}/", m['slug'], magnets, cfg.get('offers', []))}</div></section>"""
     d = dist / m["slug"]; d.mkdir()
     (d / "index.html").write_text(layout(f"{m['title']} | Rob Reece", m["sub"], body, f"/{m['slug']}/"))
 
@@ -200,7 +210,7 @@ for o in offers:
     proof_html = f'<p class="lead"><strong>Proof:</strong> {e(o["proof"])}</p>' if o.get("proof") else ""
     faq_html = "".join(f"<h3>{e(q)}</h3><p>{e(a)}</p>" for q, a in o.get("faq", []))
     faq_html = f"<h2>Quick answers</h2>{faq_html}" if faq_html else ""
-    guar_html = f'<div class="pricebox"><span class="mono">Risk-free</span><span>{e(o["guarantee"])}</span></div>' if o.get("guarantee") else ""
+    guar_html = f'<div class="pricebox"><span class="mono">Risk-free</span><span>{e(o["guarantee"])} <a href="/refunds/">Full refund policy</a>.</span></div>' if o.get("guarantee") else ""
     cross_html = f'<p class="lead">{e(o["cross"][0])} <a href="{e(o["cross"][1])}">{e(o["cross"][2])}</a></p>' if o.get("cross") else ""
     vid = o.get("video_url", "")
     if vid:
@@ -217,7 +227,8 @@ for o in offers:
 <div class="pricebox"><span class="mono">Today</span><strong>{e(o['price'])}</strong><span>One-time payment. Instant access.</span>{cta.replace('<span class="price">'+e(o["price"])+'</span>','')}</div>
 {guar_html}{cross_html}<h2>What you need</h2><ul class="bullets">{needs}</ul>
 <h2>Who it's not for</h2><ul class="bullets">{notf}</ul>{faq_html}
-<p class="foot">One-time payment of {e(o['price'])}. Checkout is handled by Dodo Payments. {e(o.get('foot', 'This is a set of instructions and files for an AI assistant. No sales or income are guaranteed.'))}</p>
+{links.related(f"/{o['slug']}/", None, magnets, [x for x in offers if x['slug'] != o['slug']])}
+<p class="foot">One-time payment of {e(o['price'])}. Checkout is handled by Dodo Payments. See the <a href="/refunds/">Refund Policy</a>, <a href="/terms/">Terms</a> and <a href="/earnings-disclaimer/">Earnings Disclaimer</a>. {e(o.get('foot', 'This is a set of instructions and files for an AI assistant. No sales or income are guaranteed.'))}</p>
 </div></section>"""
     d = dist / o["slug"]; d.mkdir(parents=True, exist_ok=True)
     (d / "index.html").write_text(layout(f"{o['title']} | Rob Reece", o["sub"], body, f"/{o['slug']}/"))
@@ -251,9 +262,10 @@ for o in offers:
     wbody = f"""<section class="res"><div class="wrap narrow"><span class="mono">Thank you</span><h1>{e(o['welcome_title'])}</h1><p class="sub">Bookmark this page. Dodo also emailed you a link to it.</p>{inner}{up}<p class="foot">Questions? Reply to any email from Rob.</p></div></section>"""
     (w / "index.html").write_text(layout(f"{o['welcome_title']} | Rob Reece", "Your purchase.", wbody, f"/welcome/{o['welcome_token']}/", noindex=True))
 
-import blog, videos
-blog_urls = blog.build(root, dist, layout, magnets, form_block, site)
-video_urls = videos.build(root, dist, layout, magnets, form_block, site)
+import links
+import blog, videos, links
+blog_urls = blog.build(root, dist, layout, magnets, form_block, site, cfg.get("offers", []))
+video_urls = videos.build(root, dist, layout, magnets, form_block, site, cfg.get("offers", []))
 import legal
 legal_urls = legal.build(root, dist, layout, site)
 (dist / "google9705e5d26db173ef.html").write_text("google-site-verification: google9705e5d26db173ef.html")

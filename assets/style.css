@@ -154,3 +154,14 @@ footer .fbase a{color:var(--rope)}
 @media(max-width:820px){footer .fgrid{grid-template-columns:1fr 1fr}}
 @media(max-width:520px){footer .fgrid{grid-template-columns:1fr}}
 footer .fgrid{align-items:start}footer .fgrid li{list-style:none}
+
+/* internal linking */
+.related{margin-top:56px;padding-top:28px;border-top:1px solid rgba(207,202,187,.25)}
+.related h2{margin-bottom:16px}
+.related h3{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.06em;font-size:15px;margin-bottom:8px}
+.related .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px}
+.related ul{margin:0;padding-left:18px}
+.related li{margin:6px 0}
+.crumbs a{text-decoration:none}
+.legalnav{margin-top:40px;padding-top:18px;border-top:1px solid rgba(207,202,187,.25);font-size:15px}
+.legalnav a{margin-right:14px}
