@@ -34,7 +34,7 @@ def layout(title, desc, body, path, noindex=False):
 <link rel="stylesheet" href="/assets/style.css?v={CSSV}">
 <script async src="{site['emailit_script']}"></script>
 </head><body>
-<nav><div class="wrap"><a class="logo" href="/"><span>{e(site['name'])}</span></a><div class="navmenu"><a class="link" href="/#pain">The problem</a><a class="link" href="/#fix">The fix</a><a class="link" href="/#free">Free stuff</a><a class="link" href="/blog/">Blog</a><a class="join" href="/#free">Free tools</a></div></div></nav>
+<nav><div class="wrap"><a class="logo" href="/"><span>{e(site['name'])}</span></a><div class="navmenu"><a class="link" href="/#pain">The problem</a><a class="link" href="/#fix">The fix</a><a class="link" href="/#free">Free stuff</a><a class="link" href="/blog/">Blog</a><a class="link" href="/videos/">Videos</a><a class="join" href="/#free">Free tools</a></div></div></nav>
 <div class="marquee"><div class="track">{MARQ}{MARQ}</div></div>
 {body}
 <footer><div class="wrap"><span>&copy; 2026 5 Solas Marketing &middot; Rob Reece</span><span><a href="{site['cultlike_url']}">CultLike Marketing</a></span></div></footer>
@@ -234,6 +234,8 @@ for o in offers:
 (dist / "robots.txt").write_text(f"User-agent: *\nAllow: /\nDisallow: /thanks/\nDisallow: /r/\nDisallow: /welcome/\nSitemap: {site['domain']}/sitemap.xml\n")
 import blog
 blog_urls = blog.build(root, dist, layout, magnets, form_block, site)
-urls = ["/"] + blog_urls + [f"/{m['slug']}/" for m in magnets] + [f"/{o['slug']}/" for o in offers]
+import videos
+video_urls = videos.build(root, dist, layout, magnets, form_block, site)
+urls = ["/"] + blog_urls + video_urls + [f"/{m['slug']}/" for m in magnets] + [f"/{o['slug']}/" for o in offers]
 (dist / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + "".join(f"<url><loc>{site['domain']}{u}</loc></url>" for u in urls) + "</urlset>")
 print("built", len(list(dist.rglob('*.html'))), "pages")

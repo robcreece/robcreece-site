@@ -1,0 +1,22 @@
+{
+ "default_magnet": "robot-tells",
+ "videos": [
+  {
+   "draft": true,
+   "slug": "example-video-page",
+   "title": "Example Video Title With Your Main Keyword",
+   "h1": "Example Video Title With Your Main Keyword",
+   "desc": "One or two sentences, under 155 characters, that say what the video teaches and who it is for.",
+   "youtube_id": "VIDEO_ID",
+   "date": "2026-11-24",
+   "duration": "PT8M30S",
+   "magnet": "robot-tells",
+   "summary": "A two-sentence plain answer to the question the video answers. This is what search engines and readers see first.",
+   "takeaways": ["First thing the viewer learns.", "Second thing.", "Third thing."],
+   "chapters": [[0, "Intro"], [45, "First point"], [210, "Second point"]],
+   "body": [["h2", "First section"], ["p", "Write the post from the video's main points, in plain words."]],
+   "faq": [["A real question viewers ask?", "A short, honest answer."]],
+   "transcript": ""
+  }
+ ]
+}
