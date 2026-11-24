@@ -3,4 +3,83 @@ Allow: /
 Disallow: /thanks/
 Disallow: /r/
 Disallow: /welcome/
+Disallow: /buy/
+
+User-agent: GPTBot
+Allow: /
+Disallow: /thanks/
+Disallow: /r/
+Disallow: /welcome/
+Disallow: /buy/
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /thanks/
+Disallow: /r/
+Disallow: /welcome/
+Disallow: /buy/
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /thanks/
+Disallow: /r/
+Disallow: /welcome/
+Disallow: /buy/
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /thanks/
+Disallow: /r/
+Disallow: /welcome/
+Disallow: /buy/
+
+User-agent: Claude-User
+Allow: /
+Disallow: /thanks/
+Disallow: /r/
+Disallow: /welcome/
+Disallow: /buy/
+
+User-agent: Claude-SearchBot
+Allow: /
+Disallow: /thanks/
+Disallow: /r/
+Disallow: /welcome/
+Disallow: /buy/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /thanks/
+Disallow: /r/
+Disallow: /welcome/
+Disallow: /buy/
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /thanks/
+Disallow: /r/
+Disallow: /welcome/
+Disallow: /buy/
+
+User-agent: Applebot-Extended
+Allow: /
+Disallow: /thanks/
+Disallow: /r/
+Disallow: /welcome/
+Disallow: /buy/
+
+User-agent: Bingbot
+Allow: /
+Disallow: /thanks/
+Disallow: /r/
+Disallow: /welcome/
+Disallow: /buy/
+
+User-agent: Googlebot
+Allow: /
+Disallow: /thanks/
+Disallow: /r/
+Disallow: /welcome/
+Disallow: /buy/
+
 Sitemap: https://robcreece.com/sitemap.xml

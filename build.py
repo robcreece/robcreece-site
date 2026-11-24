@@ -21,6 +21,17 @@ MARQ = "".join(f"<span>{t}</span>" for t in ["Simple offers.","Honest copy.","Or
 import hashlib
 CSSV = hashlib.md5((root / "assets/style.css").read_bytes()).hexdigest()[:8]
 
+def extra_ld(path):
+    import json as _j
+    out = []
+    if path == "/":
+        out.append({"@context": "https://schema.org", "@type": "WebSite", "name": site["name"], "url": site["domain"] + "/", "inLanguage": "en-US"})
+        out.append({"@context": "https://schema.org", "@type": "Person", "name": "Rob Reece", "url": site["domain"] + "/", "jobTitle": "Solo marketer", "image": site["domain"] + "/assets/rob.jpg", "worksFor": {"@type": "Organization", "name": "5 Solas Marketing"}, "sameAs": [site["cultlike_url"]], "description": "Helps broke beginners get their first online sale with simple offers, honest copy and organic traffic."})
+    for o in cfg.get("offers", []):
+        if path == f"/{o['slug']}/":
+            out.append({"@context": "https://schema.org", "@type": "Product", "name": o["title"], "description": o["sub"], "brand": {"@type": "Brand", "name": "Rob Reece"}, "offers": {"@type": "Offer", "price": o["price"].replace("$", ""), "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": site["domain"] + path}})
+    return "".join(f'<script type="application/ld+json">{_j.dumps(x)}</script>' for x in out)
+
 def layout(title, desc, body, path, noindex=False):
     robots = '<meta name="robots" content="noindex,nofollow">' if noindex else ""
     return f"""<!DOCTYPE html>
@@ -28,7 +39,7 @@ def layout(title, desc, body, path, noindex=False):
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{e(title)}</title><meta name="description" content="{e(desc)}">{robots}
 <link rel="canonical" href="{site['domain']}{path}">
-<meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(desc)}"><meta property="og:type" content="website">
+<meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(desc)}"><meta property="og:type" content="website"><meta property="og:url" content="{site['domain']}{path}"><meta property="og:site_name" content="{e(site['name'])}"><meta property="og:image" content="{site['domain']}/assets/rob.jpg"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{e(title)}"><meta name="twitter:description" content="{e(desc)}"><meta name="twitter:image" content="{site['domain']}/assets/rob.jpg">{site.get('head_extra','')}{extra_ld(path)}
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Rye&family=Oswald:wght@400;600;700&family=Special+Elite&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/style.css?v={CSSV}">
@@ -231,11 +242,35 @@ for o in offers:
     wbody = f"""<section class="res"><div class="wrap narrow"><span class="mono">Thank you</span><h1>{e(o['welcome_title'])}</h1><p class="sub">Bookmark this page. Dodo also emailed you a link to it.</p>{inner}{up}<p class="foot">Questions? Reply to any email from Rob.</p></div></section>"""
     (w / "index.html").write_text(layout(f"{o['welcome_title']} | Rob Reece", "Your purchase.", wbody, f"/welcome/{o['welcome_token']}/", noindex=True))
 
-(dist / "robots.txt").write_text(f"User-agent: *\nAllow: /\nDisallow: /thanks/\nDisallow: /r/\nDisallow: /welcome/\nSitemap: {site['domain']}/sitemap.xml\n")
-import blog
+import blog, videos
 blog_urls = blog.build(root, dist, layout, magnets, form_block, site)
-import videos
 video_urls = videos.build(root, dist, layout, magnets, form_block, site)
+import subprocess, datetime
+try:
+    LASTMOD = subprocess.run(["git", "log", "-1", "--format=%cs"], capture_output=True, text=True, cwd=root).stdout.strip() or datetime.date.today().isoformat()
+except Exception:
+    LASTMOD = datetime.date.today().isoformat()
+AI_BOTS = ["GPTBot", "OAI-SearchBot", "ChatGPT-User", "ClaudeBot", "Claude-User", "Claude-SearchBot", "PerplexityBot", "Google-Extended", "Applebot-Extended", "Bingbot", "Googlebot"]
+priv = "Disallow: /thanks/\nDisallow: /r/\nDisallow: /welcome/\nDisallow: /buy/\n"
+robots = "User-agent: *\nAllow: /\n" + priv + "\n" + "".join(f"User-agent: {b_}\nAllow: /\n{priv}\n" for b_ in AI_BOTS) + f"Sitemap: {site['domain']}/sitemap.xml\n"
+(dist / "robots.txt").write_text(robots)
 urls = ["/"] + blog_urls + video_urls + [f"/{m['slug']}/" for m in magnets] + [f"/{o['slug']}/" for o in offers]
-(dist / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + "".join(f"<url><loc>{site['domain']}{u}</loc></url>" for u in urls) + "</urlset>")
+def lm(u):
+    if u.startswith("/blog/") and u != "/blog/":
+        for p_ in json.loads((root / "blog/posts.json").read_text())["posts"]:
+            if f"/blog/{p_['slug']}/" == u: return p_["date"]
+    return LASTMOD
+(dist / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + "".join(f"<url><loc>{site['domain']}{u}</loc><lastmod>{lm(u)}</lastmod></url>" for u in urls) + "</urlset>")
+# llms.txt: a plain-text guide for AI search and assistants
+ll = [f"# {site['name']}", "", "> Rob Reece helps broke beginners get their first online sale with simple offers, honest copy and organic traffic. Solo marketer, no sales calls, no ad budget. Brand: 5 Solas Marketing. Related brand: CultLike Marketing.", "", "## Free tools"]
+ll += [f"- [{m['title']}]({site['domain']}/{m['slug']}/): {m['card_blurb']}" for m in magnets]
+ll += ["", "## Products"] + [f"- [{o['title']}]({site['domain']}/{o['slug']}/) ({o['price']}): {o['sub']}" for o in offers]
+ll += ["", "## Blog and videos", f"- [Blog]({site['domain']}/blog/)", f"- [Videos]({site['domain']}/videos/)"]
+ll += [f"- [{p_['title']}]({site['domain']}/blog/{p_['slug']}/): {p_['desc']}" for p_ in json.loads((root / "blog/posts.json").read_text())["posts"]]
+ll += ["", "## About", f"- [Home]({site['domain']}/)", f"- [CultLike Marketing]({site['cultlike_url']})", ""]
+(dist / "llms.txt").write_text("\n".join(ll))
+# IndexNow key file (proves site ownership to Bing, Yandex and others)
+ik = cfg["site"].get("indexnow_key")
+if ik:
+    (dist / f"{ik}.txt").write_text(ik)
 print("built", len(list(dist.rglob('*.html'))), "pages")
