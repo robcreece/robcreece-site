@@ -16,6 +16,8 @@ shutil.copy(root / "assets/rob.jpg", dist / "assets/rob.jpg")
 
 e = html.escape
 
+MARQ = "".join(f"<span>{t}</span>" for t in ["Simple offers.","Honest copy.","Organic traffic.","Your first online sale.","No guru required.","Built in one chat with Claude."])
+
 def layout(title, desc, body, path, noindex=False):
     robots = '<meta name="robots" content="noindex,nofollow">' if noindex else ""
     return f"""<!DOCTYPE html>
@@ -25,13 +27,14 @@ def layout(title, desc, body, path, noindex=False):
 <link rel="canonical" href="{site['domain']}{path}">
 <meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(desc)}"><meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Rye&family=Oswald:wght@400;600;700&family=Special+Elite&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/style.css">
 <script async src="{site['emailit_script']}"></script>
 </head><body>
-<nav><div class="wrap"><a class="logo" href="/">{e(site['name'])}</a><div><a class="link" href="/#pain">The problem</a><a class="link" href="/#fix">The fix</a><a class="link" href="/#free">Free stuff</a></div></div></nav>
+<nav><div class="wrap"><a class="logo" href="/"><svg width="26" height="34" viewBox="0 0 60 80" aria-hidden="true"><g stroke="#B8864A" stroke-width="3" fill="none" stroke-linecap="round" transform="translate(20,2)"><path d="M10 0 L10 12"/><ellipse cx="10" cy="16" rx="6" ry="2"/><ellipse cx="10" cy="20" rx="6" ry="2"/><ellipse cx="10" cy="24" rx="6" ry="2"/><path d="M10 28 C -4 30, -6 52, 10 62 C 26 52, 24 30, 10 28 Z"/></g></svg><span>{e(site['name'])}</span></a><div class="navmenu"><a class="link" href="/#pain">The problem</a><a class="link" href="/#fix">The fix</a><a class="link" href="/#free">Free stuff</a><a class="join" href="/#free">Free tools</a></div></div></nav>
+<div class="marquee"><div class="track">{MARQ}{MARQ}</div></div>
 {body}
-<footer><div class="wrap"><span>&copy; 2026 5 Solas Marketing. Rob Reece.</span><span><a href="{site['cultlike_url']}">CultLike Marketing</a></span></div></footer>
+<footer><div class="wrap"><span>&copy; 2026 5 Solas Marketing &middot; Rob Reece &middot; Keep the faith.</span><span><a href="{site['cultlike_url']}">CultLike Marketing</a></span></div></footer>
 </body></html>"""
 
 def form_block(m):
@@ -45,7 +48,7 @@ offers = cfg.get("offers", [])
 offer_section = ""
 if offers:
     o0 = offers[0]
-    offer_section = f'''<section id="build"><div class="wrap narrow"><span class="mono">Build your own</span><h2>Want a site like this one?</h2><p style="color:#cfcabb;max-width:620px">I built this site, its free tools and the signup flow in one chat with Claude. I packaged the process so you can do the same.</p><p style="margin-top:24px"><a class="btn" href="/{o0["slug"]}/">See the {e(o0["title"])}</a></p></div></section>'''
+    offer_section = f'''<section id="build" class="blood"><div class="wrap narrow"><span class="mono">Build your own</span><h2>Want a site like this one?</h2><p style="color:#cfcabb;max-width:620px">I built this site, its free tools and the signup flow in one chat with Claude. I packaged the process so you can do the same.</p><p style="margin-top:24px"><a class="btn" href="/{o0["slug"]}/">See the {e(o0["title"])}</a></p></div></section>'''
 
 h = cfg["hub"]
 pains = "".join(f'<div class="pain">{p}</div>' for p in h["pains"])
@@ -80,7 +83,7 @@ hub = f"""
 </aside>
 </div></section>
 
-<section id="pain"><div class="wrap narrow">
+<section id="pain" class="light"><div class="wrap narrow">
 <span class="mono">{h["pain_eyebrow"]}</span>
 <h2>{h["pain_title"]}</h2>
 {pains}
@@ -94,7 +97,7 @@ hub = f"""
 <p style="margin-top:30px"><a class="btn" href="{site['cultlike_url']}">{h["fix_button"]}</a></p>
 </div></section>
 
-<section id="free"><div class="wrap">
+<section id="free" class="light"><div class="wrap">
 <span class="mono">Start here</span>
 <h2>{h["free_title"]}</h2>
 <p style="color:#cfcabb;max-width:620px">{h["free_sub"]}</p>
