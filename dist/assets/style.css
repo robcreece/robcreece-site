@@ -123,3 +123,12 @@ footer a{text-decoration:none;color:var(--rope)}footer a:hover{color:var(--parch
 .pricebox .ctarow{justify-content:center;margin:14px 0 0}
 .pricebox .btn{background:var(--blood);color:var(--parch)}
 .res blockquote.quote{border-left:3px solid var(--blood);background:rgba(184,134,74,.08);padding:12px 16px;margin:10px 0 18px;color:#e9e3d3;font-style:italic}
+.topbar{display:block;background:var(--bloodk);color:var(--parch);text-align:center;padding:12px 20px;font-size:16px;text-decoration:none;border-bottom:1px solid var(--line)}
+.topbar:hover{background:var(--blood)}.topbar .mono{margin-right:8px}.topbar .arrow{font-family:var(--f-type);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--rope);margin-left:10px}
+.inline-cta{background:var(--ink2);border:1px solid var(--rope);border-left:4px solid var(--blood);padding:22px 24px;margin:30px 0}
+.inline-cta p{margin:8px 0 14px}
+.post h2{font-size:30px}
+.post p{font-size:20px}
+.post .formbox{margin-top:44px}
+a.card{text-decoration:none;display:block;color:var(--parch)}
+.post p.mono{font-size:12px}

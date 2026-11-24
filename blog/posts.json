@@ -1,0 +1,67 @@
+{
+ "default_magnet": "robot-tells",
+ "posts": [
+  {
+   "slug": "how-people-spot-ai-posts",
+   "title": "5 Ways People Can Tell AI Wrote Your Post",
+   "desc": "Five common giveaways that make a post read like a robot wrote it, with a quick fix for each.",
+   "date": "2026-11-24",
+   "magnet": "robot-tells",
+   "body": [
+    ["p", "You wrote the post. Or you asked an AI to write it and then hit publish. Either way, people scroll past it and you don't know why."],
+    ["p", "Most of the time it's the same few habits. Readers have seen thousands of AI posts by now, and they spot them in a second. Here are five of the common ones."],
+    ["h2", "1. The question opener"],
+    ["p", "\"Ever wondered why your posts get no sales?\" Nobody talks like that. Start with the point instead. Say what you saw or what you did."],
+    ["h2", "2. Everything comes in threes"],
+    ["p", "Fast, simple, effective. Clear, concise, compelling. AI loves lists of three. Real people say one thing and move on. Pick the best word and cut the other two."],
+    ["h2", "3. Big empty words"],
+    ["p", "\"Unlock your potential.\" \"Elevate your business.\" \"Game-changer.\" These words sound important and say nothing. Swap each one for the thing that actually happens. What does the reader get? What do they do on Monday?"],
+    ["h2", "4. A tidy bow at the end"],
+    ["p", "\"At the end of the day, success is a journey.\" Stop one line early. End on your last real point or a plain question."],
+    ["h2", "5. No you in it"],
+    ["p", "A post with no story, no name, no mess is easy to spot. Add one real detail only you would know. A number from your week. A mistake you made. A customer question."],
+    ["ul", ["Read it out loud. If you would never say it to a friend, change it.", "Cut the first sentence. Most posts start better on the second one.", "Add one detail from your own life."]],
+    ["p", "That's five. There are more, and each one has a 30-second fix. I put them all in one checklist with before and after rewrites so you can fix a post in a couple of minutes."]
+   ]
+  },
+  {
+   "slug": "words-that-get-replies",
+   "title": "The Small Words That Get People to Reply",
+   "desc": "Simple word swaps that make people more likely to reply, call or buy. No tricks, just clearer writing.",
+   "date": "2026-11-24",
+   "magnet": "ai-word-list",
+   "body": [
+    ["p", "When nobody replies to your message, it's rarely the offer. It's the words around it. Small changes can make the difference between a message that gets ignored and one that gets an answer."],
+    ["h2", "Say what you mean, with a reason"],
+    ["p", "\"Can you do me a favor?\" gets a maybe. \"Can you look at this because I'm stuck on one thing?\" gives the person a reason, and a reason makes it easier to say yes."],
+    ["h2", "Make the ask small"],
+    ["p", "\"Let's hop on a call to discuss\" is a big ask. \"Want me to send it over?\" is a tiny one. People say yes to tiny. Ask for the next small step, not the whole sale."],
+    ["h2", "Be specific"],
+    ["p", "\"Grow your business\" is vague. \"Get your first sale this month\" is something a person can picture. Numbers, names and plain nouns beat adjectives every time."],
+    ["h2", "Talk to one person"],
+    ["p", "Write \"you\", not \"people\" or \"businesses\". Picture one reader. Sentences get shorter and warmer without any effort."],
+    ["ul", ["Add one reason to every ask.", "Shrink the ask until it's easy to say yes to.", "Replace one vague word with a specific one.", "Cut anything you would not say out loud."]],
+    ["p", "I keep a list of the words I use when I want someone to reply, call or buy, with examples of how they sound in real messages. It's free, and it's short enough to use today."]
+   ]
+  },
+  {
+   "slug": "do-you-need-a-website-to-sell",
+   "title": "Do You Need a Website to Make Your First Sale?",
+   "desc": "What you actually need online to sell your first thing, and how to get it for free in an afternoon.",
+   "date": "2026-11-24",
+   "magnet": "one-prompt-website",
+   "body": [
+    ["p", "Short answer: you don't need a big one. You need one page that says what you sell, and a way for people to hand you their email or buy."],
+    ["h2", "What a first site needs"],
+    ["ul", ["One clear headline that says who it's for and what they get.", "A short description of the offer in plain words.", "One button or one signup box. Not five.", "Your name and a way to reach you."]],
+    ["h2", "What it doesn't need"],
+    ["p", "A logo designer. A ten-page menu. A blog. A custom domain on day one. Those are fine later. They're also the things that keep people stuck for months."],
+    ["h2", "Where people get stuck"],
+    ["p", "Usually it's the blank page. You don't know what to write, so you open ten tabs, compare tools and never publish. The fix is to give an AI assistant one clear set of instructions and let it build the first version, then change what you don't like."],
+    ["h2", "Free is fine to start"],
+    ["p", "Free hosting exists and it works. You can get a one-page site and a signup page live without paying for anything. Add your own domain later when you have a reason to."],
+    ["p", "I wrote one prompt that builds a one-page site and a free signup page with Claude, plus a walkthrough for the free hosting. You paste it in, answer a few questions, and publish. It's free, and it's where I'd start."]
+   ]
+  }
+ ]
+}
