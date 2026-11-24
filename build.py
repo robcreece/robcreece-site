@@ -24,7 +24,7 @@ CSSV = hashlib.md5((root / "assets/style.css").read_bytes()).hexdigest()[:8]
 
 FOOT_MAGNETS = "".join(f'<li><a href="/{m["slug"]}/">{m["title"]}</a></li>' for m in magnets)
 def foot_offers():
-    return "".join(f'<li><a href="/{o["slug"]}/">{o["title"]}</a></li>' for o in cfg.get("offers", []))
+    return "".join(f'<li><a href="/{o["slug"]}/">{o["title"]}</a></li>' for o in cfg.get("offers", []) if not o.get("funnel_only"))
 
 def extra_ld(path, title=""):
     import json as _j
@@ -33,7 +33,7 @@ def extra_ld(path, title=""):
         out.append({"@context": "https://schema.org", "@type": "WebSite", "name": site["name"], "url": site["domain"] + "/", "inLanguage": "en-US"})
         out.append({"@context": "https://schema.org", "@type": "Person", "name": "Rob Reece", "url": site["domain"] + "/", "jobTitle": "Solo marketer", "image": site["domain"] + "/assets/rob.jpg", "worksFor": {"@type": "Organization", "name": "5 Solas Marketing"}, "sameAs": [site["cultlike_url"]], "description": "Helps broke beginners get their first online sale with simple offers, honest copy and organic traffic."})
     for o in cfg.get("offers", []):
-        if path == f"/{o['slug']}/":
+        if path == f"/{o['slug']}/" and not o.get("funnel_only"):
             out.append({"@context": "https://schema.org", "@type": "Product", "name": o["title"], "description": o["sub"], "brand": {"@type": "Brand", "name": "Rob Reece"}, "offers": {"@type": "Offer", "price": o["price"].replace("$", ""), "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": site["domain"] + path}})
     import links as _l
     _bc = _l.crumbs(path, title.split(" | ")[0], site["domain"]) if path != "/" and not path.startswith(("/welcome/", "/thanks/", "/r/")) else None
@@ -74,10 +74,12 @@ from urllib.parse import quote
 offers = cfg.get("offers", [])
 import links as _lk
 _lp = _lk.load_posts()[:3]
+_lv = _lk.load_videos()[:3]
 blog_section = ""
-if _lp:
-    _cards = "".join(f'<a class="card" href="/blog/{p["slug"]}/"><h3>{e(p["title"])}</h3><p>{e(p["desc"])}</p><span class="mono">Read it</span></a>' for p in _lp)
-    blog_section = f'<section id="blog" class="light"><div class="wrap"><span class="mono">From the blog</span><h2>Short reads. Real fixes.</h2><div class="grid">{_cards}</div><p style="margin-top:24px"><a class="btn" href="/blog/">All posts</a> <a class="link" href="/videos/">Watch the videos</a></p></div></section>'
+if _lp or _lv:
+    _vc = "".join(f'<a class="card vcard" href="/videos/{v["slug"]}/"><img src="https://i.ytimg.com/vi/{e(v["youtube_id"])}/hqdefault.jpg" alt="{e(v["title"])}" loading="lazy" width="480" height="360"><span class="mono">Video</span><h3>{e(v["title"])}</h3><p>{e(v["desc"])}</p></a>' for v in _lv)
+    _pc = "".join(f'<a class="card" href="/blog/{p["slug"]}/"><span class="mono">Article</span><h3>{e(p["title"])}</h3><p>{e(p["desc"])}</p><span class="mono">Read it</span></a>' for p in _lp)
+    blog_section = f'<section id="blog" class="light"><div class="wrap"><span class="mono">Watch and read</span><h2>Videos and short reads. Every one comes with a free tool.</h2><div class="grid">{_vc}{_pc}</div><p style="margin-top:24px"><a class="btn" href="/videos/">All videos</a> <a class="btn" href="/blog/">All articles</a></p></div></section>'
 offer_section = ""
 if offers:
     o0 = offers[0]
@@ -227,11 +229,11 @@ for o in offers:
 <div class="pricebox"><span class="mono">Today</span><strong>{e(o['price'])}</strong><span>One-time payment. Instant access.</span>{cta.replace('<span class="price">'+e(o["price"])+'</span>','')}</div>
 {guar_html}{cross_html}<h2>What you need</h2><ul class="bullets">{needs}</ul>
 <h2>Who it's not for</h2><ul class="bullets">{notf}</ul>{faq_html}
-{links.related(f"/{o['slug']}/", None, magnets, [x for x in offers if x['slug'] != o['slug']])}
+{links.related(f"/{o['slug']}/", None, magnets, [x for x in offers if x['slug'] != o['slug'] and not x.get('funnel_only')])}
 <p class="foot">One-time payment of {e(o['price'])}. Checkout is handled by Dodo Payments. See the <a href="/refunds/">Refund Policy</a>, <a href="/terms/">Terms</a> and <a href="/earnings-disclaimer/">Earnings Disclaimer</a>. {e(o.get('foot', 'This is a set of instructions and files for an AI assistant. No sales or income are guaranteed.'))}</p>
 </div></section>"""
     d = dist / o["slug"]; d.mkdir(parents=True, exist_ok=True)
-    (d / "index.html").write_text(layout(f"{o['title']} | Rob Reece", o["sub"], body, f"/{o['slug']}/"))
+    (d / "index.html").write_text(layout(f"{o['title']} | Rob Reece", o["sub"], body, f"/{o['slug']}/", noindex=bool(o.get("funnel_only"))))
     for arm in o.get("arms", []):  # A/B test copies: same page, checkout tagged with the arm
         ad = d / arm; ad.mkdir(parents=True, exist_ok=True)
         (ad / "index.html").write_text(layout(f"{o['title']} | Rob Reece", o["sub"], body.replace(e(buy), e(buy_url(arm))), f"/{o['slug']}/", noindex=True))
@@ -279,7 +281,7 @@ AI_BOTS = ["GPTBot", "OAI-SearchBot", "ChatGPT-User", "ClaudeBot", "Claude-User"
 priv = "Disallow: /thanks/\nDisallow: /r/\nDisallow: /welcome/\nDisallow: /buy/\n"
 robots = "User-agent: *\nAllow: /\n" + priv + "\n" + "".join(f"User-agent: {b_}\nAllow: /\n{priv}\n" for b_ in AI_BOTS) + f"Sitemap: {site['domain']}/sitemap.xml\n"
 (dist / "robots.txt").write_text(robots)
-urls = ["/"] + blog_urls + video_urls + legal_urls + [f"/{m['slug']}/" for m in magnets] + [f"/{o['slug']}/" for o in offers]
+urls = ["/"] + blog_urls + video_urls + legal_urls + [f"/{m['slug']}/" for m in magnets] + [f"/{o['slug']}/" for o in offers if not o.get('funnel_only')]
 def lm(u):
     if u.startswith("/blog/") and u != "/blog/":
         for p_ in json.loads((root / "blog/posts.json").read_text())["posts"]:
@@ -289,7 +291,7 @@ def lm(u):
 # llms.txt: a plain-text guide for AI search and assistants
 ll = [f"# {site['name']}", "", "> Rob Reece helps broke beginners get their first online sale with simple offers, honest copy and organic traffic. Solo marketer, no sales calls, no ad budget. Brand: 5 Solas Marketing. Related brand: CultLike Marketing.", "", "## Free tools"]
 ll += [f"- [{m['title']}]({site['domain']}/{m['slug']}/): {m['card_blurb']}" for m in magnets]
-ll += ["", "## Products"] + [f"- [{o['title']}]({site['domain']}/{o['slug']}/) ({o['price']}): {o['sub']}" for o in offers]
+ll += ["", "## Products"] + [f"- [{o['title']}]({site['domain']}/{o['slug']}/) ({o['price']}): {o['sub']}" for o in offers if not o.get('funnel_only')]
 ll += ["", "## Blog and videos", f"- [Blog]({site['domain']}/blog/)", f"- [Videos]({site['domain']}/videos/)"]
 ll += [f"- [{p_['title']}]({site['domain']}/blog/{p_['slug']}/): {p_['desc']}" for p_ in json.loads((root / "blog/posts.json").read_text())["posts"]]
 ll += ["", "## Policies", f"- [Privacy]({site['domain']}/privacy/)", f"- [Terms]({site['domain']}/terms/)", f"- [Refunds]({site['domain']}/refunds/)", f"- [Contact]({site['domain']}/contact/)", "", "## About", f"- [Home]({site['domain']}/)", f"- [CultLike Marketing]({site['cultlike_url']})", ""]

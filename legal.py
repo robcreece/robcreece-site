@@ -64,7 +64,7 @@ PAGES = {
 <p>The guarantee shown on the product page at the time you bought is the one that applies. Your receipt email comes from that same purchase, so you can always check the product page or ask me.</p>
 <h2>Current guarantees</h2>
 <ul>
-<li>Launchpad, Email Add-on and Launchpad Bundle: 30 days. Follow the steps in the Click Guide. If you do not end up with a live site, reply to any email from me within 30 days of buying and I will refund you in full. No hoops.</li>
+<li>The Launchpad and anything bought with it: 30 days. Follow the steps in the Click Guide. If you do not end up with a live site, reply to any email from me within 30 days of buying and I will refund you in full. No hoops.</li>
 <li>The Overlay Agency: 30 days. If the guide is not useful to you, reply to any email from me within 30 days.</li>
 <li>Any other paid product: the window on its page, 14 to 90 days.</li>
 </ul>

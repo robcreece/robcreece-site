@@ -9,8 +9,6 @@
 
 ## Products
 - [The One-Chat Launchpad](https://robcreece.com/launchpad/) ($19): Paste one master prompt into Claude and answer its questions. You finish with a site you control and a page that collects emails. A starter template and two cheat sheets keep you from getting stuck, and you stay in control of every click.
-- [Launchpad Email Add-on](https://robcreece.com/email-addon/) ($19): Your Launchpad site gets people to sign up. This gets their emails collected and a welcome email sent from your own domain, using the Stage 6 prompt and 5 ready-to-edit welcome emails.
-- [The Launchpad Bundle](https://robcreece.com/launchpad-bundle/) ($37): Everything in the Launchpad and the Email Add-on in one purchase. One chat builds your site and signup page, then the Stage 6 prompt gets your signups collected and welcomed from your own domain.
 - [The Overlay Agency](https://robcreece.com/overlay-agency/) ($4): Your clients film. Software adds the on-screen graphics. You find the clients and send back the file. This short guide shows who buys, what to say and what to charge.
 
 ## Blog and videos

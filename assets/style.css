@@ -80,7 +80,7 @@ footer a{text-decoration:none;color:var(--rope)}footer a:hover{color:var(--parch
 .bc-cult:hover{color:var(--parch)}
 .aboutgrid{display:grid;gap:52px;grid-template-columns:1fr 1.1fr;align-items:center}
 .aboutgrid img{border:1px solid var(--rope)}
-@media(max-width:820px){.herogrid,.aboutgrid{grid-template-columns:1fr;gap:36px}nav .navmenu a.link{display:none}}
+@media(max-width:820px){.herogrid,.aboutgrid{grid-template-columns:1fr;gap:36px}nav .navmenu a.link{display:none}nav .navmenu a.link[href="/blog/"],nav .navmenu a.link[href="/videos/"]{display:inline}nav .navmenu{gap:18px}}
 @media(max-width:600px){body{font-size:18px}section{padding:60px 0}.hero{padding:64px 0}nav .wrap{padding:0 20px}.logo{font-size:18px}}
 /* resource + offer pages */
 .res{padding:76px 0 96px}
@@ -166,3 +166,5 @@ footer .fgrid{align-items:start}footer .fgrid li{list-style:none}
 .legalnav{margin-top:40px;padding-top:18px;border-top:1px solid rgba(207,202,187,.25);font-size:15px}
 .legalnav a{margin-right:14px}
 .disclosure{font-size:15px;border-left:3px solid var(--rope,#b99a6b);padding:6px 12px;margin:14px 0;color:var(--mute,#9a9484)}
+
+@media(max-width:600px){nav .navmenu{gap:14px}nav a.link{letter-spacing:.14em}nav a.join{padding:8px 12px;letter-spacing:.14em;font-size:12px}}

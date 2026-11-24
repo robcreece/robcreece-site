@@ -12,7 +12,6 @@ AUTOLINK = [
     ("AI Word List", "/ai-word-list/"),
     ("DM Reply Builder", "/dm-reply-builder/"),
     ("One-Prompt Website", "/one-prompt-website/"),
-    ("Launchpad Bundle", "/launchpad-bundle/"), ("Email Add-on", "/email-addon/"),
     ("One-Chat Launchpad", "/launchpad/"), ("Launchpad", "/launchpad/"),
     ("Overlay Agency", "/overlay-agency/"),
     ("Grafsy", "https://grafsy.app/?utm_source=robcreece&utm_medium=video&utm_campaign=claude-vs-grafsy"),
@@ -49,7 +48,7 @@ def related(current_url, magnet_slug, magnets, offers):
     content.sort(key=lambda x: 0 if x[2] == magnet_slug else 1)
     read = "".join(f'<li><a href="{u}">{e(t)}</a></li>' for u, t, _ in content[:4])
     tools = "".join(f'<li><a href="/{m["slug"]}/">{e(m["title"])}</a></li>' for m in magnets if m["slug"] != magnet_slug)
-    prods = "".join(f'<li><a href="/{o["slug"]}/">{e(o["title"])}</a> ({e(o["price"])})</li>' for o in offers)
+    prods = "".join(f'<li><a href="/{o["slug"]}/">{e(o["title"])}</a> ({e(o["price"])})</li>' for o in offers if not o.get("funnel_only"))
     cols = []
     if read:
         cols.append(f'<div><h3>Keep reading</h3><ul class="bullets">{read}<li><a href="/blog/">All posts</a></li><li><a href="/videos/">All videos</a></li></ul></div>')

@@ -237,7 +237,8 @@
         "Don't have the Launchpad yet? The bundle includes both for $37.",
         "/launchpad-bundle/",
         "See the $37 bundle"
-      ]
+      ],
+      "funnel_only": true
     },
     {
       "slug": "launchpad-bundle",
@@ -296,7 +297,8 @@
       "welcome_title": "Your Launchpad Bundle is ready",
       "zip": "launchpad-starter.zip",
       "upsell": null,
-      "guarantee": "30-day guarantee: follow the steps in the Click Guide. If you don't end up with a live site, reply to any email from Rob within 30 days and you get a full refund. No hoops."
+      "guarantee": "30-day guarantee: follow the steps in the Click Guide. If you don't end up with a live site, reply to any email from Rob within 30 days and you get a full refund. No hoops.",
+      "funnel_only": true
     },
     {
       "slug": "overlay-agency",
