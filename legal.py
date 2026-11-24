@@ -54,7 +54,7 @@ PAGES = {
 <h2>Limit of liability</h2>
 <p>The site and products are provided &ldquo;as is.&rdquo; To the fullest extent the law allows, I am not liable for indirect or consequential losses, and my total liability for any claim is limited to the amount you paid for the product involved.</p>
 <h2>Changes and law</h2>
-<p>I may update these terms and will change the date below. These terms are governed by the laws of the state where {BIZ} is based in the United States.</p>
+<p>I may update these terms and will change the date below. These terms are governed by the laws of the State of Texas, without regard to conflict-of-law rules.</p>
 <h2>Contact</h2>
 <p><a href="mailto:{MAIL}">{MAIL}</a></p>"""),
  "refunds": ("Refund Policy", "Every paid product has its own refund window, from 14 to 90 days. It is stated on the product page.", """
