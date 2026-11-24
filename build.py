@@ -265,6 +265,7 @@ for o in offers:
 import links
 import blog, videos, links
 blog_urls = blog.build(root, dist, layout, magnets, form_block, site, cfg.get("offers", []))
+site["_offers"] = cfg.get("offers", [])
 video_urls = videos.build(root, dist, layout, magnets, form_block, site, cfg.get("offers", []))
 import legal
 legal_urls = legal.build(root, dist, layout, site)

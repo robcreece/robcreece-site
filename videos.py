@@ -28,6 +28,8 @@ def build(root, dist, layout, magnets, form_block, site, offers=()):
 <noscript><a href="https://www.youtube.com/watch?v={e(vid)}">Watch on YouTube</a></noscript></div>
 <script>document.querySelectorAll('.vframe').forEach(function(f){{f.querySelector('.vplay').addEventListener('click',function(){{var i=document.createElement('iframe');i.src='{embed}?autoplay=1&rel=0';i.allow='accelerometer; autoplay; encrypted-media; picture-in-picture';i.allowFullscreen=true;i.title={json.dumps(v["title"])};f.innerHTML='';f.appendChild(i);}});}});</script>'''
         disc = f'<p class="disclosure"><strong>Disclosure:</strong> {e(v["disclosure"])}</p>' if v.get("disclosure") else ""
+        off = next((o for o in site.get("_offers", []) if o["slug"] == v.get("offer")), None)
+        offbox = f'<aside class="inline-cta"><span class="mono">Start a video graphics service: {e(off["price"])}</span><p>{e(off["sub"])}</p><a class="btn" href="/{off["slug"]}/">See {e(off["title"])} ({e(off["price"])})</a></aside>' if off else ""
         mid = f'<aside class="inline-cta"><span class="mono">Free: {e(m["title"])}</span><p>{e(m["card_blurb"])}</p><a class="btn" href="#get-free">{e(m["cta"])}</a></aside>'
         top = f'<a class="topbar" href="#get-free"><span class="mono">Free</span> {e(m["title"])}: {e(m["card_blurb"])} <span class="arrow">Get it &darr;</span></a>'
         end = f'<div class="formbox" id="get-free"><span class="mono">Free: {e(m["title"])}</span><h3 style="color:#0b0908">{e(m["headline"])}</h3><p>{e(m["sub"])}</p>{form_block(m)}<p style="margin-top:10px;font-size:14px">No spam. Unsubscribe any time.</p></div>'
@@ -47,8 +49,8 @@ def build(root, dist, layout, magnets, form_block, site, offers=()):
 <h1>{e(v["h1"])}</h1>
 {player}
 <p class="lead">{e(v["summary"])}</p>
-{disc}
-{take}{chap}{blocks(v["body"], mid, f"/videos/{v['slug']}/")}{faq}{tr}{end}
+{disc}{offbox}
+{take}{chap}{blocks(v["body"], mid, f"/videos/{v['slug']}/")}{offbox}{faq}{tr}{end}
 {links.related(f"/videos/{v['slug']}/", m["slug"], magnets, offers)}
 <p class="foot"><a href="/videos/">&larr; More videos</a></p>
 {ldjson}
