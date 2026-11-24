@@ -21,6 +21,10 @@ MARQ = "".join(f"<span>{t}</span>" for t in ["Simple offers.","Honest copy.","Or
 import hashlib
 CSSV = hashlib.md5((root / "assets/style.css").read_bytes()).hexdigest()[:8]
 
+FOOT_MAGNETS = "".join(f'<li><a href="/{m["slug"]}/">{m["title"]}</a></li>' for m in magnets)
+def foot_offers():
+    return "".join(f'<li><a href="/{o["slug"]}/">{o["title"]}</a></li>' for o in cfg.get("offers", []))
+
 def extra_ld(path):
     import json as _j
     out = []
@@ -48,7 +52,12 @@ def layout(title, desc, body, path, noindex=False):
 <nav><div class="wrap"><a class="logo" href="/"><span>{e(site['name'])}</span></a><div class="navmenu"><a class="link" href="/#pain">The problem</a><a class="link" href="/#fix">The fix</a><a class="link" href="/#free">Free stuff</a><a class="link" href="/blog/">Blog</a><a class="link" href="/videos/">Videos</a><a class="join" href="/#free">Free tools</a></div></div></nav>
 <div class="marquee"><div class="track">{MARQ}{MARQ}</div></div>
 {body}
-<footer><div class="wrap"><span>&copy; 2026 5 Solas Marketing &middot; Rob Reece</span><span><a href="{site['cultlike_url']}">CultLike Marketing</a></span></div></footer>
+<footer><div class="wrap fgrid">
+<div class="fcol"><a class="logo" href="/"><span>{e(site['name'])}</span></a><p class="fabout">Simple offers. Honest copy. Organic traffic. Helping broke beginners get their first online sale.</p><p class="fmail"><a href="mailto:rob@robcreece.com">rob@robcreece.com</a></p></div>
+<div class="fcol"><h4>Free tools</h4><ul>{FOOT_MAGNETS}</ul></div>
+<div class="fcol"><h4>Products</h4><ul>{foot_offers()}</ul></div>
+<div class="fcol"><h4>Learn</h4><ul><li><a href="/blog/">Blog</a></li><li><a href="/videos/">Videos</a></li><li><a href="{site['cultlike_url']}">CultLike Marketing</a></li></ul><h4 style="margin-top:22px">Legal</h4><ul><li><a href="/privacy/">Privacy Policy</a></li><li><a href="/terms/">Terms of Use</a></li><li><a href="/refunds/">Refund Policy</a></li><li><a href="/earnings-disclaimer/">Earnings Disclaimer</a></li><li><a href="/contact/">Contact</a></li></ul></div>
+</div><div class="wrap fbase"><span>&copy; 2026 5 Solas Marketing. Rob Reece. All rights reserved.</span><span>No income is guaranteed. Results vary. <a href="/earnings-disclaimer/">Read the disclaimer</a>.</span></div></footer>
 </body></html>"""
 
 def form_block(m):
@@ -245,6 +254,9 @@ for o in offers:
 import blog, videos
 blog_urls = blog.build(root, dist, layout, magnets, form_block, site)
 video_urls = videos.build(root, dist, layout, magnets, form_block, site)
+import legal
+legal_urls = legal.build(root, dist, layout, site)
+(dist / "google9705e5d26db173ef.html").write_text("google-site-verification: google9705e5d26db173ef.html")
 import subprocess, datetime
 try:
     LASTMOD = subprocess.run(["git", "log", "-1", "--format=%cs"], capture_output=True, text=True, cwd=root).stdout.strip() or datetime.date.today().isoformat()
@@ -254,7 +266,7 @@ AI_BOTS = ["GPTBot", "OAI-SearchBot", "ChatGPT-User", "ClaudeBot", "Claude-User"
 priv = "Disallow: /thanks/\nDisallow: /r/\nDisallow: /welcome/\nDisallow: /buy/\n"
 robots = "User-agent: *\nAllow: /\n" + priv + "\n" + "".join(f"User-agent: {b_}\nAllow: /\n{priv}\n" for b_ in AI_BOTS) + f"Sitemap: {site['domain']}/sitemap.xml\n"
 (dist / "robots.txt").write_text(robots)
-urls = ["/"] + blog_urls + video_urls + [f"/{m['slug']}/" for m in magnets] + [f"/{o['slug']}/" for o in offers]
+urls = ["/"] + blog_urls + video_urls + legal_urls + [f"/{m['slug']}/" for m in magnets] + [f"/{o['slug']}/" for o in offers]
 def lm(u):
     if u.startswith("/blog/") and u != "/blog/":
         for p_ in json.loads((root / "blog/posts.json").read_text())["posts"]:
@@ -267,7 +279,7 @@ ll += [f"- [{m['title']}]({site['domain']}/{m['slug']}/): {m['card_blurb']}" for
 ll += ["", "## Products"] + [f"- [{o['title']}]({site['domain']}/{o['slug']}/) ({o['price']}): {o['sub']}" for o in offers]
 ll += ["", "## Blog and videos", f"- [Blog]({site['domain']}/blog/)", f"- [Videos]({site['domain']}/videos/)"]
 ll += [f"- [{p_['title']}]({site['domain']}/blog/{p_['slug']}/): {p_['desc']}" for p_ in json.loads((root / "blog/posts.json").read_text())["posts"]]
-ll += ["", "## About", f"- [Home]({site['domain']}/)", f"- [CultLike Marketing]({site['cultlike_url']})", ""]
+ll += ["", "## Policies", f"- [Privacy]({site['domain']}/privacy/)", f"- [Terms]({site['domain']}/terms/)", f"- [Refunds]({site['domain']}/refunds/)", f"- [Contact]({site['domain']}/contact/)", "", "## About", f"- [Home]({site['domain']}/)", f"- [CultLike Marketing]({site['cultlike_url']})", ""]
 (dist / "llms.txt").write_text("\n".join(ll))
 # IndexNow key file (proves site ownership to Bing, Yandex and others)
 ik = cfg["site"].get("indexnow_key")
