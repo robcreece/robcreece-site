@@ -34,10 +34,10 @@ def layout(title, desc, body, path, noindex=False):
 <link rel="stylesheet" href="/assets/style.css?v={CSSV}">
 <script async src="{site['emailit_script']}"></script>
 </head><body>
-<nav><div class="wrap"><a class="logo" href="/"><svg width="26" height="34" viewBox="0 0 60 80" aria-hidden="true"><g stroke="#B8864A" stroke-width="3" fill="none" stroke-linecap="round" transform="translate(20,2)"><path d="M10 0 L10 12"/><ellipse cx="10" cy="16" rx="6" ry="2"/><ellipse cx="10" cy="20" rx="6" ry="2"/><ellipse cx="10" cy="24" rx="6" ry="2"/><path d="M10 28 C -4 30, -6 52, 10 62 C 26 52, 24 30, 10 28 Z"/></g></svg><span>{e(site['name'])}</span></a><div class="navmenu"><a class="link" href="/#pain">The problem</a><a class="link" href="/#fix">The fix</a><a class="link" href="/#free">Free stuff</a><a class="join" href="/#free">Free tools</a></div></div></nav>
+<nav><div class="wrap"><a class="logo" href="/"><span>{e(site['name'])}</span></a><div class="navmenu"><a class="link" href="/#pain">The problem</a><a class="link" href="/#fix">The fix</a><a class="link" href="/#free">Free stuff</a><a class="join" href="/#free">Free tools</a></div></div></nav>
 <div class="marquee"><div class="track">{MARQ}{MARQ}</div></div>
 {body}
-<footer><div class="wrap"><span>&copy; 2026 5 Solas Marketing &middot; Rob Reece &middot; Keep the faith.</span><span><a href="{site['cultlike_url']}">CultLike Marketing</a></span></div></footer>
+<footer><div class="wrap"><span>&copy; 2026 5 Solas Marketing &middot; Rob Reece</span><span><a href="{site['cultlike_url']}">CultLike Marketing</a></span></div></footer>
 </body></html>"""
 
 def form_block(m):
