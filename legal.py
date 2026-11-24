@@ -57,12 +57,18 @@ PAGES = {
 <p>I may update these terms and will change the date below. These terms are governed by the laws of the state where {BIZ} is based in the United States.</p>
 <h2>Contact</h2>
 <p><a href="mailto:{MAIL}">{MAIL}</a></p>"""),
- "refunds": ("Refund Policy", "30-day guarantee for the Launchpad products, and how refunds work for everything else.", """
-<p>I want you to feel safe buying from me. Here is how refunds work.</p>
-<h2>The Launchpad, Email Add-on and Bundle: 30-day guarantee</h2>
-<p>Follow the steps in the Click Guide. If you do not end up with a live site, reply to any email from me within 30 days of buying and I will refund you in full. No hoops.</p>
-<h2>Other paid products</h2>
-<p>If something is broken, missing or not what I described, email me within 30 days of purchase. I will review it and refund you where it is fair.</p>
+ "refunds": ("Refund Policy", "Every paid product has its own refund window, from 14 to 90 days. It is stated on the product page.", """
+<p>I want you to feel safe buying from me. Refund windows are not the same for every product. Each paid product has its own guarantee, anywhere from 14 to 90 days, and it is written on that product's page before you buy.</p>
+<h2>Which window applies to you</h2>
+<p>The guarantee shown on the product page at the time you bought is the one that applies. Your receipt email comes from that same purchase, so you can always check the product page or ask me.</p>
+<h2>Current guarantees</h2>
+<ul>
+<li>Launchpad, Email Add-on and Launchpad Bundle: 30 days. Follow the steps in the Click Guide. If you do not end up with a live site, reply to any email from me within 30 days of buying and I will refund you in full. No hoops.</li>
+<li>The Overlay Agency: 30 days. If the guide is not useful to you, reply to any email from me within 30 days.</li>
+<li>Any other paid product: the window on its page, 14 to 90 days.</li>
+</ul>
+<h2>If something is broken</h2>
+<p>If a product is broken, missing or not what I described, email me within its refund window and I will make it right or refund you.</p>
 <h2>How to ask</h2>
 <p>Email <a href="mailto:{MAIL}">{MAIL}</a> from the address you used to buy, with your order details. Refunds go back to your original payment method through the payment processor and usually show up within 5 to 10 business days, depending on your bank.</p>
 <h2>Free tools</h2>
