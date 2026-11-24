@@ -18,6 +18,9 @@ e = html.escape
 
 MARQ = "".join(f"<span>{t}</span>" for t in ["Simple offers.","Honest copy.","Organic traffic.","Your first online sale.","No guru required.","Built in one chat with Claude."])
 
+import hashlib
+CSSV = hashlib.md5((root / "assets/style.css").read_bytes()).hexdigest()[:8]
+
 def layout(title, desc, body, path, noindex=False):
     robots = '<meta name="robots" content="noindex,nofollow">' if noindex else ""
     return f"""<!DOCTYPE html>
@@ -28,7 +31,7 @@ def layout(title, desc, body, path, noindex=False):
 <meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(desc)}"><meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Rye&family=Oswald:wght@400;600;700&family=Special+Elite&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/style.css">
+<link rel="stylesheet" href="/assets/style.css?v={CSSV}">
 <script async src="{site['emailit_script']}"></script>
 </head><body>
 <nav><div class="wrap"><a class="logo" href="/"><svg width="26" height="34" viewBox="0 0 60 80" aria-hidden="true"><g stroke="#B8864A" stroke-width="3" fill="none" stroke-linecap="round" transform="translate(20,2)"><path d="M10 0 L10 12"/><ellipse cx="10" cy="16" rx="6" ry="2"/><ellipse cx="10" cy="20" rx="6" ry="2"/><ellipse cx="10" cy="24" rx="6" ry="2"/><path d="M10 28 C -4 30, -6 52, 10 62 C 26 52, 24 30, 10 28 Z"/></g></svg><span>{e(site['name'])}</span></a><div class="navmenu"><a class="link" href="/#pain">The problem</a><a class="link" href="/#fix">The fix</a><a class="link" href="/#free">Free stuff</a><a class="join" href="/#free">Free tools</a></div></div></nav>
