@@ -10,7 +10,9 @@ Devices (post body block types in posts.json):
 Words to season with (use sparingly, 1 or 2 per section): the Order, initiates, the Ledger (sales), heresy, doctrine, the algorithm gods, robe, the compound, the cult of ___.
 
 Guardrails:
-- Cult-marketing parody only. No scripture, prayer, "amen", "blessed", church or sermon language. Faith content lives in the separate faith brand.
+- The cult devices are parody only. Don't mix them with scripture or church language. Rob's real faith is stated plainly and opinionated in the About section, not turned into a bit. Faith content proper lives in the separate faith brand.
 - Never mock real people or groups. Punch at bad habits, vague words and guru hype.
 - Always teach something concrete first. The joke is the seasoning, not the meal.
 - Short fragments, kitchen-table directness, PG-13, anti-guru. One worked before/after example per post.
+
+Ben Settle direction: irreverent, opinionated, a little provocative, conviction-driven. Say the thing other marketers won't. Rob's own life (Jesus, the Bible, public stunts for attention) is the source of the voice. Never invent stories: use real ones he tells.
