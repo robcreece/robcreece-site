@@ -11,6 +11,12 @@ def blocks(body, cta_mid, skip_url=None):
     for kind, val in body:
         if kind == "h2":
             out.append(f"<h2>{e(val)}</h2>")
+        elif kind == "rule":
+            out.append(f'<aside class="rule"><span class="mono">Rule of the Order</span><p>{e(val)}</p></aside>')
+        elif kind == "rant":
+            out.append(f'<blockquote class="rant"><span class="mono">Rant</span><p>{e(val)}</p></blockquote>')
+        elif kind == "heresy":
+            out.append(f'<p class="heresy"><span class="mono">Heresy</span> {e(val)}</p>')
         elif kind == "ul":
             out.append('<ul class="bullets">' + "".join(f"<li>{links.autolink(e(x), used, skip_url)}</li>" for x in val) + "</ul>")
         else:

@@ -168,3 +168,13 @@ footer .fgrid{align-items:start}footer .fgrid li{list-style:none}
 .disclosure{font-size:15px;border-left:3px solid var(--rope,#b99a6b);padding:6px 12px;margin:14px 0;color:var(--mute,#9a9484)}
 
 @media(max-width:600px){nav .navmenu{gap:14px}nav a.link{letter-spacing:.14em}nav a.join{padding:8px 12px;letter-spacing:.14em;font-size:12px}}
+
+/* cult voice devices */
+.rule{margin:28px 0;padding:18px 22px;border:1px solid var(--rope,#b99a6b);background:rgba(0,0,0,.25)}
+.rule .mono{display:block;margin-bottom:6px;color:var(--rope,#b99a6b)}
+.rule p{margin:0;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.04em;font-size:1.05em}
+.rant{margin:26px 0;padding:4px 0 4px 20px;border-left:4px solid var(--blood,#8a1c14);font-style:italic}
+.rant .mono{display:block;font-style:normal;color:var(--blood,#c0392b);margin-bottom:4px}
+.rant p{margin:0}
+.heresy{margin:18px 0 8px;font-family:'Special Elite',monospace;text-decoration:line-through;text-decoration-color:var(--blood,#8a1c14)}
+.heresy .mono{text-decoration:none;display:inline-block;margin-right:8px;color:var(--blood,#c0392b)}
