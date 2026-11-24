@@ -6,6 +6,7 @@ e = html.escape
 ROOT = Path(__file__).parent
 
 # first mention of these phrases inside post/video body text becomes a link
+REL = ' rel="sponsored noopener"'
 AUTOLINK = [
     ("The Robot Tells", "/robot-tells/"), ("Robot Tells", "/robot-tells/"),
     ("AI Word List", "/ai-word-list/"),
@@ -14,6 +15,7 @@ AUTOLINK = [
     ("Launchpad Bundle", "/launchpad-bundle/"), ("Email Add-on", "/email-addon/"),
     ("One-Chat Launchpad", "/launchpad/"), ("Launchpad", "/launchpad/"),
     ("Overlay Agency", "/overlay-agency/"),
+    ("Grafsy", "https://grafsy.app/?utm_source=robcreece&utm_medium=video&utm_campaign=claude-vs-grafsy"),
 ]
 
 
@@ -24,7 +26,7 @@ def autolink(text_escaped, used, skip_url=None):
             continue
         pat = re.compile(r"(?<![\w/>-])" + re.escape(e(phrase)) + r"(?![\w-])")
         if pat.search(text_escaped):
-            text_escaped = pat.sub(lambda m: f'<a href="{url}">{m.group(0)}</a>', text_escaped, count=1)
+            text_escaped = pat.sub(lambda m: f'<a href="{url}"{REL if url.startswith("http") else ""}>{m.group(0)}</a>', text_escaped, count=1)
             used.add(url)
     return text_escaped
 

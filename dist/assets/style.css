@@ -165,3 +165,4 @@ footer .fgrid{align-items:start}footer .fgrid li{list-style:none}
 .crumbs a{text-decoration:none}
 .legalnav{margin-top:40px;padding-top:18px;border-top:1px solid rgba(207,202,187,.25);font-size:15px}
 .legalnav a{margin-right:14px}
+.disclosure{font-size:15px;border-left:3px solid var(--rope,#b99a6b);padding:6px 12px;margin:14px 0;color:var(--mute,#9a9484)}
