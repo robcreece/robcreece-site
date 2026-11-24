@@ -1,351 +1,352 @@
 {
- "site": {
-  "name": "Rob Reece",
-  "domain": "https://robcreece.com",
-  "emailit_script": "https://js.emailit.com/js/eaccc376-5edb-425c-94fc-bcab47a93d57/emailit.js",
-  "cultlike_url": "https://cultlikemarketing.com",
-  "facebook_group_url": "#",
-  "checkout_return_base": "https://robcreece.com",
-  "indexnow_key": "2e448cb6156b4ebb56e842cd6cdead7c"
- },
- "magnets": [
-  {
-   "slug": "robot-tells",
-   "title": "The Robot Tells",
-   "tag": "Free checklist",
-   "headline": "12 Giveaways That Prove AI Wrote Your Content",
-   "sub": "Your posts are getting scrolled past because people can smell the robot. Here are the 12 tells, plus a 30-second fix for each one.",
-   "bullets": [
-    "The 12 phrases and patterns readers spot in a second",
-    "A 30-second fix for every single tell",
-    "Before/after rewrites so you see the fix in action"
-   ],
-   "cta": "Send Me The Checklist",
-   "card_blurb": "12 tells that scream 'AI wrote this', each with a 30-second fix.",
-   "form_token": "840db6b06fc26c6ecf88a0b1105404cc2d405ed683af9931",
-   "thanks_headline": "Check your inbox. The Robot Tells is on its way.",
-   "thanks_body": "It should land in a minute or two. If it doesn't, check Promotions or Spam and move it to your main inbox.",
-   "delivery_label": "Open The Robot Tells now",
-   "delivery_url": "/r/robot-tells/",
-   "next_label": "Join The Lab (free Facebook group)",
-   "next_url": "#"
+  "site": {
+    "name": "Rob Reece",
+    "domain": "https://robcreece.com",
+    "emailit_script": "https://js.emailit.com/js/eaccc376-5edb-425c-94fc-bcab47a93d57/emailit.js",
+    "cultlike_url": "https://cultlikemarketing.com",
+    "facebook_group_url": "#",
+    "checkout_return_base": "https://robcreece.com",
+    "indexnow_key": "2e448cb6156b4ebb56e842cd6cdead7c",
+    "business_address": "2302 Jackson Dr, Melissa, TX 75454"
   },
-  {
-   "slug": "ai-word-list",
-   "title": "The AI Word List",
-   "tag": "Free tool",
-   "headline": "The Words That Make People Reply, Call, or Buy",
-   "sub": "A free word list you can drop into any post, DM, or page. Stop guessing which words move people and which ones get ignored.",
-   "bullets": [
-    "The trigger words that get people to take action",
-    "Where to put them in posts, DMs, and sales pages",
-    "Examples of weak wording next to stronger wording"
-   ],
-   "cta": "Get The Word List",
-   "card_blurb": "The words that move people to reply, call, or buy, with examples.",
-   "form_token": "2f3a5440922366439ef9d11c26e6474c9627886981119ded",
-   "thanks_headline": "You're in. Your word list is ready.",
-   "thanks_body": "A copy is also on its way to your inbox. Check Promotions or Spam if you don't see it.",
-   "delivery_label": "Open The AI Word List",
-   "delivery_url": "/r/ai-word-list/",
-   "next_label": "Join The Lab (free Facebook group)",
-   "next_url": "#"
-  },
-  {
-   "slug": "dm-reply-builder",
-   "title": "The DM Reply Builder",
-   "tag": "Free tool",
-   "headline": "Write DMs People Actually Answer",
-   "sub": "Paste in a prospect's profile and your chat history. Get back a DM that sounds like a human who's good company, not a bot running a script.",
-   "bullets": [
-    "Works for Facebook and Instagram DMs",
-    "Funny, charming replies instead of cold pitches",
-    "Free to use. Upgrade later if you want more runs"
-   ],
-   "cta": "Give Me Free Access",
-   "card_blurb": "Turn a prospect's profile and chat history into a DM they'll answer.",
-   "form_token": "3677e7c20143654ac1ce63f0f03e3e6f215834a81f38f12e",
-   "thanks_headline": "You're in. Your DM Reply Builder access is ready.",
-   "thanks_body": "A copy of your access link is also on its way to your inbox.",
-   "delivery_label": "Open the DM Reply Builder",
-   "delivery_url": "",
-   "next_label": "Join The Lab (free Facebook group)",
-   "next_url": "#",
-   "hidden": true
-  },
-  {
-   "slug": "one-prompt-website",
-   "title": "The One-Prompt Website",
-   "tag": "Free prompt",
-   "headline": "Build a Real Website With One Prompt",
-   "sub": "Paste one prompt into Claude and get a one-page site with a free signup page, online for free. No domain. No coding. No cost.",
-   "bullets": [
-    "The exact prompt, ready to copy and paste",
-    "Walks you through free hosting, step by step",
-    "Tells you what's still missing, so nothing surprises you"
-   ],
-   "cta": "Send Me The Prompt",
-   "card_blurb": "One prompt that builds a free website and signup page with Claude.",
-   "form_token": "b2344663715084ae022ed4007ed8da113b152e5cf5c00b00",
-   "thanks_headline": "You're in. Your prompt is ready.",
-   "thanks_body": "A copy is also on its way to your inbox. Check Promotions or Spam if you don't see it.",
-   "delivery_label": "Open The One-Prompt Website",
-   "delivery_url": "/r/one-prompt-website/",
-   "next_label": "Want the domain and email too? See the Launchpad",
-   "next_url": "/launchpad/"
-  }
- ],
- "hub": {
-  "eyebrow": "Rob Reece · Solo marketer",
-  "headline": "Your first online sale<br>doesn't need a guru.",
-  "lead": "I help broke beginners get their first online sale with simple offers, honest copy, and organic traffic. No sales calls. No ad budget. No fake lifestyle.",
-  "photo_alt": "Rob Reece at his desk in front of the Cult Like Marketing banner",
-  "card_role": "Solo marketer · CultLike Marketing",
-  "card_line": "Simple offers. Honest copy. Organic traffic.",
-  "brand_link_label": "cultlikemarketing.com",
-  "pain_eyebrow": "Sound familiar?",
-  "pain_title": "You've done everything you were told to do.",
-  "pains": [
-   "You've bought the course and still have no sale.",
-   "You post every day and nobody buys.",
-   "You don't know what to sell, or who to sell it to.",
-   "Your content reads like every other AI post, and people scroll past.",
-   "You're afraid of DMs and sales calls, so you hide."
+  "magnets": [
+    {
+      "slug": "robot-tells",
+      "title": "The Robot Tells",
+      "tag": "Free checklist",
+      "headline": "12 Giveaways That Prove AI Wrote Your Content",
+      "sub": "Your posts are getting scrolled past because people can smell the robot. Here are the 12 tells, plus a 30-second fix for each one.",
+      "bullets": [
+        "The 12 phrases and patterns readers spot in a second",
+        "A 30-second fix for every single tell",
+        "Before/after rewrites so you see the fix in action"
+      ],
+      "cta": "Send Me The Checklist",
+      "card_blurb": "12 tells that scream 'AI wrote this', each with a 30-second fix.",
+      "form_token": "840db6b06fc26c6ecf88a0b1105404cc2d405ed683af9931",
+      "thanks_headline": "Check your inbox. The Robot Tells is on its way.",
+      "thanks_body": "It should land in a minute or two. If it doesn't, check Promotions or Spam and move it to your main inbox.",
+      "delivery_label": "Open The Robot Tells now",
+      "delivery_url": "/r/robot-tells/",
+      "next_label": "Join The Lab (free Facebook group)",
+      "next_url": "#"
+    },
+    {
+      "slug": "ai-word-list",
+      "title": "The AI Word List",
+      "tag": "Free tool",
+      "headline": "The Words That Make People Reply, Call, or Buy",
+      "sub": "A free word list you can drop into any post, DM, or page. Stop guessing which words move people and which ones get ignored.",
+      "bullets": [
+        "The trigger words that get people to take action",
+        "Where to put them in posts, DMs, and sales pages",
+        "Examples of weak wording next to stronger wording"
+      ],
+      "cta": "Get The Word List",
+      "card_blurb": "The words that move people to reply, call, or buy, with examples.",
+      "form_token": "2f3a5440922366439ef9d11c26e6474c9627886981119ded",
+      "thanks_headline": "You're in. Your word list is ready.",
+      "thanks_body": "A copy is also on its way to your inbox. Check Promotions or Spam if you don't see it.",
+      "delivery_label": "Open The AI Word List",
+      "delivery_url": "/r/ai-word-list/",
+      "next_label": "Join The Lab (free Facebook group)",
+      "next_url": "#"
+    },
+    {
+      "slug": "dm-reply-builder",
+      "title": "The DM Reply Builder",
+      "tag": "Free tool",
+      "headline": "Write DMs People Actually Answer",
+      "sub": "Paste in a prospect's profile and your chat history. Get back a DM that sounds like a human who's good company, not a bot running a script.",
+      "bullets": [
+        "Works for Facebook and Instagram DMs",
+        "Funny, charming replies instead of cold pitches",
+        "Free to use. Upgrade later if you want more runs"
+      ],
+      "cta": "Give Me Free Access",
+      "card_blurb": "Turn a prospect's profile and chat history into a DM they'll answer.",
+      "form_token": "3677e7c20143654ac1ce63f0f03e3e6f215834a81f38f12e",
+      "thanks_headline": "You're in. Your DM Reply Builder access is ready.",
+      "thanks_body": "A copy of your access link is also on its way to your inbox.",
+      "delivery_label": "Open the DM Reply Builder",
+      "delivery_url": "",
+      "next_label": "Join The Lab (free Facebook group)",
+      "next_url": "#",
+      "hidden": true
+    },
+    {
+      "slug": "one-prompt-website",
+      "title": "The One-Prompt Website",
+      "tag": "Free prompt",
+      "headline": "Build a Real Website With One Prompt",
+      "sub": "Paste one prompt into Claude and get a one-page site with a free signup page, online for free. No domain. No coding. No cost.",
+      "bullets": [
+        "The exact prompt, ready to copy and paste",
+        "Walks you through free hosting, step by step",
+        "Tells you what's still missing, so nothing surprises you"
+      ],
+      "cta": "Send Me The Prompt",
+      "card_blurb": "One prompt that builds a free website and signup page with Claude.",
+      "form_token": "b2344663715084ae022ed4007ed8da113b152e5cf5c00b00",
+      "thanks_headline": "You're in. Your prompt is ready.",
+      "thanks_body": "A copy is also on its way to your inbox. Check Promotions or Spam if you don't see it.",
+      "delivery_label": "Open The One-Prompt Website",
+      "delivery_url": "/r/one-prompt-website/",
+      "next_label": "Want the domain and email too? See the Launchpad",
+      "next_url": "/launchpad/"
+    }
   ],
-  "pain_close": "That isn't a talent problem. It's a clarity problem. Fix the offer, the words, and the conversation, and sales follow.",
-  "fix_title": "Small offers. Sharp words. Real conversations.",
-  "fix_cards": [
-   {
-    "title": "Pick a small offer",
-    "text": "A simple, low-priced product that solves one problem, so your first buyer says yes fast."
-   },
-   {
-    "title": "Write like a human",
-    "text": "Direct-response copy that sounds like you at the kitchen table, not like a robot reading a script."
-   },
-   {
-    "title": "Sell without calls",
-    "text": "Organic Facebook posts and friendly DMs. That's how I sell, and it's how I teach it."
-   }
-  ],
-  "fix_button": "See CultLike Marketing",
-  "free_title": "Free tools. Steal them.",
-  "free_sub": "Pick one. Enter your email. It lands in your inbox.",
-  "about_title": "I'm Rob.",
-  "about": [
-   "I'm a solo marketer. I build small offers, write the copy, and sell through organic Facebook posts and messages. No sales calls, ever.",
-   "I'm also a husband, a dad of a big family, and a minister. I run experiments in the open and hand you what works."
+  "hub": {
+    "eyebrow": "Rob Reece · Solo marketer",
+    "headline": "Your first online sale<br>doesn't need a guru.",
+    "lead": "I help broke beginners get their first online sale with simple offers, honest copy, and organic traffic. No sales calls. No ad budget. No fake lifestyle.",
+    "photo_alt": "Rob Reece at his desk in front of the Cult Like Marketing banner",
+    "card_role": "Solo marketer · CultLike Marketing",
+    "card_line": "Simple offers. Honest copy. Organic traffic.",
+    "brand_link_label": "cultlikemarketing.com",
+    "pain_eyebrow": "Sound familiar?",
+    "pain_title": "You've done everything you were told to do.",
+    "pains": [
+      "You've bought the course and still have no sale.",
+      "You post every day and nobody buys.",
+      "You don't know what to sell, or who to sell it to.",
+      "Your content reads like every other AI post, and people scroll past.",
+      "You're afraid of DMs and sales calls, so you hide."
+    ],
+    "pain_close": "That isn't a talent problem. It's a clarity problem. Fix the offer, the words, and the conversation, and sales follow.",
+    "fix_title": "Small offers. Sharp words. Real conversations.",
+    "fix_cards": [
+      {
+        "title": "Pick a small offer",
+        "text": "A simple, low-priced product that solves one problem, so your first buyer says yes fast."
+      },
+      {
+        "title": "Write like a human",
+        "text": "Direct-response copy that sounds like you at the kitchen table, not like a robot reading a script."
+      },
+      {
+        "title": "Sell without calls",
+        "text": "Organic Facebook posts and friendly DMs. That's how I sell, and it's how I teach it."
+      }
+    ],
+    "fix_button": "See CultLike Marketing",
+    "free_title": "Free tools. Steal them.",
+    "free_sub": "Pick one. Enter your email. It lands in your inbox.",
+    "about_title": "I'm Rob.",
+    "about": [
+      "I'm a solo marketer. I build small offers, write the copy, and sell through organic Facebook posts and messages. No sales calls, ever.",
+      "I'm also a husband, a dad of a big family, and a minister. I run experiments in the open and hand you what works."
+    ]
+  },
+  "offers": [
+    {
+      "slug": "launchpad",
+      "title": "The One-Chat Launchpad",
+      "price": "$19",
+      "tag": "Launchpad",
+      "headline": "Get a Live Website, a Free Gift Page and an Email Signup in One Chat",
+      "sub": "Paste one master prompt into Claude and answer its questions. You finish with a site you control and a page that collects emails. A starter template and two cheat sheets keep you from getting stuck, and you stay in control of every click.",
+      "product_id": "pdt_0NsTCBSWE7FI25OOVMUoB",
+      "welcome_token": "cff805193546e31bdc58",
+      "button": "Get the Launchpad for $19",
+      "includes": [
+        "The Master Prompt: runs the whole build in one chat, so you never stare at a blank page wondering what comes next",
+        "The Starter Template: the same kind of generator this site is built on, so you are not designing from scratch",
+        "The Click Guide: the few steps only you can do, in order, so you never get lost",
+        "The Rollback Card: undo a domain switch in about two minutes, so nothing you try can break what already works"
+      ],
+      "needs": [
+        "A Claude account. It works best with file tools and the Claude in Chrome extension. If Claude can't do a step, it walks you through it by hand.",
+        "Free accounts at GitHub and Cloudflare (you sign in yourself).",
+        "Optional: a domain from a registrar, roughly $10 to $25 a year, paid to the registrar."
+      ],
+      "not_for": [
+        "Anyone who wants a promise of sales or income. Nobody honest can give you one.",
+        "Anyone who wants someone else to build and run it for them.",
+        "Email setup is not included. It's a separate add-on."
+      ],
+      "welcome_title": "Your Launchpad is ready",
+      "zip": "launchpad-starter.zip",
+      "upsell": "email-addon",
+      "proof": "You are looking at it. robcreece.com is built on the same kind of generator the Starter Template gives you.",
+      "bonuses": [
+        "Free bonus: The One-Prompt Website. Your first page live fast, so you get a quick win before the full build.",
+        "Free bonus: The Robot Tells. 12 giveaways that make AI writing sound fake, so your site copy reads like a person wrote it."
+      ],
+      "faq": [
+        [
+          "What if I get stuck?",
+          "The Click Guide lists the few steps only you can do, in order. If Claude can't do a step, it walks you through it by hand."
+        ],
+        [
+          "Can I break something?",
+          "The Rollback Card shows how to undo a domain switch in about two minutes."
+        ],
+        [
+          "Does it guarantee sales?",
+          "No. It gets you a site and a signup page you control. What you sell and how you promote it is up to you."
+        ]
+      ],
+      "guarantee": "30-day guarantee: follow the steps in the Click Guide. If you don't end up with a live site, reply to any email from Rob within 30 days and you get a full refund. No hoops.",
+      "cross": [
+        "Want the email part too? Get both for $37 instead of $38 separately, with the Email Add-on included.",
+        "/launchpad-bundle/",
+        "See the $37 bundle"
+      ]
+    },
+    {
+      "slug": "email-addon",
+      "title": "Launchpad Email Add-on",
+      "price": "$19",
+      "tag": "Add-on",
+      "headline": "Collect and Email Your Signups From Your Own Domain",
+      "sub": "Your Launchpad site gets people to sign up. This gets their emails collected and a welcome email sent from your own domain, using the Stage 6 prompt and 5 ready-to-edit welcome emails.",
+      "product_id": "pdt_0NsTCBWArVOHZqMyVbi1q",
+      "welcome_token": "89734f3573e9e7178ea3",
+      "button": "Get the Email Add-on for $19",
+      "includes": [
+        "The Stage 6 prompt: checks your DNS, sets up sending records and DMARC, connects the form and sends a test, so you are not guessing at settings",
+        "5 welcome-email templates with [BRACKETS] for your real details, so you are not facing a blank email",
+        "A checklist for what to do while your email tool approves your account, so the wait is not wasted"
+      ],
+      "needs": [
+        "Your site live on your own domain first (Launchpad Stage 5).",
+        "An email tool account. Check its current free limits and prices on its own site.",
+        "Patience: tools may need to approve your account before sending to outside addresses. That can take a day or more."
+      ],
+      "not_for": [
+        "Anyone sending to a purchased or scraped list. Don't.",
+        "Anyone who wants guaranteed inbox placement. Nobody can promise that."
+      ],
+      "welcome_title": "Your Email Add-on is ready",
+      "upsell": null,
+      "proof": "This is the same setup robcreece.com uses to collect and email its own signups.",
+      "bonuses": [],
+      "faq": [
+        [
+          "Why the wait?",
+          "Email tools often approve new accounts before sending to outside addresses. It can take a day or more, and the checklist tells you what to do meanwhile."
+        ],
+        [
+          "Will my emails hit the inbox?",
+          "Nobody can promise that. The prompt sets up the records that give you the best honest shot."
+        ]
+      ],
+      "guarantee": "30-day guarantee: follow the steps in the Click Guide. If you don't end up with a live site, reply to any email from Rob within 30 days and you get a full refund. No hoops.",
+      "cross": [
+        "Don't have the Launchpad yet? The bundle includes both for $37.",
+        "/launchpad-bundle/",
+        "See the $37 bundle"
+      ]
+    },
+    {
+      "slug": "launchpad-bundle",
+      "title": "The Launchpad Bundle",
+      "price": "$37",
+      "tag": "Bundle",
+      "headline": "Build the Site, the Gift Page and the Email Signup. Send From Your Own Domain.",
+      "sub": "Everything in the Launchpad and the Email Add-on in one purchase. One chat builds your site and signup page, then the Stage 6 prompt gets your signups collected and welcomed from your own domain.",
+      "product_id": "pdt_0Nsb5KPLWrxgjNG3cTVHr",
+      "welcome_token": "1f4c32e6655d2b8166f2",
+      "button": "Get the Bundle for $37",
+      "includes": [
+        "The Master Prompt: runs the whole build in one chat, so you never stare at a blank page wondering what comes next",
+        "The Starter Template: the same kind of generator this site is built on, so you are not designing from scratch",
+        "The Click Guide: the few steps only you can do, in order, so you never get lost",
+        "The Rollback Card: undo a domain switch in about two minutes, so nothing you try can break what already works",
+        "The Stage 6 prompt: checks your DNS, sets up sending records and DMARC, connects the form and sends a test, so you are not guessing at settings",
+        "5 welcome-email templates with [BRACKETS] for your real details, so you are not facing a blank email",
+        "A checklist for what to do while your email tool approves your account, so the wait is not wasted"
+      ],
+      "bonuses": [
+        "Free bonus: The One-Prompt Website. Your first page live fast, so you get a quick win before the full build.",
+        "Free bonus: The Robot Tells. 12 giveaways that make AI writing sound fake, so your site copy reads like a person wrote it."
+      ],
+      "proof": "You are looking at it. robcreece.com is built on this generator and collects and emails its own signups with this setup.",
+      "faq": [
+        [
+          "What if I get stuck?",
+          "The Click Guide lists the few steps only you can do, in order. If Claude can't do a step, it walks you through it by hand."
+        ],
+        [
+          "Can I break something?",
+          "The Rollback Card shows how to undo a domain switch in about two minutes."
+        ],
+        [
+          "Does it guarantee sales?",
+          "No. It gets you a site and a signup page you control. What you sell and how you promote it is up to you."
+        ],
+        [
+          "Why the wait?",
+          "Email tools often approve new accounts before sending to outside addresses. It can take a day or more, and the checklist tells you what to do meanwhile."
+        ]
+      ],
+      "needs": [
+        "A Claude account. It works best with file tools and the Claude in Chrome extension. If Claude can't do a step, it walks you through it by hand.",
+        "Free accounts at GitHub and Cloudflare (you sign in yourself).",
+        "Optional: a domain from a registrar, roughly $10 to $25 a year, paid to the registrar.",
+        "An email tool account for the email half. Check its current free limits and prices on its own site."
+      ],
+      "not_for": [
+        "Anyone who wants a promise of sales or income. Nobody honest can give you one.",
+        "Anyone who wants someone else to build and run it for them.",
+        "Anyone sending to a purchased or scraped list. Don't.",
+        "Anyone who wants guaranteed inbox placement. Nobody can promise that."
+      ],
+      "welcome_title": "Your Launchpad Bundle is ready",
+      "zip": "launchpad-starter.zip",
+      "upsell": null,
+      "guarantee": "30-day guarantee: follow the steps in the Click Guide. If you don't end up with a live site, reply to any email from Rob within 30 days and you get a full refund. No hoops."
+    },
+    {
+      "slug": "overlay-agency",
+      "title": "The Overlay Agency",
+      "price": "$4",
+      "tag": "$4 guide",
+      "headline": "Start a One-Person Video Graphics Service Without Learning to Edit",
+      "sub": "Your clients film. Software adds the on-screen graphics. You find the clients and send back the file. This short guide shows who buys, what to say and what to charge.",
+      "product_id": "pdt_0NsbBMgrdCRPwBhdkAMb6",
+      "welcome_token": "f5a59c40714512b407c2",
+      "button": "Get the guide for $4",
+      "arms": [
+        "a",
+        "b"
+      ],
+      "includes": [
+        "The service: exactly what you sell, with a before and after, so you can explain it in one sentence",
+        "Who buys: three filters and a 20-lead search you can run today, so you are not guessing who to message",
+        "The free 60-second sample pitch: word-for-word messages that show your work on their own video, so you never need a sales call",
+        "Pricing: your real cost per minute and a worked example, so you never quote below your cost",
+        "The tool: which plan to start with and its limits, so you never promise a client something it can't do"
+      ],
+      "bonuses": [],
+      "proof": "",
+      "needs": [
+        "A Grafsy plan to make the graphics. The guide says which one to start with. That is a separate purchase.",
+        "A few hours to find leads and send messages."
+      ],
+      "not_for": [
+        "Anyone who wants a promise of income. Nobody honest can give you one.",
+        "Anyone who wants hand-placed custom motion graphics. The graphics are AI-placed templates."
+      ],
+      "faq": [
+        [
+          "Why is it only $4?",
+          "I co-own Grafsy, the software the guide uses. I earn if you buy the tool, so the guide is cheap. Weigh what it says with that in mind."
+        ],
+        [
+          "Do I need editing skills?",
+          "No. You upload a finished video and download it back with graphics on it. You watch the result before you send it."
+        ],
+        [
+          "Does it guarantee clients?",
+          "No. It gives you the method, the messages and the math. Finding and closing clients is your work."
+        ]
+      ],
+      "guarantee": "30-day guarantee: if the guide isn't useful to you, reply to any email from Rob within 30 days and you get your $4 back. No hoops.",
+      "welcome_title": "Your copy of The Overlay Agency",
+      "upsell": null,
+      "foot": "This is a guide for informational purposes. Rob Reece co-owns Grafsy, the software it recommends. No sales or income are guaranteed."
+    }
   ]
- },
- "offers": [
-  {
-   "slug": "launchpad",
-   "title": "The One-Chat Launchpad",
-   "price": "$19",
-   "tag": "Launchpad",
-   "headline": "Get a Live Website, a Free Gift Page and an Email Signup in One Chat",
-   "sub": "Paste one master prompt into Claude and answer its questions. You finish with a site you control and a page that collects emails. A starter template and two cheat sheets keep you from getting stuck, and you stay in control of every click.",
-   "product_id": "pdt_0NsTCBSWE7FI25OOVMUoB",
-   "welcome_token": "cff805193546e31bdc58",
-   "button": "Get the Launchpad for $19",
-   "includes": [
-    "The Master Prompt: runs the whole build in one chat, so you never stare at a blank page wondering what comes next",
-    "The Starter Template: the same kind of generator this site is built on, so you are not designing from scratch",
-    "The Click Guide: the few steps only you can do, in order, so you never get lost",
-    "The Rollback Card: undo a domain switch in about two minutes, so nothing you try can break what already works"
-   ],
-   "needs": [
-    "A Claude account. It works best with file tools and the Claude in Chrome extension. If Claude can't do a step, it walks you through it by hand.",
-    "Free accounts at GitHub and Cloudflare (you sign in yourself).",
-    "Optional: a domain from a registrar, roughly $10 to $25 a year, paid to the registrar."
-   ],
-   "not_for": [
-    "Anyone who wants a promise of sales or income. Nobody honest can give you one.",
-    "Anyone who wants someone else to build and run it for them.",
-    "Email setup is not included. It's a separate add-on."
-   ],
-   "welcome_title": "Your Launchpad is ready",
-   "zip": "launchpad-starter.zip",
-   "upsell": "email-addon",
-   "proof": "You are looking at it. robcreece.com is built on the same kind of generator the Starter Template gives you.",
-   "bonuses": [
-    "Free bonus: The One-Prompt Website. Your first page live fast, so you get a quick win before the full build.",
-    "Free bonus: The Robot Tells. 12 giveaways that make AI writing sound fake, so your site copy reads like a person wrote it."
-   ],
-   "faq": [
-    [
-     "What if I get stuck?",
-     "The Click Guide lists the few steps only you can do, in order. If Claude can't do a step, it walks you through it by hand."
-    ],
-    [
-     "Can I break something?",
-     "The Rollback Card shows how to undo a domain switch in about two minutes."
-    ],
-    [
-     "Does it guarantee sales?",
-     "No. It gets you a site and a signup page you control. What you sell and how you promote it is up to you."
-    ]
-   ],
-   "guarantee": "30-day guarantee: follow the steps in the Click Guide. If you don't end up with a live site, reply to any email from Rob within 30 days and you get a full refund. No hoops.",
-   "cross": [
-    "Want the email part too? Get both for $37 instead of $38 separately, with the Email Add-on included.",
-    "/launchpad-bundle/",
-    "See the $37 bundle"
-   ]
-  },
-  {
-   "slug": "email-addon",
-   "title": "Launchpad Email Add-on",
-   "price": "$19",
-   "tag": "Add-on",
-   "headline": "Collect and Email Your Signups From Your Own Domain",
-   "sub": "Your Launchpad site gets people to sign up. This gets their emails collected and a welcome email sent from your own domain, using the Stage 6 prompt and 5 ready-to-edit welcome emails.",
-   "product_id": "pdt_0NsTCBWArVOHZqMyVbi1q",
-   "welcome_token": "89734f3573e9e7178ea3",
-   "button": "Get the Email Add-on for $19",
-   "includes": [
-    "The Stage 6 prompt: checks your DNS, sets up sending records and DMARC, connects the form and sends a test, so you are not guessing at settings",
-    "5 welcome-email templates with [BRACKETS] for your real details, so you are not facing a blank email",
-    "A checklist for what to do while your email tool approves your account, so the wait is not wasted"
-   ],
-   "needs": [
-    "Your site live on your own domain first (Launchpad Stage 5).",
-    "An email tool account. Check its current free limits and prices on its own site.",
-    "Patience: tools may need to approve your account before sending to outside addresses. That can take a day or more."
-   ],
-   "not_for": [
-    "Anyone sending to a purchased or scraped list. Don't.",
-    "Anyone who wants guaranteed inbox placement. Nobody can promise that."
-   ],
-   "welcome_title": "Your Email Add-on is ready",
-   "upsell": null,
-   "proof": "This is the same setup robcreece.com uses to collect and email its own signups.",
-   "bonuses": [],
-   "faq": [
-    [
-     "Why the wait?",
-     "Email tools often approve new accounts before sending to outside addresses. It can take a day or more, and the checklist tells you what to do meanwhile."
-    ],
-    [
-     "Will my emails hit the inbox?",
-     "Nobody can promise that. The prompt sets up the records that give you the best honest shot."
-    ]
-   ],
-   "guarantee": "30-day guarantee: follow the steps in the Click Guide. If you don't end up with a live site, reply to any email from Rob within 30 days and you get a full refund. No hoops.",
-   "cross": [
-    "Don't have the Launchpad yet? The bundle includes both for $37.",
-    "/launchpad-bundle/",
-    "See the $37 bundle"
-   ]
-  },
-  {
-   "slug": "launchpad-bundle",
-   "title": "The Launchpad Bundle",
-   "price": "$37",
-   "tag": "Bundle",
-   "headline": "Build the Site, the Gift Page and the Email Signup. Send From Your Own Domain.",
-   "sub": "Everything in the Launchpad and the Email Add-on in one purchase. One chat builds your site and signup page, then the Stage 6 prompt gets your signups collected and welcomed from your own domain.",
-   "product_id": "pdt_0Nsb5KPLWrxgjNG3cTVHr",
-   "welcome_token": "1f4c32e6655d2b8166f2",
-   "button": "Get the Bundle for $37",
-   "includes": [
-    "The Master Prompt: runs the whole build in one chat, so you never stare at a blank page wondering what comes next",
-    "The Starter Template: the same kind of generator this site is built on, so you are not designing from scratch",
-    "The Click Guide: the few steps only you can do, in order, so you never get lost",
-    "The Rollback Card: undo a domain switch in about two minutes, so nothing you try can break what already works",
-    "The Stage 6 prompt: checks your DNS, sets up sending records and DMARC, connects the form and sends a test, so you are not guessing at settings",
-    "5 welcome-email templates with [BRACKETS] for your real details, so you are not facing a blank email",
-    "A checklist for what to do while your email tool approves your account, so the wait is not wasted"
-   ],
-   "bonuses": [
-    "Free bonus: The One-Prompt Website. Your first page live fast, so you get a quick win before the full build.",
-    "Free bonus: The Robot Tells. 12 giveaways that make AI writing sound fake, so your site copy reads like a person wrote it."
-   ],
-   "proof": "You are looking at it. robcreece.com is built on this generator and collects and emails its own signups with this setup.",
-   "faq": [
-    [
-     "What if I get stuck?",
-     "The Click Guide lists the few steps only you can do, in order. If Claude can't do a step, it walks you through it by hand."
-    ],
-    [
-     "Can I break something?",
-     "The Rollback Card shows how to undo a domain switch in about two minutes."
-    ],
-    [
-     "Does it guarantee sales?",
-     "No. It gets you a site and a signup page you control. What you sell and how you promote it is up to you."
-    ],
-    [
-     "Why the wait?",
-     "Email tools often approve new accounts before sending to outside addresses. It can take a day or more, and the checklist tells you what to do meanwhile."
-    ]
-   ],
-   "needs": [
-    "A Claude account. It works best with file tools and the Claude in Chrome extension. If Claude can't do a step, it walks you through it by hand.",
-    "Free accounts at GitHub and Cloudflare (you sign in yourself).",
-    "Optional: a domain from a registrar, roughly $10 to $25 a year, paid to the registrar.",
-    "An email tool account for the email half. Check its current free limits and prices on its own site."
-   ],
-   "not_for": [
-    "Anyone who wants a promise of sales or income. Nobody honest can give you one.",
-    "Anyone who wants someone else to build and run it for them.",
-    "Anyone sending to a purchased or scraped list. Don't.",
-    "Anyone who wants guaranteed inbox placement. Nobody can promise that."
-   ],
-   "welcome_title": "Your Launchpad Bundle is ready",
-   "zip": "launchpad-starter.zip",
-   "upsell": null,
-   "guarantee": "30-day guarantee: follow the steps in the Click Guide. If you don't end up with a live site, reply to any email from Rob within 30 days and you get a full refund. No hoops."
-  },
-  {
-   "slug": "overlay-agency",
-   "title": "The Overlay Agency",
-   "price": "$4",
-   "tag": "$4 guide",
-   "headline": "Start a One-Person Video Graphics Service Without Learning to Edit",
-   "sub": "Your clients film. Software adds the on-screen graphics. You find the clients and send back the file. This short guide shows who buys, what to say and what to charge.",
-   "product_id": "pdt_0NsbBMgrdCRPwBhdkAMb6",
-   "welcome_token": "f5a59c40714512b407c2",
-   "button": "Get the guide for $4",
-   "arms": [
-    "a",
-    "b"
-   ],
-   "includes": [
-    "The service: exactly what you sell, with a before and after, so you can explain it in one sentence",
-    "Who buys: three filters and a 20-lead search you can run today, so you are not guessing who to message",
-    "The free 60-second sample pitch: word-for-word messages that show your work on their own video, so you never need a sales call",
-    "Pricing: your real cost per minute and a worked example, so you never quote below your cost",
-    "The tool: which plan to start with and its limits, so you never promise a client something it can't do"
-   ],
-   "bonuses": [],
-   "proof": "",
-   "needs": [
-    "A Grafsy plan to make the graphics. The guide says which one to start with. That is a separate purchase.",
-    "A few hours to find leads and send messages."
-   ],
-   "not_for": [
-    "Anyone who wants a promise of income. Nobody honest can give you one.",
-    "Anyone who wants hand-placed custom motion graphics. The graphics are AI-placed templates."
-   ],
-   "faq": [
-    [
-     "Why is it only $4?",
-     "I co-own Grafsy, the software the guide uses. I earn if you buy the tool, so the guide is cheap. Weigh what it says with that in mind."
-    ],
-    [
-     "Do I need editing skills?",
-     "No. You upload a finished video and download it back with graphics on it. You watch the result before you send it."
-    ],
-    [
-     "Does it guarantee clients?",
-     "No. It gives you the method, the messages and the math. Finding and closing clients is your work."
-    ]
-   ],
-   "guarantee": "30-day guarantee: if the guide isn't useful to you, reply to any email from Rob within 30 days and you get your $4 back. No hoops.",
-   "welcome_title": "Your copy of The Overlay Agency",
-   "upsell": null,
-   "foot": "This is a guide for informational purposes. Rob Reece co-owns Grafsy, the software it recommends. No sales or income are guaranteed."
-  }
- ]
 }
