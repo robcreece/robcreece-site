@@ -14,6 +14,8 @@ if dist.exists():
 (dist / "assets").mkdir(parents=True)
 shutil.copy(root / "assets/style.css", dist / "assets/style.css")
 shutil.copy(root / "assets/rob.jpg", dist / "assets/rob.jpg")
+import glob as _g
+for _p in _g.glob(str(root / "assets/product-*.png")): shutil.copy(_p, dist / "assets" / Path(_p).name)
 
 e = html.escape
 
@@ -34,7 +36,7 @@ def extra_ld(path, title=""):
         out.append({"@context": "https://schema.org", "@type": "Person", "name": "Rob Reece", "url": site["domain"] + "/", "jobTitle": "Solo marketer", "image": site["domain"] + "/assets/rob.jpg", "worksFor": {"@type": "Organization", "name": "5 Solas Marketing"}, "sameAs": [site["cultlike_url"]], "description": "Helps broke beginners get their first online sale with simple offers, honest copy and organic traffic."})
     for o in cfg.get("offers", []):
         if path == f"/{o['slug']}/" and not o.get("funnel_only"):
-            out.append({"@context": "https://schema.org", "@type": "Product", "name": o["title"], "description": o["sub"], "brand": {"@type": "Brand", "name": "Rob Reece"}, "offers": {"@type": "Offer", "price": o["price"].replace("$", ""), "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": site["domain"] + path}})
+            out.append({"@context": "https://schema.org", "@type": "Product", "name": o["title"], "description": o["sub"], "brand": {"@type": "Brand", "name": "Rob Reece"}, "image": [site["domain"] + "/assets/product-" + o["slug"] + ".png"], "offers": {"@type": "Offer", "price": o["price"].replace("$", ""), "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": site["domain"] + path, "hasMerchantReturnPolicy": {"@type": "MerchantReturnPolicy", "applicableCountry": "US", "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow", "merchantReturnDays": 30, "returnMethod": "https://schema.org/ReturnByMail", "returnFees": "https://schema.org/FreeReturn", "merchantReturnLink": site["domain"] + "/refunds/"}, "shippingDetails": {"@type": "OfferShippingDetails", "shippingRate": {"@type": "MonetaryAmount", "value": 0, "currency": "USD"}, "shippingDestination": {"@type": "DefinedRegion", "addressCountry": "US"}, "deliveryTime": {"@type": "ShippingDeliveryTime", "handlingTime": {"@type": "QuantitativeValue", "minValue": 0, "maxValue": 0, "unitCode": "DAY"}, "transitTime": {"@type": "QuantitativeValue", "minValue": 0, "maxValue": 0, "unitCode": "DAY"}}}}})
     import links as _l
     _bc = _l.crumbs(path, title.split(" | ")[0], site["domain"]) if path != "/" and not path.startswith(("/welcome/", "/thanks/", "/r/")) else None
     if _bc: out.append(_bc)

@@ -39,7 +39,7 @@ def build(root, dist, layout, magnets, form_block, site, offers=()):
         if v.get("faq"):
             faq = "<h2>Quick answers</h2>" + "".join(f"<h3>{e(q)}</h3><p>{e(a)}</p>" for q, a in v["faq"])
         tr = f'<details class="transcript"><summary>Read the transcript</summary><p>{e(v["transcript"])}</p></details>' if v.get("transcript") else ""
-        ld = [{"@context": "https://schema.org", "@type": "VideoObject", "name": v["title"], "description": v["desc"], "thumbnailUrl": [thumb], "uploadDate": v["date"], "duration": v.get("duration", ""), "embedUrl": embed, "contentUrl": f"https://www.youtube.com/watch?v={vid}", "publisher": {"@type": "Person", "name": site["name"]}},
+        ld = [{"@context": "https://schema.org", "@type": "VideoObject", "name": v["title"], "description": v["desc"], "thumbnailUrl": [thumb], "uploadDate": v["date"] + "T09:00:00-06:00", "duration": v.get("duration", ""), "embedUrl": embed, "contentUrl": f"https://www.youtube.com/watch?v={vid}", "publisher": {"@type": "Person", "name": site["name"]}},
               {"@context": "https://schema.org", "@type": "BlogPosting", "headline": v["title"], "description": v["desc"], "datePublished": v["date"], "image": thumb, "mainEntityOfPage": url, "author": {"@type": "Person", "name": site["name"]}}]
         if v.get("faq"):
             ld.append({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in v["faq"]]})
