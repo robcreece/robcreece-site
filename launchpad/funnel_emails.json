@@ -87,5 +87,49 @@
     "body": "If you've read the cheat sheet and you're still stuck on step 1, you're not alone. Picking the problem is the hardest part.\n\nSo here's a shortcut: a problem that's already proven.\n\nYouTubers and video creators hate making on-screen graphics. Lower thirds, title cards, captions. Most of them would happily pay somebody else to do it.\n\nWith AI software, you can make those graphics without being an editor and sell it as a one-person service.\n\nI wrote a short guide on exactly how: who buys, what to message them, and what to charge. It's called The Overlay Agency, and it's $4.\n\n{SITE}/overlay-agency/\n\nFull disclosure: I co-own Grafsy, the software the guide recommends, so I earn if you buy it. That's why the guide only costs $4. Weigh it with that in mind.\n\nAnd if you already picked your problem, ignore this and go send your ten messages.\n\nRob"
    }
   ]
+ },
+ "robot_tells_series": {
+  "name": "The Robot Tells: delivery + 2 follow-ups",
+  "trigger": "Added to audience: Robot Tells Leads",
+  "emails": [
+   {
+    "day": 0,
+    "send": "~1 minute after opt-in",
+    "subject": "The Robot Tells (your checklist)",
+    "body": "Here it is: {SITE}/r/robot-tells/\n\n12 giveaways that tell people a robot wrote your post, with a fix for each one.\n\nDon't read all 12 today. Do this instead:\n\nTake the last thing you posted. Check it against tells 1, 4 and 5. The throat-clearing opener, the fancy words, the dashes. Those three show up in almost every AI draft.\n\nFix just those and post the new version. That's it.\n\nOne favor. Hit reply and tell me which tell you caught in your own writing. One line is fine. It tells your inbox I'm a real person, so the next emails don't land in spam.\n\nRob"
+   },
+   {
+    "day": 1,
+    "subject": "delete your first sentence",
+    "body": "Quickest fix on the whole checklist:\n\nDelete the first sentence of your post.\n\nAI almost always opens by clearing its throat. \"In today's world...\" \"Let's talk about...\" \"Have you ever wondered...\"\n\nThe real post usually starts at sentence two.\n\nNot this: \"In today's fast-paced world, building an audience matters more than ever.\"\nThis: \"Nobody followed me for the first 90 days.\"\n\nTry it on your next draft before you post. If sentence two can stand on its own, you just made the post better in four seconds.\n\nRob"
+   },
+   {
+    "day": 3,
+    "subject": "posts that sound human, and then what?",
+    "body": "Fixing the robot tells gets people to stop scrolling. It doesn't make you money by itself.\n\nFor that you need something to sell, even something tiny.\n\nIf you don't have that yet, I made a free one-page cheat sheet for it. Seven steps from \"I have nothing to sell\" to your first buyer, with an AI prompt for each step.\n\n{SITE}/first-sale/\n\nNo cost. Same as this checklist.\n\nAnd if you already have an offer, ignore this and go post something that sounds like you.\n\nRob"
+   }
+  ]
+ },
+ "ai_word_list_series": {
+  "name": "The AI Word List: delivery + 2 follow-ups",
+  "trigger": "Added to audience: AI Word List Leads",
+  "emails": [
+   {
+    "day": 0,
+    "send": "~1 minute after opt-in",
+    "subject": "Your AI Word List",
+    "body": "Here it is: {SITE}/r/ai-word-list/\n\nThe words that get people to reply, call or buy, grouped by the job they do, with a weak and a stronger example for each.\n\nStart with group 1, the words that get a reply. Use one in the first line of your next DM or comment.\n\nNot this: \"Hi, I help people grow their business. Interested?\"\nThis: \"Quick question. Saw your post about your first launch. What's been the hardest part so far?\"\n\nOne rule with all of it: only use a word if it's true. Fake urgency costs you more than it earns.\n\nOne favor. Hit reply and tell me which word you're trying first. One line is fine. It tells your inbox I'm a real person, so the next emails don't land in spam.\n\nRob"
+   },
+   {
+    "day": 1,
+    "subject": "the most underrated word",
+    "body": "If you only use one word from the list, use \"because.\"\n\nA claim on its own sounds like a pitch. A claim with a reason sounds like a fact.\n\nNot this: \"This method really works.\"\nThis: \"This works because you message people who already said they have the problem.\"\n\nPut \"because\" right after your biggest claim in your next post. Then give one real reason. A number, a test you ran, something you saw.\n\nThat's group 6 on your list if you want more like it.\n\nRob"
+   },
+   {
+    "day": 3,
+    "subject": "good words, nothing to sell?",
+    "body": "The word list makes people reply. But a reply only turns into money if you have something to offer them.\n\nIf you don't have that yet, I made a free one-page cheat sheet for it. Seven steps from \"I have nothing to sell\" to your first buyer, with an AI prompt for each step.\n\n{SITE}/first-sale/\n\nNo cost. Same as the word list.\n\nAnd if you already have an offer, ignore this and go use \"quick question\" on ten people today.\n\nRob"
+   }
+  ]
  }
 }
