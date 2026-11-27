@@ -11,6 +11,27 @@
   },
   "magnets": [
     {
+      "slug": "first-sale",
+      "title": "The First-Sale Cheat Sheet",
+      "tag": "Free cheat sheet",
+      "headline": "Your Whole Path to Sale #1, on One Page",
+      "sub": "No ads. No list. No website. Seven steps from \"I have nothing to sell\" to your first buyer, with an example and an AI prompt for each one.",
+      "bullets": [
+        "How to pick a problem people will pay $7 to fix this week",
+        "The smallest product you can build in one afternoon",
+        "The exact message to send so 10 conversations turn into a first sale"
+      ],
+      "cta": "Send Me The Cheat Sheet",
+      "card_blurb": "Seven steps from nothing to sell to your first buyer, on one page.",
+      "form_token": "7eb424fe3386aab464c53bb0eb4203524bc8608bebd6cbb3",
+      "thanks_headline": "Check your inbox. Your cheat sheet is on its way.",
+      "thanks_body": "It should land in a minute or two. If it doesn't, check Promotions or Spam and move it to your main inbox.",
+      "delivery_label": "Open The First-Sale Cheat Sheet",
+      "delivery_url": "/r/first-sale/",
+      "next_label": "Join The Lab (free Facebook group)",
+      "next_url": "#"
+    },
+    {
       "slug": "robot-tells",
       "title": "The Robot Tells",
       "tag": "Free checklist",

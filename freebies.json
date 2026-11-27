@@ -337,5 +337,50 @@
       "label": "See the full Launchpad",
       "url": "/launchpad/"
     }
+  },
+  "first-sale": {
+    "title": "The First-Sale Cheat Sheet",
+    "subtitle": "Your whole path to sale #1, on one page. No ads, no list, no website.",
+    "intro": [
+      "You don't have a traffic problem. You don't have a talent problem. You have a first-sale problem. And it's smaller than you think.",
+      "Work through the seven steps in order. Each one has an example, and the first two have an AI prompt you can copy."
+    ],
+    "items": [
+      {
+        "name": "Pick a pain, not a passion",
+        "text": "Your first product isn't your life's work. It fixes one annoying, specific problem for one specific person. AI prompt: \"List 20 small problems [your audience] complains about online. Which 3 would someone pay $7 to fix this week?\"",
+        "before": "Social media help.",
+        "after": "5 Instagram Story frames that get DMs for home bakers."
+      },
+      {
+        "name": "Make the smallest possible thing",
+        "text": "One PDF, one template or one checklist, built in an afternoon with tools you already have. If it takes more than a day, you're overbuilding. AI prompt: \"Write a one-page fix for [problem]. Plain words. Steps only. Include one example.\"",
+        "before": "A 12-module course you'll finish \"next month.\"",
+        "after": "A one-page Story Frame Kit with 5 fill-in-the-blank frames."
+      },
+      {
+        "name": "Price it like a snack, not a steak",
+        "text": "$7 to $27. Low enough that yes is easy. High enough that it's real money from real buyers. When in doubt, start at $7."
+      },
+      {
+        "name": "Set up one checkout link",
+        "text": "You need a way to take payment and deliver the file. That's it. Gumroad, Payhip or Whop each do both, and none of them need a website."
+      },
+      {
+        "name": "Go where the pain already lives",
+        "text": "Don't build an audience first. Find a Facebook group, a comment section or a hashtag where your person is already complaining. Answer 5 real questions there, for free. Then say: \"I had this same problem, so I made a 1-page kit that fixed it. Happy to send it if you want.\""
+      },
+      {
+        "name": "Start 10 conversations",
+        "text": "Message 10 people who asked, commented or complained. Ask one easy question. No pitch.",
+        "before": "Hey! I made a product you'll love. Want to buy it?",
+        "after": "Saw your comment about [problem]. Is that still bugging you?"
+      },
+      {
+        "name": "Sell before you're ready",
+        "text": "Your first sale will feel too early. Good. \"Ready\" is where first sales go to die. Post the offer, send the messages, and fix the product after somebody buys it."
+      }
+    ],
+    "closer": "Before you close this page: one problem picked, small thing built, price set, checkout link working, 5 helpful answers posted, 10 conversations started. Stuck on a step? Reply to the email this came in and tell me the number. I read every reply."
   }
 }

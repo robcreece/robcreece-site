@@ -3,6 +3,7 @@
 > Rob Reece helps broke beginners get their first online sale with simple offers, honest copy and organic traffic. Solo marketer, no sales calls, no ad budget. Brand: 5 Solas Marketing. Related brand: CultLike Marketing.
 
 ## Free tools
+- [The First-Sale Cheat Sheet](https://robcreece.com/first-sale/): Seven steps from nothing to sell to your first buyer, on one page.
 - [The Robot Tells](https://robcreece.com/robot-tells/): 12 tells that scream 'AI wrote this', each with a 30-second fix.
 - [The AI Word List](https://robcreece.com/ai-word-list/): The words that move people to reply, call, or buy, with examples.
 - [The One-Prompt Website](https://robcreece.com/one-prompt-website/): One prompt that builds a free website and signup page with Claude.
